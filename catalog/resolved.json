@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T05:55:56.206Z",
+  "generatedAt": "2026-11-26T06:07:47.252Z",
   "tabs": [
     {
       "id": "free",
@@ -60,8 +60,8 @@
     },
     {
       "id": "office",
-      "tab": "free",
       "icon": "file-text",
+      "tab": "free",
       "folder": "Van Phong",
       "name": {
         "vi": "Văn phòng",
@@ -202,6 +202,7 @@
   "apps": [
     {
       "id": "chrome",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-chrome.png",
       "name": "Google Chrome",
       "category": "browser",
       "homepage": "https://www.google.com/chrome/",
@@ -252,6 +253,7 @@
     },
     {
       "id": "brave",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/brave.png",
       "name": "Brave",
       "category": "browser",
       "homepage": "https://brave.com/",
@@ -277,6 +279,7 @@
     },
     {
       "id": "firefox",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/firefox.png",
       "name": "Mozilla Firefox",
       "category": "browser",
       "homepage": "https://www.mozilla.org/firefox/",
@@ -369,6 +372,7 @@
     },
     {
       "id": "zalo",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/zalo.png",
       "name": "Zalo PC",
       "category": "chat",
       "homepage": "https://zalo.me/pc",
@@ -382,7 +386,7 @@
       "tab": "free",
       "release": {
         "version": "26.11.12",
-        "build": "2026-11-26|213516168|\"6af6b8bf-cb9ff88\"",
+        "build": "2026-11-13|213516168|\"6af6b8bf-cb9ff88\"",
         "url": "https://zalo.me/download/zalo-pc",
         "fileName": "ZaloSetup-26.11.12.exe",
         "installerType": "nullsoft",
@@ -395,6 +399,7 @@
     },
     {
       "id": "telegram",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/telegram.png",
       "name": "Telegram",
       "category": "chat",
       "homepage": "https://desktop.telegram.org/",
@@ -422,6 +427,7 @@
     },
     {
       "id": "discord",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/discord.png",
       "name": "Discord",
       "category": "chat",
       "homepage": "https://discord.com/",
@@ -471,6 +477,7 @@
     },
     {
       "id": "anydesk",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/anydesk.png",
       "name": "AnyDesk",
       "category": "chat",
       "homepage": "https://anydesk.com/",
@@ -500,6 +507,7 @@
     },
     {
       "id": "libreoffice",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/libreoffice.png",
       "name": "LibreOffice",
       "category": "office",
       "homepage": "https://www.libreoffice.org/",
@@ -522,6 +530,7 @@
     },
     {
       "id": "foxit",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/foxit.png",
       "name": "Foxit PDF Reader",
       "category": "office",
       "homepage": "https://www.foxit.com/pdf-reader/",
@@ -546,6 +555,7 @@
     },
     {
       "id": "vscode",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/visual-studio-code.png",
       "name": "Visual Studio Code",
       "category": "dev",
       "homepage": "https://code.visualstudio.com/",
@@ -573,6 +583,7 @@
     },
     {
       "id": "git",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/git.png",
       "name": "Git",
       "category": "dev",
       "homepage": "https://git-scm.com/",
@@ -600,6 +611,7 @@
     },
     {
       "id": "nodejs",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/nodejs.png",
       "name": "Node.js LTS",
       "category": "dev",
       "homepage": "https://nodejs.org/",
@@ -622,6 +634,7 @@
     },
     {
       "id": "python",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/python.png",
       "name": "Python 3.13",
       "category": "dev",
       "homepage": "https://www.python.org/",
@@ -1003,6 +1016,7 @@
     },
     {
       "id": "nvidia-app",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/nvidia.png",
       "name": "NVIDIA App",
       "category": "driver",
       "homepage": "https://www.nvidia.com/en-us/software/nvidia-app/",
@@ -1233,6 +1247,7 @@
     },
     {
       "id": "treesize",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/treesize.png",
       "name": "TreeSize",
       "category": "utility-pro",
       "homepage": "https://www.jam-software.com/treesize",
@@ -1312,6 +1327,7 @@
     },
     {
       "id": "steam",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/steam.png",
       "name": "Steam",
       "category": "platform",
       "homepage": "https://store.steampowered.com/",
@@ -1336,6 +1352,7 @@
     },
     {
       "id": "epic",
+      "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/epic-games.png",
       "name": "Epic Games Launcher",
       "category": "platform",
       "homepage": "https://store.epicgames.com/",
