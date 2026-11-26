@@ -2,6 +2,7 @@ import { Rocket, X } from 'lucide-react';
 import { useAppUpdate } from '../lib/appUpdate';
 import { formatBytes } from '../lib/format';
 import { useStore } from '../lib/store';
+import mascotUpdate from '../assets/img/mascot-update.webp';
 import { ProgressBar } from './ui';
 
 /** Thanh thông báo khi có bản SOGE Multi App mới. */
@@ -9,9 +10,34 @@ export function AppUpdateBanner() {
   const { available, phase, received, total, error, dismissed, install, dismiss } = useAppUpdate();
   const lang = useStore((s) => s.settings.language);
   const vi = lang !== 'en';
-  if (!available || dismissed) return null;
   const busy = phase === 'downloading' || phase === 'installing';
   const pct = total ? (received / total) * 100 : 0;
+  if (!available) return null;
+
+  // Đang tải/cài: phủ toàn màn hình để người dùng biết app sắp tự mở lại
+  if (busy) {
+    return (
+      <div className="fixed inset-0 z-[100] grid place-items-center bg-bg/95 backdrop-blur-sm">
+        <div className="flex w-[380px] flex-col items-center text-center">
+          <img src={mascotUpdate} alt="" className="h-40 w-40 animate-float" draggable={false} />
+          <div className="mt-3 font-display text-2xl font-extrabold">
+            {vi ? 'Đang cập nhật lên' : 'Updating to'} <span className="text-brand">v{available.version}</span>
+          </div>
+          <div className="mt-4 w-full">
+            <ProgressBar value={phase === 'installing' ? 100 : pct} indeterminate={phase === 'installing' || !total} />
+          </div>
+          <div className="mt-2 text-sm text-muted">
+            {phase === 'installing'
+              ? vi
+                ? 'Đang cài bản mới, app sẽ tự mở lại sau vài giây…'
+                : 'Installing, the app will reopen in a few seconds…'
+              : `${vi ? 'Đang tải' : 'Downloading'} ${formatBytes(received)}${total ? ' / ' + formatBytes(total) : ''}`}
+          </div>
+        </div>
+      </div>
+    );
+  }
+  if (dismissed) return null;
 
   return (
     <div className="mx-8 mb-4 flex animate-fade-up items-center gap-4 rounded-2xl border border-brand/50 bg-brand-soft px-5 py-3.5 shadow-card">

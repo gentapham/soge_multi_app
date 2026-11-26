@@ -72,7 +72,7 @@
         "https://github.com/gentapham/soge_multi_app/releases/latest/download/latest.json"
       ],
       "windows": {
-        "installMode": "passive"
+        "installMode": "quiet"
       }
     }
   }
