@@ -207,8 +207,10 @@ async function resolveGithub(src) {
 }
 
 // ---------- direct link ----------
+const APP_UA = 'SOGE-Multi-App/0.2 (Windows; +https://sogestore.vn)';
 async function headInfo(url) {
-  let r = await fetch(url, { method: 'HEAD', redirect: 'follow', headers: { 'User-Agent': UA } });
+  let r = await fetch(url, { method: 'HEAD', redirect: 'follow', headers: { 'User-Agent': APP_UA } });
+  if (r.status === 403 || r.status === 405) r = await fetch(url, { method: 'HEAD', redirect: 'follow', headers: { 'User-Agent': UA } });
   if (!r.ok || !r.headers.get('content-length')) {
     // Một số CDN không hỗ trợ HEAD: dùng GET rồi huỷ ngay
     const ctrl = new AbortController();

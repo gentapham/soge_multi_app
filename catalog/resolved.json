@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T08:58:34.196Z",
+  "generatedAt": "2026-11-26T11:35:02.038Z",
   "tabs": [
     {
       "id": "free",
@@ -2198,7 +2198,6 @@
         "en": "Find & install missing drivers. Open source."
       },
       "tab": "free",
-      "launch": "SDIO_x64_R891.exe",
       "release": {
         "version": "2.0.8.891",
         "url": "https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.8.891.zip",
@@ -2243,16 +2242,8 @@
         "en": "Graphics card information."
       },
       "tab": "free",
-      "release": {
-        "version": "2.72.0",
-        "url": "https://us1-dl.techpowerup.com/files/GPU-Z.2.72.0.exe",
-        "fileName": "GPU-Z.2.72.0.exe",
-        "installerType": "exe",
-        "silentArgs": [
-          "-installSilent"
-        ],
-        "sha256": "3b15545f3edf7f2c714a32c7ee2bedd9823fee7d23a20e15f2e29cd2fee25323"
-      }
+      "link": "https://www.techpowerup.com/download/techpowerup-gpu-z/",
+      "release": null
     },
     {
       "id": "ditto",
@@ -4043,16 +4034,8 @@
         "en": "GameCube & Wii emulator. Open source."
       },
       "tab": "games",
-      "release": {
-        "version": "5.0",
-        "url": "https://dl-mirror.dolphin-emu.org/5.0/dolphin-x64-5.0.exe",
-        "fileName": "dolphin-x64-5.0.exe",
-        "installerType": "nullsoft",
-        "silentArgs": [
-          "/S"
-        ],
-        "sha256": "e1b3ae8fc890c6588e5656f77ef2747ae7ddfc90b6530b240c0c5b9d0ab3ce8c"
-      }
+      "link": "https://dolphin-emu.org/download/",
+      "release": null
     },
     {
       "id": "pcsx2",
@@ -4479,7 +4462,6 @@
         "en": "Apply ISO/WIM images to another drive without USB, clean up Windows. Open source."
       },
       "tab": "windows",
-      "launch": "Dism++x64.exe",
       "release": {
         "version": "10.1.1002.2",
         "url": "https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.2/Dism++10.1.1002.1B.zip",
