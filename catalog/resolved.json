@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T08:37:09.503Z",
+  "generatedAt": "2026-11-26T08:58:34.196Z",
   "tabs": [
     {
       "id": "free",
@@ -694,7 +694,7 @@
       "tab": "free",
       "release": {
         "version": "26.11.12",
-        "build": "2026-11-26|213516168|\"6af6b8bf-cb9ff88\"",
+        "build": "2026-11-13|213516168|\"6af6b8bf-cb9ff88\"",
         "url": "https://zalo.me/download/zalo-pc",
         "fileName": "ZaloSetup-26.11.12.exe",
         "installerType": "nullsoft",
@@ -2198,6 +2198,7 @@
         "en": "Find & install missing drivers. Open source."
       },
       "tab": "free",
+      "launch": "SDIO_x64_R891.exe",
       "release": {
         "version": "2.0.8.891",
         "url": "https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.8.891.zip",
@@ -3923,7 +3924,7 @@
         "version": "6.0.2",
         "build": "2026-08-12|6102432|\"5cebb5b671a423443563bbd50f9b151f\"",
         "url": "https://api.mumuplayer.com/api/dl/win?channel=gw-overseas12",
-        "fileName": "MuMu_6.0.2_13vWJYtC.exe",
+        "fileName": "MuMu_6.0.2_13w5bcmC.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
@@ -3971,14 +3972,14 @@
       },
       "tab": "games",
       "release": {
-        "version": "2026-11-10",
-        "build": "2026-11-10|138403072|\"6af2b5d8-83fdd00\"",
+        "version": "2026-11-11",
+        "build": "2026-11-11|139060480|\"6af4252c-849e500\"",
         "url": "https://www.memuplay.com/download-en.php?file_name=Download-MEmu-Setup&from=official_release",
         "fileName": "MEmu-Setup.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
-        "size": 138403072
+        "size": 139060480
       }
     },
     {
@@ -4145,8 +4146,8 @@
         "fileName": "shadps4-win64-sdl-0.21.0.zip",
         "installerType": "zip",
         "silentArgs": null,
-        "sha256": null,
-        "size": null
+        "sha256": "95295b8f109663f70c2dac685e6232aa97be1353f6ed0a5d5e0c5dd24a797d88",
+        "size": 31725856
       }
     },
     {
@@ -4168,7 +4169,7 @@
         "installerType": "zip",
         "silentArgs": null,
         "sha256": null,
-        "size": null
+        "size": 38251888
       }
     },
     {
@@ -4304,7 +4305,7 @@
         "installerType": "zip",
         "silentArgs": null,
         "sha256": null,
-        "size": null
+        "size": 5328695
       }
     },
     {
@@ -4346,8 +4347,8 @@
         "fileName": "flycast-win64-2.7.zip",
         "installerType": "zip",
         "silentArgs": null,
-        "sha256": null,
-        "size": null
+        "sha256": "7edf489ba6b3053703a18ce8233767eb71a2d89e4bda0421b312c2167a739161",
+        "size": 9885102
       }
     },
     {
