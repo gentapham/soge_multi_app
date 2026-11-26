@@ -97,12 +97,12 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
         ) : (
           <div className="flex items-center gap-2">
             {isLink ? (
-              <button className="btn-primary flex-1" onClick={() => void api.openUrl(app.link!)}>
+              <button className="btn-primary h-10 flex-1" onClick={() => void api.openUrl(app.link!)}>
                 <ExternalLink className="h-4 w-4" /> {t('openPage')}
               </button>
             ) : (
             <button
-              className={`${inst && !outdated ? 'btn-outline' : 'btn-primary'} flex-1`}
+              className={`${inst && !outdated ? 'btn-soft-ok' : 'btn-primary'} h-10 flex-1`}
               disabled={noRelease}
               onClick={() => enqueue([app.id], 'install')}
               title={mode === 'interactive' ? t('interactiveHint') : mode === 'portable' ? t('portableHint') : t('silentHint')}
@@ -125,7 +125,7 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
             </button>
             )}
             {app.buyUrl && (
-              <button className="btn-outline !px-3" title={t('buy')} onClick={() => void api.openUrl(app.buyUrl!)}>
+              <button className="btn-outline h-10 w-10 shrink-0 !p-0" title={t('buy')} onClick={() => void api.openUrl(app.buyUrl!)}>
                 <ShoppingCart className="h-4 w-4" />
               </button>
             )}
@@ -189,7 +189,7 @@ function CardMenu({ app, hasEntry }: { app: CatalogApp; hasEntry: boolean }) {
   const item = 'flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-[13px] font-medium hover:bg-surface-2';
   return (
     <div className="relative" ref={ref}>
-      <button className="btn-outline !px-2.5" onClick={() => setOpen(!open)}>
+      <button className="btn-outline h-10 w-10 shrink-0 !p-0" onClick={() => setOpen(!open)}>
         <MoreHorizontal className="h-4 w-4" />
       </button>
       {open && (

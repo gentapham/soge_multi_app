@@ -88,6 +88,10 @@ body.kbd input:focus-visible {
   .btn-dark {
     @apply btn bg-ink text-bg hover:opacity-90;
   }
+  /* Nút "Cài lại": xanh lá nhạt = phần mềm đã có trên máy */
+  .btn-soft-ok {
+    @apply btn border-ok/30 bg-ok/10 text-ok hover:border-ok/60 hover:bg-ok/15;
+  }
   .btn-ghost {
     @apply btn text-ink hover:bg-surface-2;
   }

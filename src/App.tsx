@@ -67,8 +67,8 @@ export default function App() {
       <Sidebar />
       <main className="flex min-w-0 flex-1 flex-col">
         <TopBar />
-        <AppUpdateBanner />
         <div className="flex-1 overflow-y-auto" key={view}>
+          <AppUpdateBanner />
           {view === 'library' ? <LibraryView /> : <CatalogView tab={view} />}
         </div>
       </main>
