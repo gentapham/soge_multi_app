@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T11:35:02.038Z",
+  "generatedAt": "2026-11-26T11:35:46.257Z",
   "tabs": [
     {
       "id": "free",
@@ -600,15 +600,15 @@
       },
       "tab": "free",
       "release": {
-        "version": "140.0.6074.48",
-        "url": "https://get.geo.opera.com/pub/opera_gx/140.0.6074.48/win/Opera_GX_140.0.6074.48_Setup_x64.exe",
-        "fileName": "Opera_GX_140.0.6074.48_Setup_x64.exe",
+        "version": "140.0.6074.73",
+        "url": "https://get.geo.opera.com/pub/opera_gx/140.0.6074.73/win/Opera_GX_140.0.6074.73_Setup_x64.exe",
+        "fileName": "Opera_GX_140.0.6074.73_Setup_x64.exe",
         "installerType": "exe",
         "silentArgs": [
           "/silent",
           "/allusers=1"
         ],
-        "sha256": "7b854acb0226992ad53a5f9c3787f330aa96b410624429a16b001524d892661b"
+        "sha256": "8150e8100adf593d8aeea4d25234e01cc99fb35ac859cd78333f6dbb477ad242"
       }
     },
     {
@@ -2198,6 +2198,7 @@
         "en": "Find & install missing drivers. Open source."
       },
       "tab": "free",
+      "launch": "SDIO_x64_R891.exe",
       "release": {
         "version": "2.0.8.891",
         "url": "https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.8.891.zip",
@@ -3915,7 +3916,7 @@
         "version": "6.0.2",
         "build": "2026-08-12|6102432|\"5cebb5b671a423443563bbd50f9b151f\"",
         "url": "https://api.mumuplayer.com/api/dl/win?channel=gw-overseas12",
-        "fileName": "MuMu_6.0.2_13w5bcmC.exe",
+        "fileName": "MuMu_6.0.2_13wIL7iC.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
@@ -3963,14 +3964,14 @@
       },
       "tab": "games",
       "release": {
-        "version": "2026-11-11",
-        "build": "2026-11-11|139060480|\"6af4252c-849e500\"",
+        "version": "2026-11-10",
+        "build": "2026-11-10|138403072|\"6af2b5d8-83fdd00\"",
         "url": "https://www.memuplay.com/download-en.php?file_name=Download-MEmu-Setup&from=official_release",
         "fileName": "MEmu-Setup.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
-        "size": 139060480
+        "size": 138403072
       }
     },
     {
@@ -4462,6 +4463,7 @@
         "en": "Apply ISO/WIM images to another drive without USB, clean up Windows. Open source."
       },
       "tab": "windows",
+      "launch": "Dism++x64.exe",
       "release": {
         "version": "10.1.1002.2",
         "url": "https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.2/Dism++10.1.1002.1B.zip",
