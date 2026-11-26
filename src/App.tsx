@@ -1,7 +1,7 @@
 import { getCurrentWindow } from '@tauri-apps/api/window';
 import { Minus, X } from 'lucide-react';
 import { useEffect } from 'react';
-import mascotOffline from './assets/img/mascot-offline.webp';
+import mascotDownload from './assets/img/mascot-download.webp';
 import { CatalogView } from './components/CatalogView';
 import { LibraryView } from './components/LibraryView';
 import { Onboarding } from './components/Onboarding';
@@ -22,12 +22,17 @@ export default function App() {
   }, [settings.language]);
 
   if (!ready) {
+    const vi = settings.language !== 'en';
     return (
       <div data-tauri-drag-region className="grid h-full place-items-center">
-        <div className="flex flex-col items-center gap-3">
-          <img src={mascotOffline} alt="" className="h-24 w-24 animate-float opacity-0" />
-          <div className="h-1.5 w-40 overflow-hidden rounded-full bg-surface-2">
-            <div className="h-full w-1/3 animate-[stripes_1s_linear_infinite] rounded-full bg-brand" />
+        <div className="flex flex-col items-center">
+          <img src={mascotDownload} alt="" className="h-36 w-36 animate-float" draggable={false} />
+          <div className="mt-4 font-display text-xl font-extrabold">
+            SOGE <span className="text-brand">Multi App</span>
+          </div>
+          <div className="mt-1 text-sm text-muted">{vi ? 'Đang tải danh sách phần mềm…' : 'Loading software list…'}</div>
+          <div className="mt-4 h-1.5 w-48 overflow-hidden rounded-full bg-surface-2">
+            <div className="h-full w-1/3 animate-slide rounded-full bg-brand" />
           </div>
         </div>
       </div>

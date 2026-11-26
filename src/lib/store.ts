@@ -185,11 +185,15 @@ export const useStore = create<State>((set, get) => {
         const task = get().tasks[p.appId];
         if (task?.phase === 'downloading') patchTask(p.appId, { received: p.received, total: p.total, speed: p.speed });
       });
-      const cat = await api.loadCatalog(true);
-      set({ catalog: cat.data, catalogSource: cat.source, ready: true });
-      if (cat.source !== 'remote') get().toast({ kind: 'info', title: 'Offline', text: get().t('offline') });
+      // Hiện giao diện ngay bằng danh sách đã lưu, rồi tải danh sách mới từ GitHub ở nền
+      const local = await api.loadCatalog(false);
+      set({ catalog: local.data, catalogSource: local.source, ready: true });
       void get().refreshLibrary();
       void get().refreshInstalled();
+      void api.loadCatalog(true).then((cat) => {
+        if (cat.source === 'remote') set({ catalog: cat.data, catalogSource: cat.source });
+        else get().toast({ kind: 'info', title: 'Offline', text: get().t('offline') });
+      });
     },
 
     saveSettings: async (patch) => {
