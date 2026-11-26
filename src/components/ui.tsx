@@ -50,13 +50,13 @@ const PALETTE = ['#FBAE2C', '#F59E8B', '#7CB9E8', '#8BD3A6', '#C3A6F0', '#F2C14E
 
 /** Icon phần mềm: icon đóng gói sẵn → icon trên GitHub → chữ cái đầu. */
 export function AppIcon({ id, name, size = 48 }: { id: string; name: string; size?: number }) {
-  const sources = [`/icons/${id}.png`, `https://raw.githubusercontent.com/gentapham/soge_multi_app/main/public/icons/${id}.png`];
+  const sources = [`/icons/${id}.webp`, `https://raw.githubusercontent.com/gentapham/soge_multi_app/main/public/icons/${id}.webp`];
   const [idx, setIdx] = useState(0);
   useEffect(() => setIdx(0), [id]);
   const color = PALETTE[[...id].reduce((a, c) => a + c.charCodeAt(0), 0) % PALETTE.length];
   return (
     <div
-      className="grid shrink-0 place-items-center overflow-hidden rounded-[14px] border border-line bg-surface-2"
+      className="grid shrink-0 place-items-center overflow-hidden rounded-[14px] border border-black/5 bg-white shadow-[0_1px_2px_rgb(0_0_0/0.06)]"
       style={{ width: size, height: size }}
     >
       {idx < sources.length ? (
@@ -65,7 +65,7 @@ export function AppIcon({ id, name, size = 48 }: { id: string; name: string; siz
           alt=""
           draggable={false}
           className="object-contain"
-          style={{ width: size * 0.62, height: size * 0.62 }}
+          style={{ width: size * 0.68, height: size * 0.68 }}
           onError={() => setIdx((i) => i + 1)}
         />
       ) : (

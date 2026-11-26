@@ -9,6 +9,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
+import { toIconWebp } from './icons-to-webp.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ICON_DIR = path.join(ROOT, 'public', 'icons');
@@ -84,7 +85,7 @@ async function toPng(buf) {
 }
 
 export async function fetchIcon(app, { refresh = false } = {}) {
-  const file = path.join(ICON_DIR, `${app.id}.png`);
+  const file = path.join(ICON_DIR, `${app.id}.webp`);
   try {
     await fs.access(file);
     if (!refresh) return;
@@ -111,7 +112,7 @@ export async function fetchIcon(app, { refresh = false } = {}) {
   }
   if (best) {
     await fs.mkdir(ICON_DIR, { recursive: true });
-    await fs.writeFile(file, best.png);
+    await fs.writeFile(file, await toIconWebp(best.png));
   }
   return best?.width;
 }
