@@ -49,7 +49,7 @@ async fn load_catalog(app: AppHandle, prefer_remote: bool) -> CmdResult<CatalogP
                     .map(|d| d.as_secs())
                     .unwrap_or(0)
             );
-            let res = client.get(url).timeout(Duration::from_secs(12)).send().await;
+            let res = client.get(url).timeout(Duration::from_secs(8)).send().await;
             if let Ok(resp) = res {
                 if resp.status().is_success() {
                     if let Ok(text) = resp.text().await {

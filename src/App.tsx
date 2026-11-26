@@ -11,7 +11,7 @@ import { TopBar } from './components/TopBar';
 import { useStore } from './lib/store';
 
 export default function App() {
-  const { ready, init, settings, view } = useStore();
+  const { ready, init, settings, view, loadingStep } = useStore();
 
   useEffect(() => {
     void init();
@@ -23,17 +23,22 @@ export default function App() {
 
   if (!ready) {
     const vi = settings.language !== 'en';
+    const steps = vi
+      ? ['Đang khởi động…', 'Đang tải danh sách phần mềm mới nhất…', 'Đang đọc thư mục bộ cài…', 'Đang kiểm tra phần mềm đã cài trên máy…', 'Sẵn sàng!']
+      : ['Starting…', 'Loading the latest software list…', 'Reading your installer folder…', 'Checking installed software…', 'Ready!'];
+    const pct = Math.max(8, (loadingStep / 4) * 100);
     return (
       <div data-tauri-drag-region className="grid h-full place-items-center">
         <div className="flex flex-col items-center">
           <img src={mascotDownload} alt="" className="h-36 w-36 animate-float" draggable={false} />
-          <div className="mt-4 font-display text-xl font-extrabold">
+          <div className="mt-4 font-display text-2xl font-extrabold">
             SOGE <span className="text-brand">Multi App</span>
           </div>
-          <div className="mt-1 text-sm text-muted">{vi ? 'Đang tải danh sách phần mềm…' : 'Loading software list…'}</div>
-          <div className="mt-4 h-1.5 w-48 overflow-hidden rounded-full bg-surface-2">
-            <div className="h-full w-1/3 animate-slide rounded-full bg-brand" />
+          <div className="relative mt-5 h-2 w-64 overflow-hidden rounded-full bg-surface-2 ring-1 ring-inset ring-line">
+            <div className="h-full rounded-full bg-brand transition-[width] duration-500 ease-out" style={{ width: `${pct}%` }} />
+            <div className="absolute inset-y-0 left-0 w-1/4 animate-slide bg-gradient-to-r from-transparent via-white/50 to-transparent" />
           </div>
+          <div className="mt-3 h-5 text-sm text-muted">{steps[Math.min(loadingStep, 4)]}</div>
         </div>
       </div>
     );

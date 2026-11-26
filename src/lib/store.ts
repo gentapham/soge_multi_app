@@ -20,6 +20,8 @@ export type UpdateDialog =
 
 interface State {
   ready: boolean;
+  /** Bước đang chạy trên màn hình loading (1..4) */
+  loadingStep: number;
   settings: Settings;
   catalog: Catalog | null;
   catalogSource: 'remote' | 'cache' | 'bundled' | null;
@@ -157,6 +159,7 @@ export const useStore = create<State>((set, get) => {
 
   return {
     ready: false,
+    loadingStep: 0,
     settings: { downloadDir: null, language: 'vi', theme: 'system', maxConcurrent: 3 },
     catalog: null,
     catalogSource: null,
@@ -185,15 +188,19 @@ export const useStore = create<State>((set, get) => {
         const task = get().tasks[p.appId];
         if (task?.phase === 'downloading') patchTask(p.appId, { received: p.received, total: p.total, speed: p.speed });
       });
-      // Hiện giao diện ngay bằng danh sách đã lưu, rồi tải danh sách mới từ GitHub ở nền
-      const local = await api.loadCatalog(false);
-      set({ catalog: local.data, catalogSource: local.source, ready: true });
-      void get().refreshLibrary();
-      void get().refreshInstalled();
-      void api.loadCatalog(true).then((cat) => {
-        if (cat.source === 'remote') set({ catalog: cat.data, catalogSource: cat.source });
-        else get().toast({ kind: 'info', title: 'Offline', text: get().t('offline') });
-      });
+      // Màn hình loading: chạy lần lượt từng bước, hiển thị tối thiểu 1.5 giây
+      const started = Date.now();
+      set({ loadingStep: 1 });
+      const cat = await api.loadCatalog(true);
+      set({ catalog: cat.data, catalogSource: cat.source, loadingStep: 2 });
+      await get().refreshLibrary();
+      set({ loadingStep: 3 });
+      await get().refreshInstalled();
+      set({ loadingStep: 4 });
+      const wait = 1500 - (Date.now() - started);
+      if (wait > 0) await new Promise((r) => setTimeout(r, wait));
+      set({ ready: true });
+      if (cat.source !== 'remote') get().toast({ kind: 'info', title: 'Offline', text: get().t('offline') });
     },
 
     saveSettings: async (patch) => {
