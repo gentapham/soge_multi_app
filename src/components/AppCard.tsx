@@ -19,6 +19,7 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
   const isSelected = selected.includes(app.id);
   const busy = task && ['queued', 'downloading', 'waiting-install', 'installing'].includes(task.phase);
   const noRelease = !app.release;
+  const isLink = !!app.link;
   const mode = app.installMode ?? (app.release?.installerType === 'portable' || app.release?.installerType === 'zip' ? 'portable' : 'silent');
 
   const pct = task?.total ? (task.received / task.total) * 100 : 0;
@@ -35,7 +36,7 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
         <div className="min-w-0 flex-1 pt-0.5">
           <div className="truncate font-display text-[17px] font-bold leading-tight">{app.name}</div>
           <div className="mt-0.5 flex items-center gap-1.5 truncate text-xs text-muted">
-            <span className="truncate">{displayVersion(app.release?.version, lang) || '—'}</span>
+            <span className="truncate">{isLink ? 'microsoft.com' : displayVersion(app.release?.version, lang) || '—'}</span>
             {app.release?.size ? (
               <>
                 <span className="opacity-50">•</span>
@@ -74,7 +75,12 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
             <Sparkles className="h-3 w-3" /> {t('newVersion')}
           </span>
         )}
-        {mode === 'silent' && (
+        {isLink && (
+          <span className="badge bg-info/12 text-info">
+            <ExternalLink className="h-3 w-3" /> {t('officialPage')}
+          </span>
+        )}
+        {!isLink && mode === 'silent' && (
           <span className="badge bg-surface-2 text-muted" title={t('silentHint')}>
             <Zap className="h-3 w-3" /> Auto
           </span>
@@ -91,6 +97,11 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
           <TaskStrip appId={app.id} pct={pct} />
         ) : (
           <div className="flex items-center gap-2">
+            {isLink ? (
+              <button className="btn-primary flex-1" onClick={() => void openUrl(app.link!)}>
+                <ExternalLink className="h-4 w-4" /> {t('openPage')}
+              </button>
+            ) : (
             <button
               className={`${inst && !outdated ? 'btn-outline' : 'btn-primary'} flex-1`}
               disabled={noRelease}
@@ -113,6 +124,7 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
                 </>
               )}
             </button>
+            )}
             {app.buyUrl && (
               <button className="btn-outline !px-3" title={t('buy')} onClick={() => void openUrl(app.buyUrl!)}>
                 <ShoppingCart className="h-4 w-4" />

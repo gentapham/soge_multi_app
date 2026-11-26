@@ -3,7 +3,8 @@
   "tabs": [
     { "id": "free", "folder": "Mien Phi", "name": { "vi": "Phần Mềm Miễn Phí", "en": "Free Software" } },
     { "id": "licensed", "folder": "Ban Quyen", "name": { "vi": "Phần Mềm Bản Quyền", "en": "Licensed Software" } },
-    { "id": "games", "folder": "Games", "name": { "vi": "Games", "en": "Games" } }
+    { "id": "games", "folder": "Games", "name": { "vi": "Games", "en": "Games" } },
+    { "id": "windows", "folder": "Windows", "name": { "vi": "Cài Windows", "en": "Install Windows" } }
   ],
   "categories": [
     { "id": "browser", "tab": "free", "icon": "globe", "folder": "Trinh Duyet", "name": { "vi": "Trình duyệt", "en": "Browsers" } },
@@ -29,7 +30,9 @@
     { "id": "vn", "tab": "games", "icon": "flag", "folder": "NPH Viet Nam", "name": { "vi": "NPH Việt Nam", "en": "Vietnam publishers" } },
     { "id": "esport", "tab": "games", "icon": "trophy", "folder": "Thi Dau", "name": { "vi": "Thi đấu", "en": "Competitive" } },
     { "id": "emu-android", "tab": "games", "icon": "smartphone", "folder": "Gia Lap Android", "name": { "vi": "Giả lập Android", "en": "Android emulators" } },
-    { "id": "emu-console", "tab": "games", "icon": "joystick", "folder": "Gia Lap May Choi Game", "name": { "vi": "Giả lập máy chơi game", "en": "Console emulators" } }
+    { "id": "emu-console", "tab": "games", "icon": "joystick", "folder": "Gia Lap May Choi Game", "name": { "vi": "Giả lập máy chơi game", "en": "Console emulators" } },
+    { "id": "win-iso", "tab": "windows", "icon": "disc", "folder": "Tai Windows", "name": { "vi": "Tải Windows chính chủ", "en": "Get Windows" } },
+    { "id": "win-usb", "tab": "windows", "icon": "usb", "folder": "Tao USB", "name": { "vi": "Tạo USB cài đặt", "en": "Bootable USB" } }
   ],
   "apps": [
     { "id": "chrome", "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-chrome.png", "name": "Google Chrome", "category": "browser", "homepage": "https://www.google.com/chrome/", "detect": ["Google Chrome"],
@@ -223,7 +226,7 @@
     { "id": "7zip", "name": "7-Zip", "category": "system", "homepage": "https://www.7-zip.org/", "detect": ["7-Zip"],
       "desc": { "vi": "Nén & giải nén mọi định dạng: zip, rar, 7z…", "en": "Open/compress zip, rar, 7z and more." },
       "source": { "type": "winget", "id": "7zip.7zip" } },
-    { "id": "rufus", "name": "Rufus", "category": "system", "homepage": "https://rufus.ie/", "installMode": "portable",
+    { "id": "rufus", "name": "Rufus", "category": "system", "alsoIn": ["win-usb"], "homepage": "https://rufus.ie/", "installMode": "portable",
       "desc": { "vi": "Tạo USB cài Windows chỉ vài cú nhấp.", "en": "Create bootable USB drives." },
       "source": { "type": "winget", "id": "Rufus.Rufus" } },
     { "id": "crystaldiskinfo", "name": "CrystalDiskInfo", "category": "system", "homepage": "https://crystalmark.info/", "detect": ["CrystalDiskInfo"],
@@ -262,7 +265,7 @@
     { "id": "wiztree", "name": "WizTree", "category": "system", "homepage": "https://diskanalyzer.com/", "detect": ["WizTree"],
       "desc": { "vi": "Phân tích dung lượng ổ đĩa cực nhanh.", "en": "Super-fast disk analyzer." },
       "source": {"type": "winget", "id": "AntibodySoftware.WizTree"} },
-    { "id": "ventoy", "name": "Ventoy", "category": "system", "homepage": "https://www.ventoy.net/", "installMode": "portable", "launch": "Ventoy2Disk.exe",
+    { "id": "ventoy", "name": "Ventoy", "category": "system", "alsoIn": ["win-usb"], "homepage": "https://www.ventoy.net/", "installMode": "portable", "launch": "Ventoy2Disk.exe",
       "desc": { "vi": "Tạo USB boot chứa nhiều file ISO cùng lúc. Mã nguồn mở.", "en": "Multi-ISO bootable USB. Open source." },
       "source": {"type": "winget", "id": "Ventoy.Ventoy"} },
     { "id": "peazip", "name": "PeaZip", "category": "system", "homepage": "https://peazip.github.io/", "detect": ["PeaZip"],
@@ -542,6 +545,21 @@
       "source": {"type": "winget", "id": "SourMesen.Mesen2"} },
     { "id": "flycast", "name": "Flycast", "category": "emu-console", "homepage": "https://github.com/flyinghead/flycast", "installMode": "portable", "launch": "flycast.exe",
       "desc": { "vi": "Giả lập Sega Dreamcast & Naomi. Mã nguồn mở.", "en": "Dreamcast emulator. Open source." },
-      "source": {"type": "github", "repo": "flyinghead/flycast", "asset": "win64.*\\.zip$", "installerType": "zip"} }
+      "source": {"type": "github", "repo": "flyinghead/flycast", "asset": "win64.*\\.zip$", "installerType": "zip"} },
+    { "id": "win11-iso", "name": "Windows 11 (ISO)", "category": "win-iso", "homepage": "https://www.microsoft.com/software-download/windows11",
+      "desc": { "vi": "File ISO Windows 11 trắng từ trang Microsoft. Chọn bản & ngôn ngữ (có Tiếng Việt) rồi bấm tải.", "en": "Clean Windows 11 ISO from Microsoft. Pick edition & language, then download." },
+      "source": { "type": "link", "url": "https://www.microsoft.com/software-download/windows11" } },
+    { "id": "mct-win11", "name": "Media Creation Tool (Win 11)", "category": "win-iso", "homepage": "https://www.microsoft.com/software-download/windows11", "installMode": "interactive",
+      "desc": { "vi": "Công cụ chính thức của Microsoft: tạo file ISO hoặc USB cài Windows 11.", "en": "Official tool: create a Windows 11 ISO or install USB." },
+      "source": { "type": "direct", "url": "https://go.microsoft.com/fwlink/?linkid=2156295", "installerType": "exe", "fileName": "MediaCreationTool_Win11.exe" } },
+    { "id": "ia-win11", "name": "Windows 11 Installation Assistant", "category": "win-iso", "homepage": "https://www.microsoft.com/software-download/windows11", "installMode": "interactive",
+      "desc": { "vi": "Nâng cấp máy đang dùng lên Windows 11 mới nhất, giữ nguyên dữ liệu.", "en": "Upgrade this PC to the latest Windows 11, keeping your files." },
+      "source": { "type": "direct", "url": "https://go.microsoft.com/fwlink/?linkid=2171764", "installerType": "exe", "fileName": "Windows11InstallationAssistant.exe" } },
+    { "id": "win10-iso", "name": "Windows 10 (ISO)", "category": "win-iso", "homepage": "https://www.microsoft.com/software-download/windows10ISO",
+      "desc": { "vi": "File ISO Windows 10 từ trang Microsoft (Win 10 đã hết hỗ trợ từ 10/2025).", "en": "Windows 10 ISO from Microsoft (support ended Oct 2025)." },
+      "source": { "type": "link", "url": "https://www.microsoft.com/software-download/windows10ISO" } },
+    { "id": "mct-win10", "name": "Media Creation Tool (Win 10)", "category": "win-iso", "homepage": "https://www.microsoft.com/software-download/windows10", "installMode": "interactive",
+      "desc": { "vi": "Công cụ chính thức tạo ISO hoặc USB cài Windows 10 (bản 22H2).", "en": "Official tool to create a Windows 10 22H2 ISO or USB." },
+      "source": { "type": "direct", "url": "https://go.microsoft.com/fwlink/?LinkId=691209", "installerType": "exe", "fileName": "MediaCreationTool_Win10.exe" } }
   ]
 }

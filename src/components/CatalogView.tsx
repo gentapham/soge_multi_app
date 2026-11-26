@@ -1,15 +1,16 @@
 import bannerFree from '../assets/img/banner-free.webp';
 import bannerGames from '../assets/img/banner-games.webp';
 import bannerLicensed from '../assets/img/banner-licensed.webp';
+import bannerWindows from '../assets/img/banner-windows.webp';
 import mascotEmpty from '../assets/img/mascot-empty.webp';
-import { matchesSearch } from '../lib/format';
+import { inCategory, inTab, matchesSearch } from '../lib/format';
 import { useStore } from '../lib/store';
 import type { TabId } from '../lib/types';
 import { AppCard } from './AppCard';
 import { CategoryIcon } from './ui';
 
-const BANNERS: Record<TabId, string> = { free: bannerFree, licensed: bannerLicensed, games: bannerGames };
-const SUB = { free: 'tabFreeSub', licensed: 'tabLicensedSub', games: 'tabGamesSub' } as const;
+const BANNERS: Record<TabId, string> = { free: bannerFree, licensed: bannerLicensed, games: bannerGames, windows: bannerWindows };
+const SUB = { free: 'tabFreeSub', licensed: 'tabLicensedSub', games: 'tabGamesSub', windows: 'tabWindowsSub' } as const;
 
 export function CatalogView({ tab }: { tab: TabId }) {
   const { catalog, settings, category, setCategory, search, t } = useStore();
@@ -18,14 +19,14 @@ export function CatalogView({ tab }: { tab: TabId }) {
   const tabDef = catalog.tabs.find((x) => x.id === tab)!;
   const cats = catalog.categories.filter((c) => c.tab === tab);
   const activeCat = category[tab] ?? 'all';
-  const inTab = catalog.apps.filter((a) => a.tab === tab);
-  const apps = inTab.filter((a) => (activeCat === 'all' || a.category === activeCat) && matchesSearch(a, search));
+  const tabApps = catalog.apps.filter((a) => inTab(a, tab, catalog));
+  const apps = tabApps.filter((a) => (activeCat === 'all' || inCategory(a, activeCat)) && matchesSearch(a, search));
   const searching = search.trim().length > 0;
 
   // Khi đang lọc "Tất cả": nhóm theo danh mục. Khi tìm kiếm hoặc chọn 1 danh mục: lưới phẳng.
   const groups =
     activeCat === 'all' && !searching
-      ? cats.map((c) => ({ cat: c, apps: apps.filter((a) => a.category === c.id) })).filter((g) => g.apps.length)
+      ? cats.map((c) => ({ cat: c, apps: apps.filter((a) => inCategory(a, c.id)) })).filter((g) => g.apps.length)
       : [{ cat: null, apps }];
 
   return (
@@ -37,7 +38,7 @@ export function CatalogView({ tab }: { tab: TabId }) {
           <p className="mt-2 whitespace-nowrap text-[14px] font-medium text-[#3A1D16]/70">{t(SUB[tab])}</p>
           <div className="mt-3 flex gap-2">
             <span className="badge bg-[#3A1D16] px-2.5 py-1 text-[12px] text-[#F6EFE9]">
-              {inTab.length} {t('apps')}
+              {tabApps.length} {t('apps')}
             </span>
             <span className="badge bg-white/70 px-2.5 py-1 text-[12px] text-[#3A1D16]/80">
               {cats.length} {lang === 'vi' ? 'danh mục' : 'categories'}
@@ -55,10 +56,12 @@ export function CatalogView({ tab }: { tab: TabId }) {
           <button key={c.id} className={`chip ${activeCat === c.id ? 'chip-active' : ''}`} onClick={() => setCategory(c.id)}>
             <CategoryIcon name={c.icon} className="h-3.5 w-3.5" />
             {c.name[lang]}
-            <span className="opacity-60">{inTab.filter((a) => a.category === c.id).length}</span>
+            <span className="opacity-60">{tabApps.filter((a) => inCategory(a, c.id)).length}</span>
           </button>
         ))}
       </div>
+
+      {tab === 'windows' && !search && <WindowsGuide />}
 
       {apps.length === 0 ? (
         <div className="flex flex-col items-center py-16 text-center">
@@ -87,5 +90,26 @@ export function CatalogView({ tab }: { tab: TabId }) {
         ))
       )}
     </div>
+  );
+}
+
+function WindowsGuide() {
+  const { t } = useStore();
+  const steps = [t('winStep1'), t('winStep2'), t('winStep3')];
+  return (
+    <section className="mb-7 rounded-[22px] border border-line bg-surface p-5 shadow-card">
+      <h2 className="font-display text-lg font-bold">{t('winGuideTitle')}</h2>
+      <div className="mt-3 grid grid-cols-3 gap-3">
+        {steps.map((text, i) => (
+          <div key={i} className="flex gap-3 rounded-2xl bg-surface-2 p-3.5">
+            <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand font-display text-base font-extrabold text-[#3A1D16]">
+              {i + 1}
+            </span>
+            <p className="text-[13px] leading-5">{text}</p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-3 text-xs text-muted">ⓘ {t('winNote')}</p>
+    </section>
   );
 }

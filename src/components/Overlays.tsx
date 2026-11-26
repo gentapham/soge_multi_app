@@ -3,7 +3,7 @@ import { open } from '@tauri-apps/plugin-dialog';
 import mascotEmpty from '../assets/img/mascot-empty.webp';
 import mascotSuccess from '../assets/img/mascot-success.webp';
 import mascotUpdate from '../assets/img/mascot-update.webp';
-import { displayVersion, formatBytes, formatSpeed, matchesSearch } from '../lib/format';
+import { displayVersion, formatBytes, formatSpeed, inCategory, inTab, matchesSearch } from '../lib/format';
 import { appById, useStore } from '../lib/store';
 import type { Lang, Theme } from '../lib/types';
 import { AppIcon, Modal, ProgressBar, Segmented } from './ui';
@@ -15,9 +15,9 @@ export function SelectionBar() {
   const visible =
     catalog?.apps.filter(
       (a) =>
-        a.tab === view &&
+        inTab(a, view, catalog) &&
         a.release &&
-        (category[view] === 'all' || a.category === category[view]) &&
+        (category[view] === 'all' || inCategory(a, category[view])) &&
         matchesSearch(a, search),
     ) ?? [];
   if (!selected.length) return null;

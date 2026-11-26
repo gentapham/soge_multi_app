@@ -167,7 +167,7 @@ export const useStore = create<State>((set, get) => {
     installed: [],
     tasks: {},
     view: 'free',
-    category: { free: 'all', licensed: 'all', games: 'all', library: 'all' },
+    category: { free: 'all', licensed: 'all', games: 'all', windows: 'all', library: 'all' },
     search: '',
     selected: [],
     toasts: [],

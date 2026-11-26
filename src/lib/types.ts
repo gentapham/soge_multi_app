@@ -1,6 +1,6 @@
 export type Lang = 'vi' | 'en';
 export type Theme = 'light' | 'dark' | 'system';
-export type TabId = 'free' | 'licensed' | 'games';
+export type TabId = 'free' | 'licensed' | 'games' | 'windows';
 export type L10n = { vi: string; en: string };
 
 export interface Release {
@@ -26,6 +26,10 @@ export interface CatalogApp {
   detect?: string[];
   installMode?: 'silent' | 'interactive' | 'portable';
   launch?: string;
+  /** Hiển thị thêm trong các danh mục khác (vd. Rufus ở tab Windows) */
+  alsoIn?: string[];
+  /** Chỉ mở trang tải chính thức, không tải trực tiếp */
+  link?: string;
   release: Release | null;
 }
 

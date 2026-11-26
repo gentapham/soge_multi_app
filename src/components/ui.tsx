@@ -2,6 +2,8 @@ import {
   Clapperboard,
   Code2,
   Cpu,
+  Disc3,
+  Usb,
   Download,
   FileText,
   Flag,
@@ -37,6 +39,8 @@ const CATEGORY_ICONS: Record<string, LucideIcon> = {
   gamepad: Gamepad2,
   flag: Flag,
   trophy: Trophy,
+  disc: Disc3,
+  usb: Usb,
   smartphone: Smartphone,
   joystick: Joystick,
 };

@@ -1,4 +1,4 @@
-import type { CatalogApp, InstalledProgram } from './types';
+import type { Catalog, CatalogApp, InstalledProgram, TabId } from './types';
 
 export function formatBytes(n?: number | null): string {
   if (!n || n <= 0) return '—';
@@ -50,4 +50,15 @@ export function findInstalled(app: CatalogApp, programs: InstalledProgram[]): In
     // khớp đầu tên và ký tự kế tiếp không phải chữ cái (tránh "Git" khớp "GitHub Desktop")
     return pats.some((pat) => n.startsWith(pat) && !/[a-z]/.test(n.charAt(pat.length)));
   });
+}
+
+/** App thuộc danh mục (kể cả danh mục phụ khai báo trong alsoIn). */
+export function inCategory(app: CatalogApp, catId: string): boolean {
+  return app.category === catId || !!app.alsoIn?.includes(catId);
+}
+
+/** App hiển thị trong tab (tab chính hoặc qua danh mục phụ). */
+export function inTab(app: CatalogApp, tab: TabId, catalog: Catalog): boolean {
+  if (app.tab === tab) return true;
+  return !!app.alsoIn?.some((c) => catalog.categories.find((x) => x.id === c)?.tab === tab);
 }

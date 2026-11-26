@@ -1,4 +1,5 @@
-import { BadgeCheck, FolderDown, FolderOpen, Gamepad2, Gift, Settings as Cog, type LucideIcon } from 'lucide-react';
+import { BadgeCheck, FolderDown, FolderOpen, Gamepad2, Gift, Monitor, Settings as Cog, type LucideIcon } from 'lucide-react';
+import { inTab } from '../lib/format';
 import logoText from '../assets/img/logo-text.webp';
 import { api } from '../lib/api';
 import { useStore, type View } from '../lib/store';
@@ -8,12 +9,13 @@ const NAV: { id: View; icon: LucideIcon; label?: TKey }[] = [
   { id: 'free', icon: Gift },
   { id: 'licensed', icon: BadgeCheck },
   { id: 'games', icon: Gamepad2 },
+  { id: 'windows', icon: Monitor },
 ];
 
 export function Sidebar() {
   const { view, setView, catalog, settings, library, t, set } = useStore();
   const lang = settings.language;
-  const count = (tab: string) => catalog?.apps.filter((a) => a.tab === tab).length ?? 0;
+  const count = (tab: View) => (catalog && tab !== 'library' ? catalog.apps.filter((a) => inTab(a, tab, catalog)).length : 0);
   const libCount = Object.keys(library).length;
 
   return (

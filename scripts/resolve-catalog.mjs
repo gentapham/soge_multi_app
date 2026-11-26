@@ -294,6 +294,19 @@ async function main() {
       const { source, ...rest } = app;
       const out = { ...rest, tab: cat.tab };
       const prev = prevById.get(app.id);
+      if (source.type === 'link') {
+        // Chỉ mở trang tải chính thức (vd. ISO Windows dùng link tạm thời), không tải trực tiếp
+        out.link = source.url;
+        out.release = null;
+        if (!only.length || only.includes(app.id)) {
+          console.log(`↗ ${app.id.padEnd(16)} ${source.url}`);
+          try {
+            await fetchIcon(app);
+          } catch {}
+        }
+        apps.push(out);
+        continue;
+      }
       if (only.length && !only.includes(app.id)) {
         apps.push({ ...out, release: prev?.release ?? null });
         continue;

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T06:39:43.168Z",
+  "generatedAt": "2026-11-26T07:44:52.291Z",
   "tabs": [
     {
       "id": "free",
@@ -24,6 +24,14 @@
       "name": {
         "vi": "Games",
         "en": "Games"
+      }
+    },
+    {
+      "id": "windows",
+      "folder": "Windows",
+      "name": {
+        "vi": "Cài Windows",
+        "en": "Install Windows"
       }
     }
   ],
@@ -246,6 +254,26 @@
       "name": {
         "vi": "Giả lập máy chơi game",
         "en": "Console emulators"
+      }
+    },
+    {
+      "id": "win-iso",
+      "tab": "windows",
+      "icon": "disc",
+      "folder": "Tai Windows",
+      "name": {
+        "vi": "Tải Windows chính chủ",
+        "en": "Get Windows"
+      }
+    },
+    {
+      "id": "win-usb",
+      "tab": "windows",
+      "icon": "usb",
+      "folder": "Tao USB",
+      "name": {
+        "vi": "Tạo USB cài đặt",
+        "en": "Bootable USB"
       }
     }
   ],
@@ -1770,6 +1798,9 @@
       "id": "rufus",
       "name": "Rufus",
       "category": "system",
+      "alsoIn": [
+        "win-usb"
+      ],
       "homepage": "https://rufus.ie/",
       "installMode": "portable",
       "desc": {
@@ -2098,6 +2129,9 @@
       "id": "ventoy",
       "name": "Ventoy",
       "category": "system",
+      "alsoIn": [
+        "win-usb"
+      ],
       "homepage": "https://www.ventoy.net/",
       "installMode": "portable",
       "launch": "Ventoy2Disk.exe",
@@ -2153,7 +2187,6 @@
         "en": "Find & install missing drivers. Open source."
       },
       "tab": "free",
-      "launch": "SDIO_x64_R891.exe",
       "release": {
         "version": "2.0.8.891",
         "url": "https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.8.891.zip",
@@ -4305,6 +4338,98 @@
         "silentArgs": null,
         "sha256": "7edf489ba6b3053703a18ce8233767eb71a2d89e4bda0421b312c2167a739161",
         "size": 9885102
+      }
+    },
+    {
+      "id": "win11-iso",
+      "name": "Windows 11 (ISO)",
+      "category": "win-iso",
+      "homepage": "https://www.microsoft.com/software-download/windows11",
+      "desc": {
+        "vi": "File ISO Windows 11 trắng từ trang Microsoft. Chọn bản & ngôn ngữ (có Tiếng Việt) rồi bấm tải.",
+        "en": "Clean Windows 11 ISO from Microsoft. Pick edition & language, then download."
+      },
+      "tab": "windows",
+      "link": "https://www.microsoft.com/software-download/windows11",
+      "release": null
+    },
+    {
+      "id": "mct-win11",
+      "name": "Media Creation Tool (Win 11)",
+      "category": "win-iso",
+      "homepage": "https://www.microsoft.com/software-download/windows11",
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Công cụ chính thức của Microsoft: tạo file ISO hoặc USB cài Windows 11.",
+        "en": "Official tool: create a Windows 11 ISO or install USB."
+      },
+      "tab": "windows",
+      "release": {
+        "version": "2025-10-28",
+        "build": "2025-10-28|21591048|\"0x9C04877785BF15F313761581BB76A5E3344789A8F5787D069275C12BFCD6A56A\"",
+        "url": "https://go.microsoft.com/fwlink/?linkid=2156295",
+        "fileName": "MediaCreationTool_Win11.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 21591048
+      }
+    },
+    {
+      "id": "ia-win11",
+      "name": "Windows 11 Installation Assistant",
+      "category": "win-iso",
+      "homepage": "https://www.microsoft.com/software-download/windows11",
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Nâng cấp máy đang dùng lên Windows 11 mới nhất, giữ nguyên dữ liệu.",
+        "en": "Upgrade this PC to the latest Windows 11, keeping your files."
+      },
+      "tab": "windows",
+      "release": {
+        "version": "2026-09-29",
+        "build": "2026-09-29|4184360|\"0x08A9F4B357492B8D8BC938BB57FA2CAC0FB0812CDDF1A31D45E0022B37402590\"",
+        "url": "https://go.microsoft.com/fwlink/?linkid=2171764",
+        "fileName": "Windows11InstallationAssistant.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 4184360
+      }
+    },
+    {
+      "id": "win10-iso",
+      "name": "Windows 10 (ISO)",
+      "category": "win-iso",
+      "homepage": "https://www.microsoft.com/software-download/windows10ISO",
+      "desc": {
+        "vi": "File ISO Windows 10 từ trang Microsoft (Win 10 đã hết hỗ trợ từ 10/2025).",
+        "en": "Windows 10 ISO from Microsoft (support ended Oct 2025)."
+      },
+      "tab": "windows",
+      "link": "https://www.microsoft.com/software-download/windows10ISO",
+      "release": null
+    },
+    {
+      "id": "mct-win10",
+      "name": "Media Creation Tool (Win 10)",
+      "category": "win-iso",
+      "homepage": "https://www.microsoft.com/software-download/windows10",
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Công cụ chính thức tạo ISO hoặc USB cài Windows 10 (bản 22H2).",
+        "en": "Official tool to create a Windows 10 22H2 ISO or USB."
+      },
+      "tab": "windows",
+      "release": {
+        "version": "2025-03-03",
+        "build": "2025-03-03|19463448|\"0xF9DFCC6713CCD0CD3366C378E5A1B6F4D79F0771CCC79BF83C2CDEADF7DA3810\"",
+        "url": "https://go.microsoft.com/fwlink/?LinkId=691209",
+        "fileName": "MediaCreationTool_Win10.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 19463448
       }
     }
   ]
