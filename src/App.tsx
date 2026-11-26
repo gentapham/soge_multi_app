@@ -2,7 +2,7 @@ import { getCurrentWindow } from '@tauri-apps/api/window';
 import { Minus, X } from 'lucide-react';
 import { useEffect } from 'react';
 import mascotDownload from './assets/img/mascot-download.webp';
-import { AppUpdateBanner } from './components/AppUpdateBanner';
+import { AppUpdateBanner, JustUpdatedDialog } from './components/AppUpdateBanner';
 import { CatalogView } from './components/CatalogView';
 import { useAppUpdate } from './lib/appUpdate';
 import { LibraryView } from './components/LibraryView';
@@ -76,6 +76,7 @@ export default function App() {
       <ActivityPanel />
       <SettingsDialog />
       <UpdateDialogView />
+      <JustUpdatedDialog />
       <Toasts />
     </div>
   );

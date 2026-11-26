@@ -1,10 +1,12 @@
-import { BadgeCheck, FolderDown, FolderOpen, Gamepad2, Gift, Monitor, Settings as Cog, type LucideIcon } from 'lucide-react';
+import { BadgeCheck, ExternalLink, FolderDown, FolderOpen, Gamepad2, Gift, Monitor, Settings as Cog, ShoppingBag, type LucideIcon } from 'lucide-react';
 import { useAppUpdate } from '../lib/appUpdate';
 import { inTab } from '../lib/format';
 import logoText from '../assets/img/logo-text.webp';
 import { api } from '../lib/api';
 import { useStore, type View } from '../lib/store';
 import type { TKey } from '../lib/i18n';
+
+const SHOP_URL = 'https://sogestore.vn/';
 
 const NAV: { id: View; icon: LucideIcon; label?: TKey }[] = [
   { id: 'free', icon: Gift },
@@ -23,7 +25,13 @@ export function Sidebar() {
   return (
     <aside className="flex w-[276px] shrink-0 flex-col border-r border-line bg-surface/70">
       <div data-tauri-drag-region className="flex flex-col items-center px-6 pb-5 pt-6">
-        <img src={logoText} alt="SOGE Store" draggable={false} className="logo-chip pointer-events-none h-auto w-[160px]" />
+        <button
+          onClick={() => void api.openUrl(SHOP_URL)}
+          title="sogestore.vn"
+          className="rounded-2xl transition hover:scale-[1.03] active:scale-[.98]"
+        >
+          <img src={logoText} alt="SOGE Store" draggable={false} className="logo-chip pointer-events-none h-auto w-[160px]" />
+        </button>
         <div className="pointer-events-none mt-2 flex items-center gap-2">
           <span className="h-1.5 w-1.5 rounded-full bg-brand" />
           <span className="font-display text-[14px] font-extrabold tracking-[0.2em] text-muted">MULTI APP</span>
@@ -73,6 +81,19 @@ export function Sidebar() {
       </nav>
 
       <div className="mt-auto space-y-2 p-3">
+        <button
+          onClick={() => void api.openUrl(SHOP_URL)}
+          className="group flex w-full items-center gap-3 rounded-2xl bg-gradient-to-r from-[#FBAE2C] to-[#F59E8B] p-3 text-left text-[#3A1D16] shadow-card transition hover:brightness-105 active:scale-[.98]"
+        >
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/45">
+            <ShoppingBag className="h-[18px] w-[18px]" strokeWidth={2.3} />
+          </span>
+          <span className="min-w-0 flex-1 leading-tight">
+            <span className="block text-[13.5px] font-bold">{lang === 'en' ? 'Visit SOGE Store' : 'Ghé SOGE Store'}</span>
+            <span className="block text-[11.5px] font-medium opacity-75">sogestore.vn</span>
+          </span>
+          <ExternalLink className="h-4 w-4 opacity-60 transition group-hover:translate-x-0.5 group-hover:opacity-100" />
+        </button>
         <div className="rounded-2xl border border-line bg-surface p-3">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-muted">{t('folder')}</div>
           <div className="mt-1 truncate text-[13px] font-semibold" title={settings.downloadDir ?? ''}>

@@ -39,6 +39,28 @@ window.addEventListener('contextmenu', (e) => {
   if (!['INPUT', 'TEXTAREA'].includes(el.tagName)) e.preventDefault();
 });
 
+// Chỉ bản dev: Ctrl+Shift+U giả lập quá trình cập nhật app để xem giao diện (không cài thật)
+if (import.meta.env.DEV) {
+  window.addEventListener('keydown', async (e) => {
+    if (!(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'u')) return;
+    const { useAppUpdate } = await import('./lib/appUpdate');
+    const set = useAppUpdate.setState;
+    const total = 3_900_000;
+    set({ available: { version: '9.9.9' } as never, phase: 'downloading', received: 0, total: null });
+    await new Promise((r) => setTimeout(r, 700));
+    set({ total });
+    for (let got = 0; got < total; got += 260_000) {
+      set({ received: got });
+      await new Promise((r) => setTimeout(r, 120));
+    }
+    set({ phase: 'ready', received: total });
+    await new Promise((r) => setTimeout(r, 1800));
+    set({ phase: 'installing' });
+    await new Promise((r) => setTimeout(r, 2500));
+    set({ phase: 'idle', available: null, justUpdated: { from: '0.2.7', to: '9.9.9' } });
+  });
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
