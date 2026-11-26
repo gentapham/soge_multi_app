@@ -9,6 +9,7 @@ import {
   Flag,
   Gamepad2,
   Globe,
+  HardDrive,
   Joystick,
   Smartphone,
   Keyboard,
@@ -41,6 +42,7 @@ const CATEGORY_ICONS: Record<string, LucideIcon> = {
   trophy: Trophy,
   disc: Disc3,
   usb: Usb,
+  'hard-drive': HardDrive,
   smartphone: Smartphone,
   joystick: Joystick,
 };

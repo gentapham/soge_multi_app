@@ -1,4 +1,5 @@
 import { getCurrentWindow } from '@tauri-apps/api/window';
+import { ask } from '@tauri-apps/plugin-dialog';
 import { Activity, Copy, Minus, RefreshCw, Search, Square, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useStore } from '../lib/store';
@@ -63,7 +64,14 @@ export function TopBar() {
         <WinBtn onClick={() => void win.toggleMaximize()} title={t('maximize')}>
           {maximized ? <Copy className="h-3.5 w-3.5 -scale-x-100" /> : <Square className="h-3.5 w-3.5" />}
         </WinBtn>
-        <WinBtn onClick={() => void win.close()} title={t('closeWindow')} danger>
+        <WinBtn
+          onClick={async () => {
+            if (active > 0 && !(await ask(t('closeWhileBusy'), { title: 'SOGE Multi App', kind: 'warning' }))) return;
+            void win.close();
+          }}
+          title={t('closeWindow')}
+          danger
+        >
           <X className="h-4 w-4" />
         </WinBtn>
       </div>

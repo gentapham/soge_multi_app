@@ -1,6 +1,7 @@
 import { CircleAlert, CircleCheck, Download, Info, ListChecks, Monitor, Moon, Sun, X } from 'lucide-react';
 import { open } from '@tauri-apps/plugin-dialog';
 import mascotEmpty from '../assets/img/mascot-empty.webp';
+import mascotOffline from '../assets/img/mascot-offline.webp';
 import mascotSuccess from '../assets/img/mascot-success.webp';
 import mascotUpdate from '../assets/img/mascot-update.webp';
 import { displayVersion, formatBytes, formatSpeed, inCategory, inTab, matchesSearch } from '../lib/format';
@@ -59,7 +60,7 @@ export function ActivityPanel() {
       installing: t('installing'),
       done: t('done'),
       error: t('failed'),
-      cancelled: t('cancel'),
+      cancelled: t('cancelled'),
     })[p] ?? p;
   return (
     <>
@@ -155,16 +156,35 @@ export function UpdateDialogView() {
   const { updateDialog, set, t, tasks, settings } = s;
   const close = () => set({ updateDialog: null });
   if (!updateDialog) return null;
-  const img = updateDialog.kind === 'updating' ? mascotUpdate : updateDialog.kind === 'uptodate' ? mascotSuccess : mascotEmpty;
+  const img =
+    updateDialog.kind === 'updating'
+      ? mascotUpdate
+      : updateDialog.kind === 'uptodate'
+        ? mascotSuccess
+        : updateDialog.kind === 'offline'
+          ? mascotOffline
+          : mascotEmpty;
   return (
     <Modal open onClose={close} width={updateDialog.kind === 'updating' ? 560 : 440}>
       <div className="flex flex-col items-center text-center">
         <img src={img} alt="" className="h-36 w-36" draggable={false} />
         <h2 className="mt-1 font-display text-2xl font-bold">
-          {updateDialog.kind === 'updating' ? t('updatesTitle') : updateDialog.kind === 'uptodate' ? t('upToDateTitle') : t('libraryEmpty')}
+          {updateDialog.kind === 'updating'
+            ? t('updatesTitle')
+            : updateDialog.kind === 'uptodate'
+              ? t('upToDateTitle')
+              : updateDialog.kind === 'offline'
+                ? t('offlineTitle')
+                : t('libraryEmpty')}
         </h2>
         <p className="mt-1 text-sm text-muted">
-          {updateDialog.kind === 'updating' ? t('updatesText') : updateDialog.kind === 'uptodate' ? t('upToDateText') : t('nothingDownloaded')}
+          {updateDialog.kind === 'updating'
+            ? t('updatesText')
+            : updateDialog.kind === 'uptodate'
+              ? t('upToDateText')
+              : updateDialog.kind === 'offline'
+                ? t('offline')
+                : t('nothingDownloaded')}
         </p>
       </div>
       {updateDialog.kind === 'updating' && (

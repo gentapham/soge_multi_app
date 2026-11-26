@@ -24,12 +24,26 @@
       }
     ],
     "security": {
-      "csp": null
+      "csp": {
+        "default-src": "'self'",
+        "script-src": "'self'",
+        "style-src": "'self' 'unsafe-inline'",
+        "img-src": "'self' data: https://raw.githubusercontent.com",
+        "font-src": "'self' data:",
+        "connect-src": "ipc: http://ipc.localhost",
+        "object-src": "'none'",
+        "base-uri": "'none'",
+        "frame-src": "'none'",
+        "form-action": "'none'"
+      },
+      "freezePrototype": true
     }
   },
   "bundle": {
     "active": true,
-    "targets": ["nsis"],
+    "targets": [
+      "nsis"
+    ],
     "publisher": "SOGE Store",
     "shortDescription": "Tải & cài phần mềm nhanh",
     "copyright": "© SOGE Store",
@@ -41,7 +55,10 @@
     ],
     "windows": {
       "nsis": {
-        "languages": ["Vietnamese", "English"],
+        "languages": [
+          "Vietnamese",
+          "English"
+        ],
         "displayLanguageSelector": false,
         "installMode": "perMachine"
       }

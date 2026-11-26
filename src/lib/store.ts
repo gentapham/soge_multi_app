@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { api } from './api';
+import { compareVersions } from './format';
 import { translate, type TKey } from './i18n';
 import type { Catalog, CatalogApp, InstalledProgram, Lang, LibraryEntry, Settings, TabId, Task, Theme } from './types';
 
@@ -15,6 +16,7 @@ export interface Toast {
 export type UpdateDialog =
   | { kind: 'nothing' }
   | { kind: 'uptodate' }
+  | { kind: 'offline' }
   | { kind: 'updating'; appIds: string[] }
   | null;
 
@@ -66,7 +68,11 @@ export const appById = (s: State, id: string) => s.catalog?.apps.find((a) => a.i
 
 export const needsDownload = (s: State, app: CatalogApp) => {
   const e = s.library[app.id];
-  return !e || (!!app.release && e.version !== app.release.version);
+  if (!e) return true;
+  if (!app.release || e.version === app.release.version) return false;
+  // Không "cập nhật" lùi về bản cũ hơn (vd. danh mục lưu tạm cũ hơn file đã tải)
+  const cmp = compareVersions(app.release.version, e.version);
+  return cmp === null ? true : cmp > 0;
 };
 
 function applyTheme(theme: Theme) {
@@ -91,6 +97,7 @@ export const useStore = create<State>((set, get) => {
       const app = appById(s, task.appId);
       if (!app?.release) {
         patchTask(task.appId, { phase: 'error', error: get().t('unavailable') });
+        get().toast({ kind: 'err', title: app?.name ?? task.appId, text: get().t('unavailable') });
         continue;
       }
       slots--;
@@ -99,12 +106,9 @@ export const useStore = create<State>((set, get) => {
   };
 
   const runDownload = async (app: CatalogApp, kind: Task['kind']) => {
-    const s = get();
-    const tab = s.catalog!.tabs.find((t) => t.id === app.tab)!;
-    const cat = s.catalog!.categories.find((c) => c.id === app.category)!;
     patchTask(app.id, { phase: 'downloading', received: 0, total: app.release?.size ?? null, speed: 0 });
     try {
-      const entry = await api.download(app, tab, cat);
+      const entry = await api.download(app.id);
       set((st) => ({ library: { ...st.library, [app.id]: entry } }));
       if (kind === 'install') {
         patchTask(app.id, { phase: 'waiting-install' });
@@ -209,6 +213,7 @@ export const useStore = create<State>((set, get) => {
         applyTheme(settings.theme);
         set({ settings });
         if ('downloadDir' in patch) await get().refreshLibrary();
+        if ('maxConcurrent' in patch) pump();
         return true;
       } catch (e) {
         get().toast({ kind: 'err', title: get().t('folder'), text: String(e) });
@@ -218,7 +223,7 @@ export const useStore = create<State>((set, get) => {
 
     setView: (view) => set({ view, selected: [], search: '' }),
     setCategory: (c) => set((s) => ({ category: { ...s.category, [s.view]: c } })),
-    setSearch: (search) => set({ search }),
+    setSearch: (search) => set({ search, selected: [] }),
     toggleSelect: (id) =>
       set((s) => ({ selected: s.selected.includes(id) ? s.selected.filter((x) => x !== id) : [...s.selected, id] })),
     setSelected: (selected) => set({ selected }),
@@ -283,6 +288,11 @@ export const useStore = create<State>((set, get) => {
       try {
         const cat = await api.loadCatalog(true);
         set({ catalog: cat.data, catalogSource: cat.source });
+        if (cat.source !== 'remote') {
+          // Không kết nối được máy chủ: không thể khẳng định "đã mới nhất"
+          set({ updateDialog: { kind: 'offline' } });
+          return;
+        }
         await get().refreshLibrary();
         void get().refreshInstalled();
         const s = get();
@@ -301,6 +311,8 @@ export const useStore = create<State>((set, get) => {
         }
         set({ updateDialog: { kind: 'updating', appIds: outdated } });
         get().enqueue(outdated, 'download', { isUpdate: true });
+      } catch (e) {
+        get().toast({ kind: 'err', title: get().t('checkUpdate'), text: String(e) });
       } finally {
         set({ checking: false });
       }

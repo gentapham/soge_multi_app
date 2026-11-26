@@ -62,14 +62,24 @@ textarea {
   background: rgb(var(--brand) / 0.35);
 }
 
+/* Viền focus chỉ hiện khi dùng bàn phím (Tab), không hiện khi bấm chuột */
+:focus,
 :focus-visible {
+  outline: none;
+}
+body.kbd :focus-visible {
   outline: 2px solid rgb(var(--brand));
   outline-offset: 2px;
 }
+/* Ô nhập liệu đã có viền riêng của khung bao ngoài */
+body.kbd input:focus-visible {
+  outline: none;
+}
 
 @layer components {
+  /* Mọi nút đều có viền 1px (trong suốt nếu không cần) để cao bằng nhau */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl px-4 py-2 text-sm font-semibold transition
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-transparent px-4 py-2 text-sm font-semibold transition
       active:scale-[.97] disabled:pointer-events-none disabled:opacity-50;
   }
   .btn-primary {

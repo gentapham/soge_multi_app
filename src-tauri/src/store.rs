@@ -49,22 +49,31 @@ pub fn load_library(root: &Path) -> Library {
         .ok()
         .and_then(|s| serde_json::from_str(&s).ok())
         .unwrap_or_default();
-    // Bỏ các mục mà file đã bị người dùng xoá tay
-    lib.entries.retain(|_, e| root.join(&e.rel_path).exists());
+    // Chỉ giữ mục hợp lệ: đường dẫn nằm trong thư mục gốc (không "..", không junction)
+    // và file còn tồn tại. Mục bị sửa bậy hoặc file đã bị xoá tay sẽ bị bỏ qua.
+    lib.entries.retain(|k, e| {
+        k == &e.app_id
+            && crate::security::safe_join(root, &e.rel_path)
+                .map(|p| p.is_file())
+                .unwrap_or(false)
+    });
     lib
 }
 
 pub fn save_library(root: &Path, lib: &Library) -> Result<()> {
+    let dir = crate::security::create_dir_safe(root, Path::new(".soge"))?;
+    hide_dir(&dir);
     let path = library_path(root);
-    if let Some(parent) = path.parent() {
-        std::fs::create_dir_all(parent)?;
-        hide_dir(parent);
+    if crate::security::is_reparse(&path) {
+        std::fs::remove_file(&path)?;
     }
     write_atomic(&path, &serde_json::to_vec_pretty(lib)?)
 }
 
 fn write_atomic(path: &Path, bytes: &[u8]) -> Result<()> {
     let tmp = path.with_extension("tmp");
+    // Xoá file tạm cũ (nếu là symlink thì chỉ xoá chính link) để không ghi xuyên liên kết
+    let _ = std::fs::remove_file(&tmp);
     std::fs::write(&tmp, bytes)?;
     std::fs::rename(&tmp, path)?;
     Ok(())

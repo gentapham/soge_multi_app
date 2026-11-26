@@ -172,9 +172,12 @@ async function githubLatestFromHtml(repo) {
   const tag = decodeURIComponent(/\/releases\/tag\/([^/?#]+)/.exec(r.url)?.[1] ?? '');
   if (!tag) throw new Error('không tìm thấy release mới nhất');
   const html = await (await fetch(`https://github.com/${repo}/releases/expanded_assets/${encodeURIComponent(tag)}`, { headers: { 'User-Agent': UA } })).text();
+  const tagPage = await (await fetch(r.url, { headers: { 'User-Agent': UA } })).text();
+  const published = /<relative-time[^>]*datetime="([^"]+)"/.exec(tagPage)?.[1] ?? /datetime="([^"]+)"/.exec(html)?.[1];
+  if (!published) throw new Error('không đọc được ngày phát hành');
   const assets = [...html.matchAll(/href="(\/[^"]+\/releases\/download\/[^"]+)"/g)].map((m) => {
     const url = `https://github.com${m[1]}`;
-    return { name: decodeURIComponent(url.split('/').pop()), browser_download_url: url, updated_at: new Date().toISOString(), size: null };
+    return { name: decodeURIComponent(url.split('/').pop()), browser_download_url: url, updated_at: published, size: null };
   });
   return { tag_name: tag, name: tag, assets };
 }
@@ -318,11 +321,18 @@ async function main() {
         }
         if (release.launch && !out.launch) out.launch = release.launch;
         delete release.launch;
+        if (!/^https:\/\//i.test(release.url)) throw new Error(`link không phải https: ${release.url}`);
+        // Link cố định không chứa số phiên bản (vd. .../ChromeSetup.exe) có thể đổi file bất cứ lúc nào
+        // → mã SHA256 sẽ nhanh chóng lỗi thời. Bỏ mã, app sẽ kiểm tra chữ ký số Authenticode thay thế.
+        if (release.sha256 && !/\d+[._]\d+/.test(decodeURIComponent(new URL(release.url).pathname))) {
+          release.sha256 = null;
+        }
         out.release = release;
         console.log(`✔ ${app.id.padEnd(16)} ${release.version.padEnd(18)} ${release.installerType.padEnd(9)} ${release.fileName}`);
       } catch (e) {
         failures.push(`${app.id}: ${e.message}`);
         out.release = prev?.release ?? null; // giữ bản cũ nếu lần này lỗi
+        if (prev?.launch && !out.launch) out.launch = prev.launch;
         console.log(`✘ ${app.id.padEnd(16)} ${e.message}`);
       }
       try {

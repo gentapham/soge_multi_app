@@ -41,14 +41,35 @@ export function matchesSearch(app: CatalogApp, q: string): boolean {
     .every((w) => hay.includes(w));
 }
 
+const ADDON_RE = /\b(add-?in|plug-?in|extension|outlook|meeting|helper|redistributable|sdk|documentation|language pack)\b/;
+
+/** So sánh phiên bản dạng số (1.10 > 1.9). Trả về null nếu không so được. */
+export function compareVersions(a: string, b: string): number | null {
+  const num = (v: string) => (/^\d+(\.\d+)*/.exec(v.trim().replace(/^v/i, ''))?.[0] ?? null);
+  const x = num(a);
+  const y = num(b);
+  if (!x || !y) return null;
+  const pa = x.split('.').map(Number);
+  const pb = y.split('.').map(Number);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+    const d = (pa[i] ?? 0) - (pb[i] ?? 0);
+    if (d) return d;
+  }
+  return 0;
+}
+
 /** Tìm phần mềm đã cài trên máy dựa vào danh sách tên trong `detect`. */
 export function findInstalled(app: CatalogApp, programs: InstalledProgram[]): InstalledProgram | undefined {
   if (!app.detect?.length) return undefined;
   const pats = app.detect.map(norm);
   return programs.find((p) => {
     const n = norm(p.name);
-    // khớp đầu tên và ký tự kế tiếp không phải chữ cái (tránh "Git" khớp "GitHub Desktop")
-    return pats.some((pat) => n.startsWith(pat) && !/[a-z]/.test(n.charAt(pat.length)));
+    return pats.some((pat) => {
+      // khớp đầu tên, ký tự kế tiếp không phải chữ cái (tránh "Git" khớp "GitHub Desktop")
+      if (!n.startsWith(pat) || /[a-z]/.test(n.charAt(pat.length))) return false;
+      // bỏ qua add-in/plugin đi kèm (vd. "Microsoft Teams Meeting Add-in", "Zoom Outlook Plugin")
+      return !ADDON_RE.test(n.slice(pat.length));
+    });
   });
 }
 

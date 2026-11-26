@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T07:53:42.053Z",
+  "generatedAt": "2026-11-26T08:37:09.503Z",
   "tabs": [
     {
       "id": "free",
@@ -275,6 +275,16 @@
         "vi": "Tạo USB cài đặt",
         "en": "Bootable USB"
       }
+    },
+    {
+      "id": "win-nousb",
+      "tab": "windows",
+      "icon": "hard-drive",
+      "folder": "Khong Can USB",
+      "name": {
+        "vi": "Cài không cần USB",
+        "en": "No USB needed"
+      }
     }
   ],
   "apps": [
@@ -298,7 +308,7 @@
         "fileName": "googlechromestandaloneenterprise64.msi",
         "installerType": "wix",
         "silentArgs": null,
-        "sha256": "aa958c31c82a744eba52e1354bf2d97ae3b413d5ecd14125bdf7db1b1f44c99b"
+        "sha256": null
       }
     },
     {
@@ -547,7 +557,7 @@
         "fileName": "MicrosoftEdgeEnterpriseX64.msi",
         "installerType": "msi",
         "silentArgs": null,
-        "sha256": "784051ebfcc8b28569127f381d515766866c4925312d35c52293382b97eef2fb"
+        "sha256": null
       }
     },
     {
@@ -642,7 +652,7 @@
         "fileName": "EVKey.zip",
         "installerType": "zip",
         "silentArgs": null,
-        "sha256": "009c5697a3caff531974f6069d3c9c6642cbe66513cb6ecdb16d9d69bced028b",
+        "sha256": null,
         "size": 1017458
       }
     },
@@ -684,7 +694,7 @@
       "tab": "free",
       "release": {
         "version": "26.11.12",
-        "build": "2026-11-13|213516168|\"6af6b8bf-cb9ff88\"",
+        "build": "2026-11-26|213516168|\"6af6b8bf-cb9ff88\"",
         "url": "https://zalo.me/download/zalo-pc",
         "fileName": "ZaloSetup-26.11.12.exe",
         "installerType": "nullsoft",
@@ -800,7 +810,7 @@
           "--create-desktop-icon",
           "--create-shortcuts"
         ],
-        "sha256": "3f5a98b1a162ae3b3adf07df38cd554943e79919ff4ae90b44f392959887da22"
+        "sha256": null
       }
     },
     {
@@ -880,7 +890,8 @@
       "category": "chat",
       "homepage": "https://zoom.us/",
       "detect": [
-        "Zoom"
+        "Zoom",
+        "Zoom Workplace"
       ],
       "desc": {
         "vi": "Họp trực tuyến, học online.",
@@ -1555,7 +1566,7 @@
           "--backend=wsl-2",
           "--no-windows-containers"
         ],
-        "sha256": "98b24fd6f56313899953ca4d2ed05645d69963b598143b75c6585fa4f7f639b2"
+        "sha256": null
       }
     },
     {
@@ -1974,7 +1985,7 @@
           "/NORESTART",
           "/SP-"
         ],
-        "sha256": "a91126cf6bdba645da00b95be7ca54157666391798042bb2037bc23bffe791f9"
+        "sha256": null
       }
     },
     {
@@ -2187,7 +2198,6 @@
         "en": "Find & install missing drivers. Open source."
       },
       "tab": "free",
-      "launch": "SDIO_x64_R891.exe",
       "release": {
         "version": "2.0.8.891",
         "url": "https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.8.891.zip",
@@ -2441,7 +2451,7 @@
       "category": "media",
       "homepage": "https://codecguide.com/",
       "detect": [
-        "K-Lite"
+        "K-Lite Codec Pack"
       ],
       "desc": {
         "vi": "Bộ codec giúp Windows mở mọi file video.",
@@ -2459,7 +2469,7 @@
           "/NORESTART",
           "/SP-"
         ],
-        "sha256": "3caf9d253f788937d1a1b665cf67ffc3b75dfb48a998ac09f3ac3f47f3252941"
+        "sha256": null
       }
     },
     {
@@ -2483,7 +2493,7 @@
         "silentArgs": [
           "/S"
         ],
-        "sha256": "71374ce7f60136b8e8dd1618f736d37ccbefcc5875feb33650f9f8de0bba87e8"
+        "sha256": null
       }
     },
     {
@@ -2712,7 +2722,7 @@
           "/silent",
           "/skip-app-launch"
         ],
-        "sha256": "27e57a2a60fc3795d739ffe754b2a2701d9cc2f9a58e896182bcfb68ffb7fd11"
+        "sha256": null
       }
     },
     {
@@ -2787,7 +2797,7 @@
         "silentArgs": [
           "/S"
         ],
-        "sha256": "348e9690a638d84e30e32e9c7c2dd7aad9fd82d71eced1942c04c4c5620b0e1e"
+        "sha256": null
       }
     },
     {
@@ -2808,7 +2818,7 @@
         "fileName": "CinebenchR23.zip",
         "installerType": "zip",
         "silentArgs": null,
-        "sha256": "fff6d34b8f696de64a534fc9f0788ec1e9f1bda880a88aed92df8b96d1797c42"
+        "sha256": null
       }
     },
     {
@@ -2911,7 +2921,7 @@
           "/NORESTART",
           "/SP-"
         ],
-        "sha256": "c94bcf11560c6ef709854408b8a3732023dd94494b74c39beb1ec26992349a02"
+        "sha256": null
       }
     },
     {
@@ -2989,7 +2999,7 @@
         "silentArgs": [
           "/skipdlgs"
         ],
-        "sha256": "ab577063d4d157cacf126d38db237886493e5888a3e1e259dfb72e95b297376b"
+        "sha256": null
       }
     },
     {
@@ -3014,7 +3024,7 @@
         "silentArgs": [
           "-s1"
         ],
-        "sha256": "e9b0a91ce03726a16d29d437c78567c3b4c561086380f14a318cc6ceab2037ef"
+        "sha256": null
       }
     },
     {
@@ -3042,7 +3052,7 @@
           "/NORESTART",
           "/SP-"
         ],
-        "sha256": "ac44cbaf95641260a8bdf94e85d4f918ed67d31102008b94134baf83b4a6d6dc"
+        "sha256": null
       }
     },
     {
@@ -3147,7 +3157,7 @@
         "silentArgs": [
           "/S"
         ],
-        "sha256": "7d3654531c32d941b8cae81c4137fc542172bfa9635f169cb392f245a0a12bcb"
+        "sha256": null
       }
     },
     {
@@ -3193,7 +3203,7 @@
         "fileName": "battlenet-2.0.0.4232.exe",
         "installerType": "exe",
         "silentArgs": null,
-        "sha256": "f4643a2086c0cecb1ab68cc601bf38c1a0a6f7ef5914ad03375cc9449385bec6"
+        "sha256": null
       }
     },
     {
@@ -3243,7 +3253,7 @@
         "silentArgs": [
           "/S"
         ],
-        "sha256": "551ab83c2bd11490c7f3316325e6bf1a63cbeda66c6a7ba52a8bf4ed00b2abfe"
+        "sha256": null
       }
     },
     {
@@ -3278,8 +3288,7 @@
       "category": "vn",
       "homepage": "https://lienminh.vnggames.com/",
       "detect": [
-        "League of Legends",
-        "Riot Client"
+        "League of Legends"
       ],
       "installMode": "interactive",
       "desc": {
@@ -3345,7 +3354,7 @@
         "silentArgs": [
           "--silent"
         ],
-        "sha256": "cf436f1dd756cb1b4fc5553b194661e4c1bdcd21f95c142eed66a7f618b04895"
+        "sha256": null
       }
     },
     {
@@ -3749,7 +3758,7 @@
           "/quiet",
           "/norestart"
         ],
-        "sha256": "9c02c9ed120f671b900e6b9471d890e3b2414117a7e53f4ae2e855466fa2b7c9"
+        "sha256": null
       }
     },
     {
@@ -3775,7 +3784,7 @@
           "/quiet",
           "/norestart"
         ],
-        "sha256": "7b0117e6e20e9e349029c000a8a2715a52cf37c15b6bb697b2908e8bc7066cdf"
+        "sha256": null
       }
     },
     {
@@ -3796,7 +3805,7 @@
         "silentArgs": [
           "/Q"
         ],
-        "sha256": "2cf71d098c608c56e07f4655855a886c3102553f648df88458df616b26fd612f"
+        "sha256": null
       }
     },
     {
@@ -3914,7 +3923,7 @@
         "version": "6.0.2",
         "build": "2026-08-12|6102432|\"5cebb5b671a423443563bbd50f9b151f\"",
         "url": "https://api.mumuplayer.com/api/dl/win?channel=gw-overseas12",
-        "fileName": "MuMu_6.0.2_13vOQDuC.exe",
+        "fileName": "MuMu_6.0.2_13vWJYtC.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
@@ -3962,14 +3971,14 @@
       },
       "tab": "games",
       "release": {
-        "version": "2026-11-11",
-        "build": "2026-11-11|139060480|\"6af4252c-849e500\"",
+        "version": "2026-11-10",
+        "build": "2026-11-10|138403072|\"6af2b5d8-83fdd00\"",
         "url": "https://www.memuplay.com/download-en.php?file_name=Download-MEmu-Setup&from=official_release",
         "fileName": "MEmu-Setup.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
-        "size": 139060480
+        "size": 138403072
       }
     },
     {
@@ -3993,7 +4002,7 @@
         "silentArgs": [
           "--silent"
         ],
-        "sha256": "a483167fecbc569fcff25a92c8a633be90b6000fe53eca094426351d5e91f05a"
+        "sha256": null
       }
     },
     {
@@ -4136,8 +4145,8 @@
         "fileName": "shadps4-win64-sdl-0.21.0.zip",
         "installerType": "zip",
         "silentArgs": null,
-        "sha256": "95295b8f109663f70c2dac685e6232aa97be1353f6ed0a5d5e0c5dd24a797d88",
-        "size": 31725856
+        "sha256": null,
+        "size": null
       }
     },
     {
@@ -4158,8 +4167,8 @@
         "fileName": "windows-latest.zip",
         "installerType": "zip",
         "silentArgs": null,
-        "sha256": "26c5ded576834d1e4108c361119e2436671f709ac13866a8be51c1fc44e16829",
-        "size": 38251888
+        "sha256": null,
+        "size": null
       }
     },
     {
@@ -4295,7 +4304,7 @@
         "installerType": "zip",
         "silentArgs": null,
         "sha256": null,
-        "size": 5328695
+        "size": null
       }
     },
     {
@@ -4337,8 +4346,8 @@
         "fileName": "flycast-win64-2.7.zip",
         "installerType": "zip",
         "silentArgs": null,
-        "sha256": "7edf489ba6b3053703a18ce8233767eb71a2d89e4bda0421b312c2167a739161",
-        "size": 9885102
+        "sha256": null,
+        "size": null
       }
     },
     {
@@ -4431,6 +4440,52 @@
         "silentArgs": null,
         "sha256": null,
         "size": 19463448
+      }
+    },
+    {
+      "id": "wintohdd",
+      "name": "WinToHDD Free",
+      "category": "win-nousb",
+      "homepage": "https://www.easyuefi.com/wintohdd/",
+      "installMode": "interactive",
+      "detect": [
+        "WinToHDD"
+      ],
+      "desc": {
+        "vi": "Cài lại hoặc cài mới Windows trực tiếp từ file ISO, không cần USB hay đĩa.",
+        "en": "Reinstall or install Windows straight from an ISO, no USB needed."
+      },
+      "tab": "windows",
+      "release": {
+        "version": "2026-11-17",
+        "build": "2026-11-17|38323312",
+        "url": "https://www.easyuefi.com/wintohdd/downloads/WinToHDD_Free.exe",
+        "fileName": "WinToHDD_Free.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 38323312
+      }
+    },
+    {
+      "id": "dismpp",
+      "name": "Dism++",
+      "category": "win-nousb",
+      "homepage": "https://github.com/Chuyu-Team/Dism-Multi-language",
+      "installMode": "portable",
+      "desc": {
+        "vi": "Bung file ISO/WIM ra ổ đĩa khác để cài Windows không cần USB, dọn rác hệ thống. Mã nguồn mở.",
+        "en": "Apply ISO/WIM images to another drive without USB, clean up Windows. Open source."
+      },
+      "tab": "windows",
+      "launch": "Dism++x64.exe",
+      "release": {
+        "version": "10.1.1002.2",
+        "url": "https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.2/Dism++10.1.1002.1B.zip",
+        "fileName": "Dism++10.1.1002.1B.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "5bbab96d60704854efd8246a7d9371688b9102261544827fc8884126d70bcb3b"
       }
     }
   ]

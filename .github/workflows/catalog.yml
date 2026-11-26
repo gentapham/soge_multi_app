@@ -9,29 +9,54 @@ on:
     paths: ['catalog/catalog.json']
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: catalog
+  cancel-in-progress: false
 
 jobs:
   resolve:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      # Ghim theo mã commit để action không bị thay đổi ngầm
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      # --ignore-scripts: không chạy script cài đặt của thư viện khi đang có token
+      - run: npm ci --ignore-scripts
       - name: Tra cứu phiên bản & link mới nhất
         run: npm run catalog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Commit nếu có thay đổi
+      - name: Ký số danh mục (ed25519)
+        id: sign
+        env:
+          SOGE_SIGNING_KEY: ${{ secrets.SOGE_SIGNING_KEY }}
         run: |
-          if git diff --quiet -- catalog/resolved.json public/icons; then
+          if [ -z "$SOGE_SIGNING_KEY" ]; then
+            echo "::warning::Chưa cấu hình secret SOGE_SIGNING_KEY — bỏ qua, không commit (app sẽ từ chối danh mục chưa ký)."
+            echo "signed=false" >> "$GITHUB_OUTPUT"
+          else
+            node scripts/sign-catalog.mjs
+            echo "signed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Commit nếu có thay đổi
+        if: steps.sign.outputs.signed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet -- catalog public/icons; then
             echo "Không có gì mới"; exit 0
           fi
           git config user.name "soge-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A catalog/resolved.json public/icons
+          git add -A catalog/resolved.json catalog/resolved.json.sig public/icons
           git commit -m "chore(catalog): cập nhật phiên bản $(date -u +%Y-%m-%d)"
-          git push
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main

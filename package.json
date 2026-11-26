@@ -12,14 +12,15 @@
     "app:build": "tauri build",
     "catalog": "node scripts/resolve-catalog.mjs",
     "art": "node scripts/optimize-art.mjs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "sign": "node scripts/sign-catalog.mjs",
+    "catalog:release": "node scripts/resolve-catalog.mjs && node scripts/sign-catalog.mjs"
   },
   "dependencies": {
     "@fontsource/be-vietnam-pro": "^5.3.0",
     "@fontsource/nunito": "^5.3.0",
     "@tauri-apps/api": "^2.12.5",
     "@tauri-apps/plugin-dialog": "^2.8.4",
-    "@tauri-apps/plugin-opener": "^2.7.3",
     "lucide-react": "^0.460.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

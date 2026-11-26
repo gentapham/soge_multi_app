@@ -32,7 +32,8 @@
     { "id": "emu-android", "tab": "games", "icon": "smartphone", "folder": "Gia Lap Android", "name": { "vi": "Giả lập Android", "en": "Android emulators" } },
     { "id": "emu-console", "tab": "games", "icon": "joystick", "folder": "Gia Lap May Choi Game", "name": { "vi": "Giả lập máy chơi game", "en": "Console emulators" } },
     { "id": "win-iso", "tab": "windows", "icon": "disc", "folder": "Tai Windows", "name": { "vi": "Tải Windows chính chủ", "en": "Get Windows" } },
-    { "id": "win-usb", "tab": "windows", "icon": "usb", "folder": "Tao USB", "name": { "vi": "Tạo USB cài đặt", "en": "Bootable USB" } }
+    { "id": "win-usb", "tab": "windows", "icon": "usb", "folder": "Tao USB", "name": { "vi": "Tạo USB cài đặt", "en": "Bootable USB" } },
+    { "id": "win-nousb", "tab": "windows", "icon": "hard-drive", "folder": "Khong Can USB", "name": { "vi": "Cài không cần USB", "en": "No USB needed" } }
   ],
   "apps": [
     { "id": "chrome", "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/google-chrome.png", "name": "Google Chrome", "category": "browser", "homepage": "https://www.google.com/chrome/", "detect": ["Google Chrome"],
@@ -109,7 +110,7 @@
     { "id": "rustdesk", "name": "RustDesk", "category": "chat", "homepage": "https://rustdesk.com/", "detect": ["RustDesk"],
       "desc": { "vi": "Điều khiển máy tính từ xa miễn phí, thay TeamViewer. Mã nguồn mở.", "en": "Free remote desktop. Open source." },
       "source": {"type": "github", "repo": "rustdesk/rustdesk", "asset": "x86_64\\.msi$", "installerType": "msi"} },
-    { "id": "zoom", "name": "Zoom", "category": "chat", "homepage": "https://zoom.us/", "detect": ["Zoom"],
+    { "id": "zoom", "name": "Zoom", "category": "chat", "homepage": "https://zoom.us/", "detect": ["Zoom", "Zoom Workplace"],
       "desc": { "vi": "Họp trực tuyến, học online.", "en": "Video meetings." },
       "source": {"type": "winget", "id": "Zoom.Zoom"} },
     { "id": "teams", "name": "Microsoft Teams", "category": "chat", "homepage": "https://www.microsoft.com/microsoft-teams", "detect": ["Microsoft Teams"],
@@ -305,7 +306,7 @@
     { "id": "obs", "name": "OBS Studio", "category": "media", "homepage": "https://obsproject.com/", "detect": ["OBS Studio"],
       "desc": { "vi": "Quay màn hình & livestream chuyên nghiệp.", "en": "Screen recording and live streaming." },
       "source": { "type": "winget", "id": "OBSProject.OBSStudio" } },
-    { "id": "klite", "name": "K-Lite Codec Pack", "category": "media", "homepage": "https://codecguide.com/", "detect": ["K-Lite"],
+    { "id": "klite", "name": "K-Lite Codec Pack", "category": "media", "homepage": "https://codecguide.com/", "detect": ["K-Lite Codec Pack"],
       "desc": { "vi": "Bộ codec giúp Windows mở mọi file video.", "en": "Codecs for every video format." },
       "source": { "type": "winget", "id": "CodecGuide.K-LiteCodecPack.Standard" } },
     { "id": "potplayer", "name": "PotPlayer", "category": "media", "homepage": "https://potplayer.daum.net/", "detect": ["PotPlayer"],
@@ -410,7 +411,7 @@
     { "id": "garena", "name": "Garena", "category": "vn", "homepage": "https://garena.vn/", "detect": ["Garena"],
       "desc": { "vi": "FC Online, Liên Quân, Free Fire và các game Garena.", "en": "FC Online and other Garena games." },
       "source": { "type": "direct", "url": "https://cdn.gxx.garenanow.com/gxx/pc/installer/Garena-v2.0.exe", "installerType": "nullsoft", "silentArgs": ["/S"] } },
-    { "id": "lol-vn", "name": "Liên Minh Huyền Thoại VN", "category": "vn", "homepage": "https://lienminh.vnggames.com/", "detect": ["League of Legends", "Riot Client"], "installMode": "interactive",
+    { "id": "lol-vn", "name": "Liên Minh Huyền Thoại VN", "category": "vn", "homepage": "https://lienminh.vnggames.com/", "detect": ["League of Legends"], "installMode": "interactive",
       "desc": { "vi": "Bộ cài LMHT máy chủ Việt Nam.", "en": "League of Legends – Vietnam server." },
       "source": { "type": "direct", "url": "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.vn2.exe", "fileName": "Install League of Legends vn2.exe", "installerType": "exe" } },
     { "id": "vnggames", "name": "VNGGames Level Up", "category": "vn", "homepage": "https://vnggames.com/", "detect": ["Level Up"],
@@ -560,6 +561,12 @@
       "source": { "type": "link", "url": "https://www.microsoft.com/software-download/windows10ISO" } },
     { "id": "mct-win10", "name": "Media Creation Tool (Win 10)", "category": "win-iso", "homepage": "https://www.microsoft.com/software-download/windows10", "installMode": "interactive",
       "desc": { "vi": "Công cụ chính thức tạo ISO hoặc USB cài Windows 10 (bản 22H2).", "en": "Official tool to create a Windows 10 22H2 ISO or USB." },
-      "source": { "type": "direct", "url": "https://go.microsoft.com/fwlink/?LinkId=691209", "installerType": "exe", "fileName": "MediaCreationTool_Win10.exe" } }
+      "source": { "type": "direct", "url": "https://go.microsoft.com/fwlink/?LinkId=691209", "installerType": "exe", "fileName": "MediaCreationTool_Win10.exe" } },
+    { "id": "wintohdd", "name": "WinToHDD Free", "category": "win-nousb", "homepage": "https://www.easyuefi.com/wintohdd/", "installMode": "interactive", "detect": ["WinToHDD"],
+      "desc": { "vi": "Cài lại hoặc cài mới Windows trực tiếp từ file ISO, không cần USB hay đĩa.", "en": "Reinstall or install Windows straight from an ISO, no USB needed." },
+      "source": { "type": "direct", "url": "https://www.easyuefi.com/wintohdd/downloads/WinToHDD_Free.exe", "installerType": "exe", "fileName": "WinToHDD_Free.exe" } },
+    { "id": "dismpp", "name": "Dism++", "category": "win-nousb", "homepage": "https://github.com/Chuyu-Team/Dism-Multi-language", "installMode": "portable",
+      "desc": { "vi": "Bung file ISO/WIM ra ổ đĩa khác để cài Windows không cần USB, dọn rác hệ thống. Mã nguồn mở.", "en": "Apply ISO/WIM images to another drive without USB, clean up Windows. Open source." },
+      "source": { "type": "winget", "id": "ChuyuTeam.DISM++" } }
   ]
 }

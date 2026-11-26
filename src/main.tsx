@@ -17,6 +17,22 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
 
+// Bản release: chặn tải lại trang (F5/Ctrl+R) vì sẽ làm mất hàng đợi tải/cài đang chạy
+if (import.meta.env.PROD) {
+  window.addEventListener('keydown', (e) => {
+    const k = e.key.toLowerCase();
+    if (k === 'f5' || ((e.ctrlKey || e.metaKey) && (k === 'r' || k === 'p')) || (e.ctrlKey && e.shiftKey && k === 'i')) {
+      e.preventDefault();
+    }
+  });
+}
+
+// Chỉ hiện viền focus khi người dùng điều hướng bằng bàn phím
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Tab') document.body.classList.add('kbd');
+});
+window.addEventListener('mousedown', () => document.body.classList.remove('kbd'));
+
 // Chặn menu chuột phải mặc định của trình duyệt (trừ ô nhập liệu)
 window.addEventListener('contextmenu', (e) => {
   const el = e.target as HTMLElement;

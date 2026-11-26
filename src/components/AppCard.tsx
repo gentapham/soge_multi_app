@@ -1,5 +1,4 @@
 import { ask } from '@tauri-apps/plugin-dialog';
-import { openUrl } from '@tauri-apps/plugin-opener';
 import { Check, CircleCheck, Download, ExternalLink, FolderOpen, MoreHorizontal, RotateCcw, ShoppingCart, Sparkles, Trash2, X, Zap } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { api } from '../lib/api';
@@ -98,7 +97,7 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
         ) : (
           <div className="flex items-center gap-2">
             {isLink ? (
-              <button className="btn-primary flex-1" onClick={() => void openUrl(app.link!)}>
+              <button className="btn-primary flex-1" onClick={() => void api.openUrl(app.link!)}>
                 <ExternalLink className="h-4 w-4" /> {t('openPage')}
               </button>
             ) : (
@@ -126,7 +125,7 @@ export function AppCard({ app, index }: { app: CatalogApp; index: number }) {
             </button>
             )}
             {app.buyUrl && (
-              <button className="btn-outline !px-3" title={t('buy')} onClick={() => void openUrl(app.buyUrl!)}>
+              <button className="btn-outline !px-3" title={t('buy')} onClick={() => void api.openUrl(app.buyUrl!)}>
                 <ShoppingCart className="h-4 w-4" />
               </button>
             )}
@@ -203,7 +202,7 @@ function CardMenu({ app, hasEntry }: { app: CatalogApp; hasEntry: boolean }) {
               <FolderOpen className="h-4 w-4 text-muted" /> {t('showFile')}
             </button>
           )}
-          <button className={item} onClick={() => (void openUrl(app.homepage), setOpen(false))}>
+          <button className={item} onClick={() => (void api.openUrl(app.homepage), setOpen(false))}>
             <ExternalLink className="h-4 w-4 text-muted" /> {t('homepage')}
           </button>
           {hasEntry && (

@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
-/// Thông tin bản phát hành mới nhất của 1 phần mềm (do script resolve-catalog sinh ra).
+/// Thông tin bản phát hành mới nhất của 1 phần mềm (lấy từ danh mục ĐÃ XÁC MINH chữ ký).
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Release {
@@ -21,25 +21,21 @@ pub struct Release {
     pub archive_entry: Option<String>,
 }
 
-/// Yêu cầu tải 1 phần mềm, frontend gửi xuống.
-#[derive(Debug, Clone, Deserialize)]
-#[serde(rename_all = "camelCase")]
-pub struct DownloadRequest {
-    pub app_id: String,
-    pub app_name: String,
-    /// Thư mục cấp 1, ví dụ "Phan Mem Mien Phi"
+/// Một phần mềm trong danh mục, kèm tên thư mục lưu đã tra sẵn.
+#[derive(Debug, Clone)]
+pub struct AppInfo {
+    pub id: String,
+    pub name: String,
     pub tab_folder: String,
-    /// Thư mục cấp 2, ví dụ "Bo Go Chu"
     pub category_folder: String,
-    pub release: Release,
-    /// silent | interactive | portable
-    #[serde(default)]
     pub install_mode: Option<String>,
-    /// Tên file exe cần chạy với phần mềm portable (zip)
-    #[serde(default)]
     pub launch: Option<String>,
+    pub release: Option<Release>,
 }
 
+/// Bản ghi bộ cài đã tải. Lưu trong thư mục tải (người dùng thường ghi được) nên CHỈ dùng
+/// để biết file nằm đâu & phiên bản nào; mọi đường dẫn đều được kiểm tra lại, thông tin
+/// cài đặt (loại bộ cài, tham số) luôn lấy từ danh mục đã ký.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct LibraryEntry {
@@ -50,15 +46,10 @@ pub struct LibraryEntry {
     /// Đường dẫn tương đối so với thư mục gốc
     pub rel_path: String,
     pub size: u64,
+    #[serde(default)]
+    pub sha256: Option<String>,
+    #[serde(default)]
     pub installer_type: String,
-    #[serde(default)]
-    pub silent_args: Option<Vec<String>>,
-    #[serde(default)]
-    pub install_mode: Option<String>,
-    #[serde(default)]
-    pub launch: Option<String>,
-    #[serde(default)]
-    pub archive_entry: Option<String>,
     pub downloaded_at: u64,
 }
 
@@ -129,6 +120,8 @@ pub struct InstallResult {
     pub needs_reboot: bool,
     pub mode: String,
     pub message: Option<String>,
+    /// Nhà phát hành theo chữ ký số (nếu đã kiểm tra)
+    pub signer: Option<String>,
 }
 
 #[derive(Debug, Clone, Serialize)]

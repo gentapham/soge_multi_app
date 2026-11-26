@@ -109,6 +109,14 @@ function WindowsGuide() {
           </div>
         ))}
       </div>
+      <div className="mt-3 rounded-2xl border border-dashed border-line p-3.5">
+        <div className="text-[13px] font-bold">💡 {t('noUsbTitle')}</div>
+        <ul className="mt-1.5 space-y-1 text-[13px] leading-5 text-muted">
+          <li>• {t('noUsb1')}</li>
+          <li>• {t('noUsb2')}</li>
+          <li>• {t('noUsb3')}</li>
+        </ul>
+      </div>
       <p className="mt-3 text-xs text-muted">ⓘ {t('winNote')}</p>
     </section>
   );
