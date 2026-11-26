@@ -84,7 +84,7 @@ export function Sidebar() {
             </button>
           </div>
         </div>
-        <div className="px-2 text-[11px] text-muted/80">SOGE Multi App v0.1.0</div>
+        <div className="text-center text-[11px] text-muted/80">SOGE Multi App v0.1.0</div>
       </div>
     </aside>
   );

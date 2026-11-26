@@ -3,9 +3,9 @@ import type { Lang } from './types';
 const dict = {
   vi: {
     appTagline: 'Tải & cài phần mềm chỉ với một cú nhấp',
-    tabFreeSub: 'Phần mềm miễn phí, an toàn, tải từ trang chính thức',
-    tabLicensedSub: 'Bộ cài chính chủ — dùng thử hoặc kích hoạt bằng bản quyền của bạn',
-    tabGamesSub: 'Launcher & client game từ các nhà phát hành',
+    tabFreeSub: 'Miễn phí, an toàn, tải từ trang chính thức',
+    tabLicensedSub: 'Bộ cài chính chủ, dùng thử hoặc kích hoạt bản quyền',
+    tabGamesSub: 'Launcher & client game chính thức',
     library: 'Đã tải về',
     librarySub: 'Các bộ cài đang có trong thư mục của bạn',
     settings: 'Cài đặt',
@@ -90,9 +90,9 @@ const dict = {
   },
   en: {
     appTagline: 'Download & install software in one click',
-    tabFreeSub: 'Safe free software, straight from official sources',
-    tabLicensedSub: 'Official installers — trial, or activate with your own license',
-    tabGamesSub: 'Game launchers & clients from publishers',
+    tabFreeSub: 'Free, safe, from official sources',
+    tabLicensedSub: 'Official installers, trial or your own license',
+    tabGamesSub: 'Official game launchers & clients',
     library: 'Downloaded',
     librarySub: 'Installers currently in your folder',
     settings: 'Settings',

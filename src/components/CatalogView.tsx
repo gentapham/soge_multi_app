@@ -34,7 +34,7 @@ export function CatalogView({ tab }: { tab: TabId }) {
         <img src={BANNERS[tab]} alt="" draggable={false} className="absolute inset-0 h-full w-full object-cover object-right" />
         <div className="relative flex h-full flex-col justify-center pl-9 text-[#3A1D16]">
           <h1 className="font-display text-[38px] font-extrabold leading-none tracking-tight">{tabDef.name[lang]}</h1>
-          <p className="mt-2 max-w-[440px] text-[14px] font-medium text-[#3A1D16]/70">{t(SUB[tab])}</p>
+          <p className="mt-2 whitespace-nowrap text-[14px] font-medium text-[#3A1D16]/70">{t(SUB[tab])}</p>
           <div className="mt-3 flex gap-2">
             <span className="badge bg-[#3A1D16] px-2.5 py-1 text-[12px] text-[#F6EFE9]">
               {inTab.length} {t('apps')}
