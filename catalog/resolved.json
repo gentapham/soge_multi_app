@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T07:44:52.291Z",
+  "generatedAt": "2026-11-26T07:53:42.053Z",
   "tabs": [
     {
       "id": "free",
@@ -2187,6 +2187,7 @@
         "en": "Find & install missing drivers. Open source."
       },
       "tab": "free",
+      "launch": "SDIO_x64_R891.exe",
       "release": {
         "version": "2.0.8.891",
         "url": "https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.8.891.zip",
@@ -3913,7 +3914,7 @@
         "version": "6.0.2",
         "build": "2026-08-12|6102432|\"5cebb5b671a423443563bbd50f9b151f\"",
         "url": "https://api.mumuplayer.com/api/dl/win?channel=gw-overseas12",
-        "fileName": "MuMu_6.0.2_13vwe3PC.exe",
+        "fileName": "MuMu_6.0.2_13vOQDuC.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
@@ -3961,14 +3962,14 @@
       },
       "tab": "games",
       "release": {
-        "version": "2026-11-10",
-        "build": "2026-11-10|138403072|\"6af2b5d8-83fdd00\"",
+        "version": "2026-11-11",
+        "build": "2026-11-11|139060480|\"6af4252c-849e500\"",
         "url": "https://www.memuplay.com/download-en.php?file_name=Download-MEmu-Setup&from=official_release",
         "fileName": "MEmu-Setup.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
-        "size": 138403072
+        "size": 139060480
       }
     },
     {
