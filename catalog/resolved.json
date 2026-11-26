@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T06:35:47.275Z",
+  "generatedAt": "2026-11-26T06:39:43.168Z",
   "tabs": [
     {
       "id": "free",
@@ -2153,6 +2153,7 @@
         "en": "Find & install missing drivers. Open source."
       },
       "tab": "free",
+      "launch": "SDIO_x64_R891.exe",
       "release": {
         "version": "2.0.8.891",
         "url": "https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.8.891.zip",
@@ -3879,7 +3880,7 @@
         "version": "6.0.2",
         "build": "2026-08-12|6102432|\"5cebb5b671a423443563bbd50f9b151f\"",
         "url": "https://api.mumuplayer.com/api/dl/win?channel=gw-overseas12",
-        "fileName": "MuMu_6.0.2_13vv6QvC.exe",
+        "fileName": "MuMu_6.0.2_13vwe3PC.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
