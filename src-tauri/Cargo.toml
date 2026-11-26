@@ -1,0 +1,40 @@
+[package]
+name = "soge-multi-app"
+version = "0.1.0"
+description = "SOGE Multi App - tải và cài phần mềm nhanh cho Windows"
+authors = ["SOGE Store"]
+license = ""
+repository = "https://github.com/gentapham/soge_multi_app"
+edition = "2021"
+rust-version = "1.80"
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "stream", "json", "gzip"] }
+tokio = { version = "1", features = ["fs", "io-util", "process", "time", "sync", "macros"] }
+futures-util = "0.3"
+sha2 = "0.10"
+hex = "0.4"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+anyhow = "1"
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.55"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true

@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 247 241 235;
+  --surface: 255 255 255;
+  --surface-2: 251 246 241;
+  --line: 236 225 215;
+  --ink: 58 29 22;
+  --muted: 138 116 104;
+  --brand: 251 174 44;
+  --brand-soft: 254 240 212;
+  --blush: 247 181 176;
+  --ok: 46 160 90;
+  --bad: 224 83 61;
+  --info: 59 130 246;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: 26 18 15;
+  --surface: 38 27 23;
+  --surface-2: 47 34 29;
+  --line: 66 50 42;
+  --ink: 246 239 233;
+  --muted: 182 162 150;
+  --brand: 251 178 56;
+  --brand-soft: 71 50 25;
+  --blush: 214 130 124;
+  --ok: 74 196 120;
+  --bad: 240 110 90;
+  --info: 96 165 250;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg font-sans text-ink antialiased;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea {
+  user-select: text;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--line)) transparent;
+}
+
+::selection {
+  background: rgb(var(--brand) / 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--brand));
+  outline-offset: 2px;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl px-4 py-2 text-sm font-semibold transition
+      active:scale-[.97] disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-[#3A1D16] shadow-[inset_0_-2px_0_rgb(0_0_0/0.12)] hover:brightness-105;
+  }
+  .btn-dark {
+    @apply btn bg-ink text-bg hover:opacity-90;
+  }
+  .btn-ghost {
+    @apply btn text-ink hover:bg-surface-2;
+  }
+  .btn-outline {
+    @apply btn border border-line bg-surface text-ink hover:border-brand/60 hover:bg-surface-2;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-line bg-surface px-3.5 py-1.5 text-[13px] font-medium text-muted transition hover:text-ink;
+  }
+  .chip-active {
+    @apply border-ink bg-ink text-bg hover:text-bg;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold;
+  }
+  .drag {
+    -webkit-app-region: drag;
+    app-region: drag;
+  }
+  .no-drag {
+    -webkit-app-region: no-drag;
+    app-region: no-drag;
+  }
+}
+
+/* Logo chữ có phần "STORE" màu nâu: ở giao diện tối đặt trên nền kem cho dễ đọc */
+[data-theme='dark'] .logo-chip {
+  background: #f6efe9;
+  border-radius: 18px;
+  padding: 8px 14px;
+  box-sizing: content-box;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

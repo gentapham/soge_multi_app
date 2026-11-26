@@ -1,0 +1,1535 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-26T05:55:56.206Z",
+  "tabs": [
+    {
+      "id": "free",
+      "folder": "Mien Phi",
+      "name": {
+        "vi": "Phần Mềm Miễn Phí",
+        "en": "Free Software"
+      }
+    },
+    {
+      "id": "licensed",
+      "folder": "Ban Quyen",
+      "name": {
+        "vi": "Phần Mềm Bản Quyền",
+        "en": "Licensed Software"
+      }
+    },
+    {
+      "id": "games",
+      "folder": "Games",
+      "name": {
+        "vi": "Games",
+        "en": "Games"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "browser",
+      "tab": "free",
+      "icon": "globe",
+      "folder": "Trinh Duyet",
+      "name": {
+        "vi": "Trình duyệt",
+        "en": "Browsers"
+      }
+    },
+    {
+      "id": "typing",
+      "tab": "free",
+      "icon": "keyboard",
+      "folder": "Bo Go Chu",
+      "name": {
+        "vi": "Bộ gõ chữ",
+        "en": "Vietnamese input"
+      }
+    },
+    {
+      "id": "chat",
+      "tab": "free",
+      "icon": "message-circle",
+      "folder": "Lien Lac",
+      "name": {
+        "vi": "Liên lạc & điều khiển",
+        "en": "Chat & remote"
+      }
+    },
+    {
+      "id": "office",
+      "tab": "free",
+      "icon": "file-text",
+      "folder": "Van Phong",
+      "name": {
+        "vi": "Văn phòng",
+        "en": "Office"
+      }
+    },
+    {
+      "id": "dev",
+      "tab": "free",
+      "icon": "code",
+      "folder": "Lap Trinh",
+      "name": {
+        "vi": "Lập trình",
+        "en": "Development"
+      }
+    },
+    {
+      "id": "system",
+      "tab": "free",
+      "icon": "wrench",
+      "folder": "Tien Ich He Thong",
+      "name": {
+        "vi": "Tiện ích hệ thống",
+        "en": "System tools"
+      }
+    },
+    {
+      "id": "media",
+      "tab": "free",
+      "icon": "clapperboard",
+      "folder": "Da Phuong Tien",
+      "name": {
+        "vi": "Đa phương tiện",
+        "en": "Media"
+      }
+    },
+    {
+      "id": "driver",
+      "tab": "free",
+      "icon": "cpu",
+      "folder": "Driver Hieu Nang",
+      "name": {
+        "vi": "Driver & hiệu năng",
+        "en": "Drivers & performance"
+      }
+    },
+    {
+      "id": "download",
+      "tab": "free",
+      "icon": "download",
+      "folder": "Tai Xuong",
+      "name": {
+        "vi": "Trình tải xuống",
+        "en": "Download managers"
+      }
+    },
+    {
+      "id": "office-pro",
+      "tab": "licensed",
+      "icon": "file-text",
+      "folder": "Van Phong",
+      "name": {
+        "vi": "Văn phòng",
+        "en": "Office"
+      }
+    },
+    {
+      "id": "creative",
+      "tab": "licensed",
+      "icon": "palette",
+      "folder": "Do Hoa",
+      "name": {
+        "vi": "Đồ hoạ & video",
+        "en": "Creative"
+      }
+    },
+    {
+      "id": "utility-pro",
+      "tab": "licensed",
+      "icon": "wrench",
+      "folder": "Tien Ich",
+      "name": {
+        "vi": "Tiện ích",
+        "en": "Utilities"
+      }
+    },
+    {
+      "id": "security",
+      "tab": "licensed",
+      "icon": "shield",
+      "folder": "Bao Mat",
+      "name": {
+        "vi": "Bảo mật",
+        "en": "Security"
+      }
+    },
+    {
+      "id": "dev-pro",
+      "tab": "licensed",
+      "icon": "code",
+      "folder": "Lap Trinh",
+      "name": {
+        "vi": "Lập trình",
+        "en": "Development"
+      }
+    },
+    {
+      "id": "platform",
+      "tab": "games",
+      "icon": "gamepad",
+      "folder": "Nen Tang",
+      "name": {
+        "vi": "Nền tảng quốc tế",
+        "en": "Global platforms"
+      }
+    },
+    {
+      "id": "vn",
+      "tab": "games",
+      "icon": "flag",
+      "folder": "NPH Viet Nam",
+      "name": {
+        "vi": "NPH Việt Nam",
+        "en": "Vietnam publishers"
+      }
+    },
+    {
+      "id": "esport",
+      "tab": "games",
+      "icon": "trophy",
+      "folder": "Thi Dau",
+      "name": {
+        "vi": "Thi đấu",
+        "en": "Competitive"
+      }
+    }
+  ],
+  "apps": [
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "category": "browser",
+      "homepage": "https://www.google.com/chrome/",
+      "detect": [
+        "Google Chrome"
+      ],
+      "desc": {
+        "vi": "Trình duyệt nhanh, phổ biến nhất thế giới.",
+        "en": "The world's most popular fast browser."
+      },
+      "tab": "free",
+      "release": {
+        "version": "158.0.8127.89",
+        "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi",
+        "fileName": "googlechromestandaloneenterprise64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "aa958c31c82a744eba52e1354bf2d97ae3b413d5ecd14125bdf7db1b1f44c99b"
+      }
+    },
+    {
+      "id": "coccoc",
+      "name": "Cốc Cốc",
+      "category": "browser",
+      "homepage": "https://coccoc.com/",
+      "detect": [
+        "Cốc Cốc",
+        "CocCoc"
+      ],
+      "desc": {
+        "vi": "Trình duyệt của người Việt, có sẵn tải video và từ điển.",
+        "en": "Vietnamese browser with built-in video downloader."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2026-11-16",
+        "build": "2026-11-16|15147944|\"6afa72a2-e723a8\"",
+        "url": "https://files.coccoc.com/browser/coccoc_vi.exe",
+        "fileName": "CocCocSetup.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/silent",
+          "/install"
+        ],
+        "sha256": null,
+        "size": 15147944
+      }
+    },
+    {
+      "id": "brave",
+      "name": "Brave",
+      "category": "browser",
+      "homepage": "https://brave.com/",
+      "detect": [
+        "Brave"
+      ],
+      "desc": {
+        "vi": "Trình duyệt chặn quảng cáo, bảo vệ quyền riêng tư.",
+        "en": "Privacy browser with built-in ad blocking."
+      },
+      "tab": "free",
+      "release": {
+        "version": "158.1.100.58",
+        "url": "https://github.com/brave/brave-browser/releases/download/v1.100.58/BraveBrowserStandaloneSetup.exe",
+        "fileName": "BraveBrowserStandaloneSetup.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/silent",
+          "/install"
+        ],
+        "sha256": "2802553c89831effe624bd1b0dd8e39c463e03a1224d557441350a5586e559ce"
+      }
+    },
+    {
+      "id": "firefox",
+      "name": "Mozilla Firefox",
+      "category": "browser",
+      "homepage": "https://www.mozilla.org/firefox/",
+      "detect": [
+        "Mozilla Firefox"
+      ],
+      "desc": {
+        "vi": "Trình duyệt mã nguồn mở, nhẹ và riêng tư.",
+        "en": "Open-source, private browser."
+      },
+      "tab": "free",
+      "release": {
+        "version": "160.0.1",
+        "url": "https://download-installer.cdn.mozilla.net/pub/firefox/releases/160.0.1/win64/en-US/Firefox%20Setup%20160.0.1.exe",
+        "fileName": "Firefox Setup 160.0.1.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S",
+          "/PreventRebootRequired=true"
+        ],
+        "sha256": "768e29619f3463c157f20c5ab1e4d480acfb0d84f1a39ee60ef3151fed91ceb2"
+      }
+    },
+    {
+      "id": "unikey",
+      "name": "UniKey",
+      "category": "typing",
+      "homepage": "https://www.unikey.org/",
+      "installMode": "portable",
+      "launch": "UniKeyNT.exe",
+      "desc": {
+        "vi": "Bộ gõ tiếng Việt quen thuộc, gọn nhẹ.",
+        "en": "The classic Vietnamese keyboard."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.6 RC2",
+        "build": "2023-09-28|721044|\"b0094-6066ed68d0800\"",
+        "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip",
+        "fileName": "unikey46RC2-230919-win64.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 721044
+      }
+    },
+    {
+      "id": "evkey",
+      "name": "EVKey",
+      "category": "typing",
+      "homepage": "https://github.com/lamquangminh/EVKey",
+      "installMode": "portable",
+      "launch": "EVKey64.exe",
+      "desc": {
+        "vi": "Bộ gõ tiếng Việt hiện đại, sửa lỗi gõ trên Chrome/Excel.",
+        "en": "Modern Vietnamese keyboard, fixes typing glitches."
+      },
+      "tab": "free",
+      "release": {
+        "version": "6.1.1",
+        "url": "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKey.zip",
+        "fileName": "EVKey.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "009c5697a3caff531974f6069d3c9c6642cbe66513cb6ecdb16d9d69bced028b",
+        "size": 1017458
+      }
+    },
+    {
+      "id": "openkey",
+      "name": "OpenKey",
+      "category": "typing",
+      "homepage": "https://github.com/tuyenvm/OpenKey",
+      "installMode": "portable",
+      "launch": "OpenKey64.exe",
+      "desc": {
+        "vi": "Bộ gõ tiếng Việt mã nguồn mở.",
+        "en": "Open-source Vietnamese keyboard."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.0.5",
+        "url": "https://github.com/tuyenvm/OpenKey/releases/download/2.0.5/OpenKey64-Windows-2.0.5-RC.zip",
+        "fileName": "OpenKey64-Windows-2.0.5-RC.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 361915
+      }
+    },
+    {
+      "id": "zalo",
+      "name": "Zalo PC",
+      "category": "chat",
+      "homepage": "https://zalo.me/pc",
+      "detect": [
+        "Zalo"
+      ],
+      "desc": {
+        "vi": "Nhắn tin, gọi video, gửi file với bạn bè & đồng nghiệp.",
+        "en": "Messaging and calls, Vietnam's #1 chat app."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.11.12",
+        "build": "2026-11-26|213516168|\"6af6b8bf-cb9ff88\"",
+        "url": "https://zalo.me/download/zalo-pc",
+        "fileName": "ZaloSetup-26.11.12.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": null,
+        "size": 213516168
+      }
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "category": "chat",
+      "homepage": "https://desktop.telegram.org/",
+      "detect": [
+        "Telegram Desktop"
+      ],
+      "desc": {
+        "vi": "Nhắn tin nhanh, bảo mật, đồng bộ nhiều thiết bị.",
+        "en": "Fast, secure cloud messaging."
+      },
+      "tab": "free",
+      "release": {
+        "version": "7.4.6",
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.6/td-setup-win-x64-7.4.6.exe",
+        "fileName": "td-setup-win-x64-7.4.6.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "c4323c79b76b86e3b160953ec7ebeadce502d7e042ae7d7a407f423d21ad3d3f"
+      }
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "category": "chat",
+      "homepage": "https://discord.com/",
+      "detect": [
+        "Discord"
+      ],
+      "desc": {
+        "vi": "Trò chuyện thoại, nhắn tin cho game thủ & cộng đồng.",
+        "en": "Voice and text chat for communities."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.0.9270",
+        "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9270/DiscordSetup.exe",
+        "fileName": "DiscordSetup.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": "0d03d3b67a2c41335f65be94a0f7814af28e1c5d5dac3f1d525a7f28a63df856"
+      }
+    },
+    {
+      "id": "ultraviewer",
+      "name": "UltraViewer",
+      "category": "chat",
+      "homepage": "https://ultraviewer.net/",
+      "detect": [
+        "UltraViewer"
+      ],
+      "desc": {
+        "vi": "Điều khiển máy tính từ xa, hỗ trợ khách hàng.",
+        "en": "Remote desktop for support."
+      },
+      "tab": "free",
+      "release": {
+        "version": "6.6.124",
+        "url": "https://dl2.ultraviewer.net/UltraViewer_setup_6.6_vi.exe",
+        "fileName": "UltraViewer_setup_6.6_vi.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "c3932f8f894b4c77200d3850dcf5d7f6f1c456ea7d2baa8131176f5763a425bb"
+      }
+    },
+    {
+      "id": "anydesk",
+      "name": "AnyDesk",
+      "category": "chat",
+      "homepage": "https://anydesk.com/",
+      "detect": [
+        "AnyDesk"
+      ],
+      "desc": {
+        "vi": "Điều khiển từ xa tốc độ cao.",
+        "en": "Fast remote desktop."
+      },
+      "tab": "free",
+      "release": {
+        "version": "9.8.4",
+        "url": "https://download.anydesk.com/AnyDesk.exe",
+        "fileName": "AnyDesk.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--install",
+          "C:\\Program Files (x86)\\AnyDesk",
+          "--silent",
+          "--update-auto",
+          "--create-desktop-icon",
+          "--create-shortcuts"
+        ],
+        "sha256": "3f5a98b1a162ae3b3adf07df38cd554943e79919ff4ae90b44f392959887da22"
+      }
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "category": "office",
+      "homepage": "https://www.libreoffice.org/",
+      "detect": [
+        "LibreOffice"
+      ],
+      "desc": {
+        "vi": "Bộ văn phòng miễn phí: soạn thảo, bảng tính, trình chiếu.",
+        "en": "Free office suite."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.8.3.1",
+        "url": "https://download.documentfoundation.org/libreoffice/stable/26.8.3/win/x86_64/LibreOffice_26.8.3_Win_x86-64.msi",
+        "fileName": "LibreOffice_26.8.3_Win_x86-64.msi",
+        "installerType": "msi",
+        "silentArgs": null,
+        "sha256": "0e6918c273eabbdbbd800ee0dacbbf130a14c13c2e4cec861b06dd59e015bf94"
+      }
+    },
+    {
+      "id": "foxit",
+      "name": "Foxit PDF Reader",
+      "category": "office",
+      "homepage": "https://www.foxit.com/pdf-reader/",
+      "detect": [
+        "Foxit PDF Reader"
+      ],
+      "desc": {
+        "vi": "Đọc, ký và ghi chú PDF nhẹ nhàng.",
+        "en": "Lightweight PDF reader."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2026.2.1.39815",
+        "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2026.2.1/FoxitPDFReader202621_L10N_Setup_x64.exe",
+        "fileName": "FoxitPDFReader202621_L10N_Setup_x64.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/quiet"
+        ],
+        "sha256": "71f1a0cb46c0854e7b45d675f2ebbd5052261a0d95f6513dc6aa087c6350ee27"
+      }
+    },
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "category": "dev",
+      "homepage": "https://code.visualstudio.com/",
+      "detect": [
+        "Microsoft Visual Studio Code"
+      ],
+      "desc": {
+        "vi": "Trình soạn code miễn phí, nhiều tiện ích.",
+        "en": "Free code editor by Microsoft."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.148.0",
+        "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/661626d0e72f97806550790a98fb87116c9db825/VSCodeSetup-x64-1.148.0.exe",
+        "fileName": "VSCodeSetup-x64-1.148.0.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "80e3c1814125f141afd5e196c22a831abfc5fdf4ee4087cf6b08c692e649f79c"
+      }
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "dev",
+      "homepage": "https://git-scm.com/",
+      "detect": [
+        "Git"
+      ],
+      "desc": {
+        "vi": "Quản lý phiên bản mã nguồn.",
+        "en": "Version control system."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.56.1",
+        "url": "https://github.com/git-for-windows/git/releases/download/v2.56.1.windows.1/Git-2.56.1-64-bit.exe",
+        "fileName": "Git-2.56.1-64-bit.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/SP-",
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART"
+        ],
+        "sha256": "c330c72e10b408cc39994bfefdb63542b0d93d21699325c3e0bd874af8a5a559"
+      }
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js LTS",
+      "category": "dev",
+      "homepage": "https://nodejs.org/",
+      "detect": [
+        "Node.js"
+      ],
+      "desc": {
+        "vi": "Môi trường chạy JavaScript (bản ổn định LTS).",
+        "en": "JavaScript runtime (LTS)."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.13.1",
+        "url": "https://nodejs.org/dist/v26.13.1/node-v26.13.1-x64.msi",
+        "fileName": "node-v26.13.1-x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "0398ced8446e119478c724d1aa37c5afd6aa1a76fceab12787eb9714c5ed8b45"
+      }
+    },
+    {
+      "id": "python",
+      "name": "Python 3.13",
+      "category": "dev",
+      "homepage": "https://www.python.org/",
+      "detect": [
+        "Python 3.13"
+      ],
+      "desc": {
+        "vi": "Ngôn ngữ lập trình phổ biến, dễ học.",
+        "en": "Popular, easy programming language."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.13.17",
+        "url": "https://www.python.org/ftp/python/3.13.17/python-3.13.17-amd64.exe",
+        "fileName": "python-3.13.17-amd64.exe",
+        "installerType": "burn",
+        "silentArgs": [
+          "/quiet",
+          "/norestart"
+        ],
+        "sha256": "5da012101ba2e17113a9a1cd901e9ce1441086f2b7ecb5de06ec94163899a190"
+      }
+    },
+    {
+      "id": "laragon",
+      "name": "Laragon",
+      "category": "dev",
+      "homepage": "https://laragon.org/",
+      "detect": [
+        "Laragon"
+      ],
+      "desc": {
+        "vi": "Môi trường PHP/MySQL cục bộ siêu nhanh.",
+        "en": "Fast local PHP/MySQL environment."
+      },
+      "tab": "free",
+      "release": {
+        "version": "8.9.0",
+        "url": "https://github.com/leokhoa/laragon/releases/download/8.9.0/laragon-wamp.exe",
+        "fileName": "laragon-wamp.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "d1198a75fb4487039242508c54b96af7f0ef054a7cf202442154cd078253e555"
+      }
+    },
+    {
+      "id": "xampp",
+      "name": "XAMPP",
+      "category": "dev",
+      "homepage": "https://www.apachefriends.org/",
+      "detect": [
+        "XAMPP"
+      ],
+      "desc": {
+        "vi": "Apache, MySQL, PHP trọn gói.",
+        "en": "Apache, MySQL and PHP bundle."
+      },
+      "tab": "free",
+      "release": {
+        "version": "8.2.12-0",
+        "url": "https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe",
+        "fileName": "xampp-windows-x64-8.2.12-0-VS16-installer.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--mode",
+          "unattended",
+          "--unattendedmodeui",
+          "none"
+        ],
+        "sha256": "12e818ce5aec79fe646606df3a80b35da865ec0213646ad7c92044dcfcec7535"
+      }
+    },
+    {
+      "id": "antigravity",
+      "name": "Google Antigravity",
+      "category": "dev",
+      "homepage": "https://antigravity.google/",
+      "detect": [
+        "Antigravity"
+      ],
+      "desc": {
+        "vi": "IDE lập trình có AI của Google.",
+        "en": "Google's AI-powered IDE."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.8.0",
+        "url": "https://edgedl.me.gvt1.com/edgedl/release2/j0qc3/antigravity/stable/2.8.0-6733682917113856/windows-x64/Antigravity%20IDE.exe",
+        "fileName": "Antigravity IDE.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "0f63d94c0be212e25157125eb3757272b5aa95ea06538298631c14a3d7709197"
+      }
+    },
+    {
+      "id": "7zip",
+      "name": "7-Zip",
+      "category": "system",
+      "homepage": "https://www.7-zip.org/",
+      "detect": [
+        "7-Zip"
+      ],
+      "desc": {
+        "vi": "Nén & giải nén mọi định dạng: zip, rar, 7z…",
+        "en": "Open/compress zip, rar, 7z and more."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.06",
+        "url": "https://github.com/ip7z/7zip/releases/download/26.06/7z2606-x64.msi",
+        "fileName": "7z2606-x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "6dc822569e777d9a3ecd5ffcbc22b55600af87e6c5d9810a64e8566cf5a4af9f"
+      }
+    },
+    {
+      "id": "rufus",
+      "name": "Rufus",
+      "category": "system",
+      "homepage": "https://rufus.ie/",
+      "installMode": "portable",
+      "desc": {
+        "vi": "Tạo USB cài Windows chỉ vài cú nhấp.",
+        "en": "Create bootable USB drives."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.16",
+        "url": "https://github.com/pbatard/rufus/releases/download/v4.16/rufus-4.16.exe",
+        "fileName": "rufus-4.16.exe",
+        "installerType": "portable",
+        "silentArgs": null,
+        "sha256": "8351a56c134aa6dd26a930d702cc3fd57f11ef90b17e55a8de960d5a73d46cfc"
+      }
+    },
+    {
+      "id": "crystaldiskinfo",
+      "name": "CrystalDiskInfo",
+      "category": "system",
+      "homepage": "https://crystalmark.info/",
+      "detect": [
+        "CrystalDiskInfo"
+      ],
+      "desc": {
+        "vi": "Kiểm tra sức khoẻ ổ cứng HDD/SSD.",
+        "en": "Check HDD/SSD health."
+      },
+      "tab": "free",
+      "release": {
+        "version": "9.9.5",
+        "url": "https://sourceforge.net/projects/crystaldiskinfo/files/9.9.5/CrystalDiskInfo9_9_5.exe/download",
+        "fileName": "crystaldiskinfo-9.9.5.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "17cf38131d89003c666d499ccb62b5b9418b0127d7f362aeefeaa048481a8912"
+      }
+    },
+    {
+      "id": "crystaldiskmark",
+      "name": "CrystalDiskMark",
+      "category": "system",
+      "homepage": "https://crystalmark.info/",
+      "detect": [
+        "CrystalDiskMark"
+      ],
+      "desc": {
+        "vi": "Đo tốc độ đọc/ghi ổ cứng.",
+        "en": "Benchmark disk speed."
+      },
+      "tab": "free",
+      "release": {
+        "version": "9.0.3",
+        "url": "https://sourceforge.net/projects/crystaldiskmark/files/9.0.3/CrystalDiskMark9_0_3.exe",
+        "fileName": "CrystalDiskMark9_0_3.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "1a255154e116a533f86535bc362f101e32d6171604cde9b6b554335856917e5e"
+      }
+    },
+    {
+      "id": "ddu",
+      "name": "Display Driver Uninstaller",
+      "category": "system",
+      "homepage": "https://www.wagnardsoft.com/",
+      "detect": [
+        "Display Driver Uninstaller"
+      ],
+      "desc": {
+        "vi": "Gỡ sạch driver card màn hình NVIDIA/AMD/Intel.",
+        "en": "Cleanly remove GPU drivers."
+      },
+      "tab": "free",
+      "release": {
+        "version": "18.1.5.3",
+        "url": "https://www.wagnardsoft.com/DDU/download/DDU%20v18.1.5.3_setup.exe",
+        "fileName": "DDU v18.1.5.3_setup.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "1e854c00aa7086a85559551abbfb8f0f3ebbb88a1c6126c6e7a1d0a61f25c0a1"
+      }
+    },
+    {
+      "id": "fancontrol",
+      "name": "FanControl",
+      "category": "system",
+      "homepage": "https://getfancontrol.com/",
+      "detect": [
+        "FanControl",
+        "Fan Control"
+      ],
+      "desc": {
+        "vi": "Điều chỉnh tốc độ quạt máy tính theo nhiệt độ.",
+        "en": "Custom fan curves for your PC."
+      },
+      "tab": "free",
+      "release": {
+        "version": "286",
+        "url": "https://github.com/Rem0o/FanControl.Releases/releases/download/V286/FanControl_286_net_10_0_Installer.exe",
+        "fileName": "FanControl_286_net_10_0_Installer.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "162121ae8c176e90f3447c6ae3f60df7af7c51d3ae5be0cd6fa36e01de0fe88c"
+      }
+    },
+    {
+      "id": "cpuz",
+      "name": "CPU-Z",
+      "category": "system",
+      "homepage": "https://www.cpuid.com/softwares/cpu-z.html",
+      "detect": [
+        "CPU-Z"
+      ],
+      "desc": {
+        "vi": "Xem thông tin CPU, RAM, mainboard.",
+        "en": "CPU, RAM and motherboard info."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.02",
+        "url": "https://download.cpuid.com/cpu-z/cpu-z_3.02-en.exe",
+        "fileName": "cpu-z_3.02-en.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "7109edaeffddd39b75d170d5465263185cc80103f37f49065709e91ddcecee8d"
+      }
+    },
+    {
+      "id": "hwinfo",
+      "name": "HWiNFO",
+      "category": "system",
+      "homepage": "https://www.hwinfo.com/",
+      "detect": [
+        "HWiNFO"
+      ],
+      "desc": {
+        "vi": "Theo dõi nhiệt độ, cảm biến phần cứng chi tiết.",
+        "en": "Detailed hardware sensors."
+      },
+      "tab": "free",
+      "release": {
+        "version": "8.60",
+        "url": "https://www.sac.sk/download/utildiag/hwi_860x.exe",
+        "fileName": "hwi_860x.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "a91126cf6bdba645da00b95be7ca54157666391798042bb2037bc23bffe791f9"
+      }
+    },
+    {
+      "id": "vlc",
+      "name": "VLC Media Player",
+      "category": "media",
+      "homepage": "https://www.videolan.org/",
+      "detect": [
+        "VLC media player"
+      ],
+      "desc": {
+        "vi": "Xem mọi định dạng video, nhạc.",
+        "en": "Plays every video and audio format."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.0.24",
+        "url": "https://download.videolan.org/pub/videolan/vlc/3.0.24/win64/vlc-3.0.24-win64.msi",
+        "fileName": "vlc-3.0.24-win64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "22172095ce4c2d5f5b600bb4c142d78105db29a77fa59a931941876f3b20f6d0"
+      }
+    },
+    {
+      "id": "obs",
+      "name": "OBS Studio",
+      "category": "media",
+      "homepage": "https://obsproject.com/",
+      "detect": [
+        "OBS Studio"
+      ],
+      "desc": {
+        "vi": "Quay màn hình & livestream chuyên nghiệp.",
+        "en": "Screen recording and live streaming."
+      },
+      "tab": "free",
+      "release": {
+        "version": "33.0.3",
+        "url": "https://github.com/obsproject/obs-studio/releases/download/33.0.3/OBS-Studio-33.0.3-Windows-x64-Installer.exe",
+        "fileName": "OBS-Studio-33.0.3-Windows-x64-Installer.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "700be33c01468c2a1e43820bbcc49ba914f570f0f82250022bb680fba43b2a67"
+      }
+    },
+    {
+      "id": "klite",
+      "name": "K-Lite Codec Pack",
+      "category": "media",
+      "homepage": "https://codecguide.com/",
+      "detect": [
+        "K-Lite"
+      ],
+      "desc": {
+        "vi": "Bộ codec giúp Windows mở mọi file video.",
+        "en": "Codecs for every video format."
+      },
+      "tab": "free",
+      "release": {
+        "version": "20.2.0",
+        "url": "https://files2.codecguide.com/K-Lite_Codec_Pack_2020_Standard.exe",
+        "fileName": "K-Lite_Codec_Pack_2020_Standard.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "3caf9d253f788937d1a1b665cf67ffc3b75dfb48a998ac09f3ac3f47f3252941"
+      }
+    },
+    {
+      "id": "nvidia-app",
+      "name": "NVIDIA App",
+      "category": "driver",
+      "homepage": "https://www.nvidia.com/en-us/software/nvidia-app/",
+      "detect": [
+        "NVIDIA app"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Cập nhật driver card NVIDIA, tối ưu game.",
+        "en": "NVIDIA drivers and game optimization."
+      },
+      "tab": "free",
+      "release": {
+        "version": "11.0.9.585",
+        "build": "2026-10-30|184718176|\"629d8bf949179cb8e989d0316dedde8d:1793691415.645277\"",
+        "url": "https://us.download.nvidia.com/nvapp/client/11.0.9.585/x64/NVIDIA_app_v11.0.9.585_x64.exe",
+        "fileName": "NVIDIA_app_v11.0.9.585_x64.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 184718176
+      }
+    },
+    {
+      "id": "afterburner",
+      "name": "MSI Afterburner",
+      "category": "driver",
+      "homepage": "https://www.msi.com/Landing/afterburner",
+      "detect": [
+        "MSI Afterburner"
+      ],
+      "desc": {
+        "vi": "Theo dõi FPS, nhiệt độ, ép xung card màn hình.",
+        "en": "GPU monitoring and overclocking."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.6.6",
+        "url": "https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/[Guru3D]-MSIAfterburnerSetup466Build16757.zip",
+        "fileName": "[Guru3D]-MSIAfterburnerSetup466Build16757.zip",
+        "installerType": "nullsoft",
+        "archiveEntry": "MSIAfterburnerSetup466.exe",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "348e9690a638d84e30e32e9c7c2dd7aad9fd82d71eced1942c04c4c5620b0e1e"
+      }
+    },
+    {
+      "id": "cinebench",
+      "name": "Cinebench R23",
+      "category": "driver",
+      "homepage": "https://www.maxon.net/cinebench",
+      "installMode": "portable",
+      "launch": "Cinebench.exe",
+      "desc": {
+        "vi": "Chấm điểm sức mạnh CPU.",
+        "en": "CPU benchmark."
+      },
+      "tab": "free",
+      "release": {
+        "version": "23.200",
+        "url": "https://installer.maxon.net/cinebench/CinebenchR23.zip",
+        "fileName": "CinebenchR23.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "fff6d34b8f696de64a534fc9f0788ec1e9f1bda880a88aed92df8b96d1797c42"
+      }
+    },
+    {
+      "id": "neatdm",
+      "name": "Neat Download Manager",
+      "category": "download",
+      "homepage": "https://www.neatdownloadmanager.com/",
+      "detect": [
+        "Neat Download Manager"
+      ],
+      "desc": {
+        "vi": "Tăng tốc tải file miễn phí, thay thế IDM.",
+        "en": "Free download accelerator."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2022-11-15",
+        "build": "2022-11-15|917340|\"637404c5-dff5c\"",
+        "url": "https://www.neatdownloadmanager.com/file/NeatDM_setup.exe",
+        "fileName": "NeatDM_setup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART"
+        ],
+        "sha256": null,
+        "size": 917340
+      }
+    },
+    {
+      "id": "office",
+      "name": "Microsoft 365 / Office",
+      "category": "office-pro",
+      "homepage": "https://www.office.com/",
+      "buyUrl": "https://www.microsoft.com/vi-vn/microsoft-365",
+      "detect": [
+        "Microsoft 365",
+        "Microsoft Office"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Word, Excel, PowerPoint chính chủ. Đăng nhập tài khoản Microsoft để kích hoạt.",
+        "en": "Official Word, Excel, PowerPoint. Sign in to activate."
+      },
+      "tab": "licensed",
+      "release": {
+        "version": "Microsoft 365",
+        "build": "7330832",
+        "url": "https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=O365HomePremRetail&platform=x64&language=vi-vn&version=O16GA",
+        "fileName": "OfficeSetup.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 7330832
+      }
+    },
+    {
+      "id": "adobe-cc",
+      "name": "Adobe Creative Cloud",
+      "category": "creative",
+      "homepage": "https://www.adobe.com/creativecloud.html",
+      "buyUrl": "https://www.adobe.com/vn_vi/creativecloud/plans.html",
+      "detect": [
+        "Adobe Creative Cloud"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Cài Photoshop, Premiere, Illustrator… chính chủ từ Adobe.",
+        "en": "Official installer for Photoshop, Premiere and more."
+      },
+      "tab": "licensed",
+      "release": {
+        "version": "Creative Cloud",
+        "build": "3389984",
+        "url": "https://prod-rel-ffc-ccm.oobesaas.adobe.com/adobe-ffc-external/core/v1/wam/download?sapCode=KCCC&wamFeature=nuj-live",
+        "fileName": "Creative_Cloud_Set-Up.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 3389984
+      }
+    },
+    {
+      "id": "idm",
+      "name": "Internet Download Manager",
+      "category": "utility-pro",
+      "homepage": "https://www.internetdownloadmanager.com/",
+      "buyUrl": "https://www.internetdownloadmanager.com/buy.html",
+      "detect": [
+        "Internet Download Manager"
+      ],
+      "desc": {
+        "vi": "Tăng tốc tải file tới 5 lần. Dùng thử 30 ngày.",
+        "en": "Download accelerator. 30-day trial."
+      },
+      "tab": "licensed",
+      "release": {
+        "version": "6.43.19",
+        "url": "https://download.internetdownloadmanager.com/idman643build19.exe",
+        "fileName": "idman643build19.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/skipdlgs"
+        ],
+        "sha256": "ab577063d4d157cacf126d38db237886493e5888a3e1e259dfb72e95b297376b"
+      }
+    },
+    {
+      "id": "winrar",
+      "name": "WinRAR",
+      "category": "utility-pro",
+      "homepage": "https://www.win-rar.com/",
+      "buyUrl": "https://www.win-rar.com/buy.html",
+      "detect": [
+        "WinRAR"
+      ],
+      "desc": {
+        "vi": "Nén & giải nén RAR/ZIP. Dùng thử 40 ngày.",
+        "en": "RAR/ZIP archiver. 40-day trial."
+      },
+      "tab": "licensed",
+      "release": {
+        "version": "7.23.0",
+        "url": "https://www.rarlab.com/rar/winrar-x64-723vn.exe",
+        "fileName": "winrar-x64-723vn.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "-s1"
+        ],
+        "sha256": "e9b0a91ce03726a16d29d437c78567c3b4c561086380f14a318cc6ceab2037ef"
+      }
+    },
+    {
+      "id": "revo",
+      "name": "Revo Uninstaller Pro",
+      "category": "utility-pro",
+      "homepage": "https://www.revouninstaller.com/",
+      "buyUrl": "https://www.revouninstaller.com/buy/",
+      "detect": [
+        "Revo Uninstaller"
+      ],
+      "desc": {
+        "vi": "Gỡ phần mềm tận gốc, dọn rác registry.",
+        "en": "Uninstall apps completely."
+      },
+      "tab": "licensed",
+      "release": {
+        "version": "5.5.4.0",
+        "url": "https://download.revouninstaller.com/download/RevoUninProSetup.exe",
+        "fileName": "RevoUninProSetup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "ac44cbaf95641260a8bdf94e85d4f918ed67d31102008b94134baf83b4a6d6dc"
+      }
+    },
+    {
+      "id": "treesize",
+      "name": "TreeSize",
+      "category": "utility-pro",
+      "homepage": "https://www.jam-software.com/treesize",
+      "buyUrl": "https://www.jam-software.com/treesize/buy.shtml",
+      "detect": [
+        "TreeSize"
+      ],
+      "desc": {
+        "vi": "Tìm thư mục chiếm nhiều dung lượng ổ đĩa.",
+        "en": "Find what fills your disk."
+      },
+      "tab": "licensed",
+      "release": {
+        "version": "9.9.1",
+        "url": "https://downloads.jam-software.de/treesize/archive/v9.9.1.2401/TreeSize-Setup.exe",
+        "fileName": "TreeSize-Setup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "8005e320671b67a2f72ac2b0b3b70853e55fa4a764c762a3a026ef4f4cde5319"
+      }
+    },
+    {
+      "id": "malwarebytes",
+      "name": "Malwarebytes",
+      "category": "security",
+      "homepage": "https://www.malwarebytes.com/",
+      "buyUrl": "https://www.malwarebytes.com/pricing",
+      "detect": [
+        "Malwarebytes"
+      ],
+      "desc": {
+        "vi": "Quét và diệt mã độc, phần mềm quảng cáo.",
+        "en": "Remove malware and adware."
+      },
+      "tab": "licensed",
+      "release": {
+        "version": "5.7.3.376",
+        "url": "https://data-cdn.mbamupdates.com/web/mb5-setup-consumer/offline/mb5-setup-consumer-5.7.3.376-167.0.5780-1.0.115771.exe",
+        "fileName": "mb5-setup-consumer-5.7.3.376-167.0.5780-1.0.115771.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/NORESTART"
+        ],
+        "sha256": "be06e457881269992d5d8b57f2303f9bb3a73f25eca301b801bfd46b0b049bdb"
+      }
+    },
+    {
+      "id": "fork",
+      "name": "Fork",
+      "category": "dev-pro",
+      "homepage": "https://git-fork.com/",
+      "buyUrl": "https://git-fork.com/buy",
+      "detect": [
+        "Fork"
+      ],
+      "desc": {
+        "vi": "Giao diện Git đẹp, nhanh cho lập trình viên.",
+        "en": "Fast and friendly Git client."
+      },
+      "tab": "licensed",
+      "release": {
+        "version": "2.24.0",
+        "url": "https://cdn.fork.dev/win/Fork-2.24.0.exe",
+        "fileName": "Fork-2.24.0.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--silent"
+        ],
+        "sha256": "49f861a587a8d7c5d56e2ef0c38afcfb52b5d4b469e640314f941a681d83899f"
+      }
+    },
+    {
+      "id": "steam",
+      "name": "Steam",
+      "category": "platform",
+      "homepage": "https://store.steampowered.com/",
+      "detect": [
+        "Steam"
+      ],
+      "desc": {
+        "vi": "Kho game PC lớn nhất thế giới.",
+        "en": "The largest PC game store."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2.10.91.91",
+        "url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe",
+        "fileName": "SteamSetup.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "7d3654531c32d941b8cae81c4137fc542172bfa9635f169cb392f245a0a12bcb"
+      }
+    },
+    {
+      "id": "epic",
+      "name": "Epic Games Launcher",
+      "category": "platform",
+      "homepage": "https://store.epicgames.com/",
+      "detect": [
+        "Epic Games Launcher"
+      ],
+      "desc": {
+        "vi": "Nhận game miễn phí mỗi tuần, Fortnite.",
+        "en": "Free games every week, Fortnite."
+      },
+      "tab": "games",
+      "release": {
+        "version": "1.3.210.0",
+        "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Windows/EpicInstaller-20.3.3.msi?launcherfilename=EpicInstaller-20.3.3.msi",
+        "fileName": "EpicInstaller-20.3.3.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "d55d79710edfeaa107a62f2ea007bec1eeeac8b715a43c2ba3858eec7bc60337"
+      }
+    },
+    {
+      "id": "battlenet",
+      "name": "Battle.net",
+      "category": "platform",
+      "homepage": "https://battle.net/",
+      "detect": [
+        "Battle.net"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Diablo, Overwatch, World of Warcraft, Call of Duty.",
+        "en": "Diablo, Overwatch, WoW, Call of Duty."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2.0.0.4232",
+        "url": "https://downloader.battle.net/download/getInstaller?os=win&installer=Battle.net-Setup.exe",
+        "fileName": "battlenet-2.0.0.4232.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": "f4643a2086c0cecb1ab68cc601bf38c1a0a6f7ef5914ad03375cc9449385bec6"
+      }
+    },
+    {
+      "id": "ea",
+      "name": "EA App",
+      "category": "platform",
+      "homepage": "https://www.ea.com/ea-app",
+      "detect": [
+        "EA app"
+      ],
+      "desc": {
+        "vi": "FC, Battlefield, The Sims, Apex Legends.",
+        "en": "FC, Battlefield, The Sims, Apex."
+      },
+      "tab": "games",
+      "release": {
+        "version": "13.836.0.6349",
+        "url": "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller-13.836.0.6349-16817646.exe",
+        "fileName": "EAappInstaller-13.836.0.6349-16817646.exe",
+        "installerType": "burn",
+        "silentArgs": [
+          "/passive",
+          "/norestart",
+          "/norestart"
+        ],
+        "sha256": "a9874bfe31f058559a5a85b3b0dc349d8bc7f21df9b86092938471264cab54fd"
+      }
+    },
+    {
+      "id": "ubisoft",
+      "name": "Ubisoft Connect",
+      "category": "platform",
+      "homepage": "https://ubisoftconnect.com/",
+      "detect": [
+        "Ubisoft Connect"
+      ],
+      "desc": {
+        "vi": "Assassin's Creed, Far Cry, Rainbow Six.",
+        "en": "Assassin's Creed, Far Cry, Rainbow Six."
+      },
+      "tab": "games",
+      "release": {
+        "version": "175.2.0.13423",
+        "url": "https://static3.cdn.ubi.com/orbit/launcher_installer/UbisoftConnectInstaller.exe",
+        "fileName": "UbisoftConnectInstaller.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "551ab83c2bd11490c7f3316325e6bf1a63cbeda66c6a7ba52a8bf4ed00b2abfe"
+      }
+    },
+    {
+      "id": "garena",
+      "name": "Garena",
+      "category": "vn",
+      "homepage": "https://garena.vn/",
+      "detect": [
+        "Garena"
+      ],
+      "desc": {
+        "vi": "FC Online, Liên Quân, Free Fire và các game Garena.",
+        "en": "FC Online and other Garena games."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2.0",
+        "build": "2025-09-15|73106216|\"2c597f29fdcede06be9d18e9bf65c275-2\"",
+        "url": "https://cdn.gxx.garenanow.com/gxx/pc/installer/Garena-v2.0.exe",
+        "fileName": "Garena-v2.0.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": null,
+        "size": 73106216
+      }
+    },
+    {
+      "id": "lol-vn",
+      "name": "Liên Minh Huyền Thoại VN",
+      "category": "vn",
+      "homepage": "https://lienminh.vnggames.com/",
+      "detect": [
+        "League of Legends",
+        "Riot Client"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Bộ cài LMHT máy chủ Việt Nam.",
+        "en": "League of Legends – Vietnam server."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2026-11-05",
+        "build": "2026-11-05|76714752|\"a237f13140c416e05340199e1429483f-10\"",
+        "url": "https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.vn2.exe",
+        "fileName": "Install League of Legends vn2.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 76714752
+      }
+    },
+    {
+      "id": "vnggames",
+      "name": "VNGGames Level Up",
+      "category": "vn",
+      "homepage": "https://vnggames.com/",
+      "detect": [
+        "Level Up"
+      ],
+      "desc": {
+        "vi": "Launcher chính thức các game PC của VNGGames.",
+        "en": "Official VNGGames PC launcher."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2026-11-11",
+        "build": "2026-11-11|146861384|\"91681be5a629c9cdf0c55fdb464942af-18\"",
+        "url": "https://cdn-nexus.vnggames.com/launcher/installer/mainsite/Level%20Up%20-%20Installer.exe",
+        "fileName": "Level Up - Installer.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": null,
+        "size": 146861384
+      }
+    },
+    {
+      "id": "faceit",
+      "name": "FACEIT",
+      "category": "esport",
+      "homepage": "https://www.faceit.com/",
+      "detect": [
+        "FACEIT"
+      ],
+      "desc": {
+        "vi": "Nền tảng thi đấu CS2 & Valorant.",
+        "en": "Competitive platform for CS2."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2.11.2",
+        "url": "https://faceit-client.faceit-cdn.net/release/FACEIT-setup-latest.exe",
+        "fileName": "FACEIT-setup-latest.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--silent"
+        ],
+        "sha256": "cf436f1dd756cb1b4fc5553b194661e4c1bdcd21f95c142eed66a7f618b04895"
+      }
+    }
+  ]
+}

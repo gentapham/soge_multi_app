@@ -1,0 +1,37 @@
+name: Cập nhật danh mục phần mềm
+
+on:
+  schedule:
+    - cron: '0 1 * * *' # 08:00 giờ Việt Nam mỗi ngày
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['catalog/catalog.json']
+
+permissions:
+  contents: write
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Tra cứu phiên bản & link mới nhất
+        run: npm run catalog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit nếu có thay đổi
+        run: |
+          if git diff --quiet -- catalog/resolved.json public/icons; then
+            echo "Không có gì mới"; exit 0
+          fi
+          git config user.name "soge-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog/resolved.json public/icons
+          git commit -m "chore(catalog): cập nhật phiên bản $(date -u +%Y-%m-%d)"
+          git push
