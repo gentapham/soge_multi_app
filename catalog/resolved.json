@@ -1197,7 +1197,7 @@
       "name": "WinRAR",
       "category": "utility-pro",
       "homepage": "https://www.win-rar.com/",
-      "buyUrl": "https://www.win-rar.com/buy.html",
+      "buyUrl": "https://www.win-rar.com/winrarlicense.html",
       "detect": [
         "WinRAR"
       ],
@@ -1222,7 +1222,7 @@
       "name": "Revo Uninstaller Pro",
       "category": "utility-pro",
       "homepage": "https://www.revouninstaller.com/",
-      "buyUrl": "https://www.revouninstaller.com/buy/",
+      "buyUrl": "https://www.revouninstaller.com/buy-now-revo-uninstaller-pro/",
       "detect": [
         "Revo Uninstaller"
       ],
@@ -1251,7 +1251,7 @@
       "name": "TreeSize",
       "category": "utility-pro",
       "homepage": "https://www.jam-software.com/treesize",
-      "buyUrl": "https://www.jam-software.com/treesize/buy.shtml",
+      "buyUrl": "https://customers.jam-software.de/prices.php?language=EN&article_group_id=1",
       "detect": [
         "TreeSize"
       ],
@@ -1377,7 +1377,7 @@
       "id": "battlenet",
       "name": "Battle.net",
       "category": "platform",
-      "homepage": "https://battle.net/",
+      "homepage": "https://download.battle.net/",
       "detect": [
         "Battle.net"
       ],

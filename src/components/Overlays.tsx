@@ -22,7 +22,7 @@ export function SelectionBar() {
     ) ?? [];
   if (!selected.length) return null;
   return (
-    <div className="pointer-events-none fixed bottom-6 left-[248px] right-0 z-30 flex justify-center">
+    <div className="pointer-events-none fixed bottom-6 left-[276px] right-0 z-30 flex justify-center">
       <div className="pointer-events-auto flex animate-fade-up items-center gap-2 rounded-2xl border border-line bg-ink py-2 pl-5 pr-2 text-bg shadow-pop">
         <ListChecks className="h-5 w-5 text-brand" />
         <span className="mr-2 text-sm font-semibold">

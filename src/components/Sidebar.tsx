@@ -17,11 +17,12 @@ export function Sidebar() {
   const libCount = Object.keys(library).length;
 
   return (
-    <aside className="flex w-[248px] shrink-0 flex-col border-r border-line bg-surface/70">
-      <div data-tauri-drag-region className="px-6 pb-4 pt-6">
-        <img src={logoText} alt="SOGE Store" draggable={false} className="logo-chip pointer-events-none h-auto w-[150px]" />
-        <div className="pointer-events-none mt-1.5 flex items-center gap-2 pl-1">
-          <span className="font-display text-[15px] font-bold tracking-wide text-muted">MULTI APP</span>
+    <aside className="flex w-[276px] shrink-0 flex-col border-r border-line bg-surface/70">
+      <div data-tauri-drag-region className="flex flex-col items-center px-6 pb-5 pt-6">
+        <img src={logoText} alt="SOGE Store" draggable={false} className="logo-chip pointer-events-none h-auto w-[160px]" />
+        <div className="pointer-events-none mt-2 flex items-center gap-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-brand" />
+          <span className="font-display text-[14px] font-extrabold tracking-[0.2em] text-muted">MULTI APP</span>
           <span className="h-1.5 w-1.5 rounded-full bg-brand" />
         </div>
       </div>
@@ -34,7 +35,7 @@ export function Sidebar() {
             <button
               key={id}
               onClick={() => setView(id)}
-              className={`group flex items-center gap-3 rounded-2xl px-3 py-2.5 text-left text-[14px] font-semibold transition ${
+              className={`group flex items-center gap-2.5 rounded-2xl px-3 py-2.5 text-left text-[13.5px] font-semibold transition ${
                 active ? 'bg-brand text-[#3A1D16] shadow-card' : 'text-muted hover:bg-surface-2 hover:text-ink'
               }`}
             >
@@ -45,7 +46,7 @@ export function Sidebar() {
               >
                 <Icon className="h-[18px] w-[18px]" strokeWidth={2.3} />
               </span>
-              <span className="flex-1 leading-tight">{tab?.name[lang] ?? id}</span>
+              <span className="min-w-0 flex-1 truncate whitespace-nowrap">{tab?.name[lang] ?? id}</span>
               <span className={`text-xs font-bold ${active ? 'text-[#3A1D16]/70' : 'text-muted/70'}`}>{count(id)}</span>
             </button>
           );
@@ -55,7 +56,7 @@ export function Sidebar() {
 
         <button
           onClick={() => setView('library')}
-          className={`group flex items-center gap-3 rounded-2xl px-3 py-2.5 text-left text-[14px] font-semibold transition ${
+          className={`group flex items-center gap-2.5 rounded-2xl px-3 py-2.5 text-left text-[13.5px] font-semibold transition ${
             view === 'library' ? 'bg-ink text-bg shadow-card' : 'text-muted hover:bg-surface-2 hover:text-ink'
           }`}
         >
