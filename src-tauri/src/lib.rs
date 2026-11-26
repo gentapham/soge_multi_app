@@ -268,6 +268,8 @@ pub fn run() {
     std::thread::spawn(security::cleanup_old_staging);
     tauri::Builder::default()
         .plugin(tauri_plugin_dialog::init())
+        .plugin(tauri_plugin_updater::Builder::new().build())
+        .plugin(tauri_plugin_process::init())
         .manage(DownloadState::default())
         .manage(CatalogState::default())
         .manage(InstallLock::default())

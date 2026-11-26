@@ -5,6 +5,7 @@ import mascotOffline from '../assets/img/mascot-offline.webp';
 import mascotSuccess from '../assets/img/mascot-success.webp';
 import mascotUpdate from '../assets/img/mascot-update.webp';
 import { displayVersion, formatBytes, formatSpeed, inCategory, inTab, matchesSearch } from '../lib/format';
+import { useAppUpdate } from '../lib/appUpdate';
 import { appById, useStore } from '../lib/store';
 import type { Lang, Theme } from '../lib/types';
 import { AppIcon, Modal, ProgressBar, Segmented } from './ui';
@@ -281,11 +282,39 @@ export function SettingsDialog() {
             options={['1', '2', '3', '5'].map((v) => ({ value: v, label: v }))}
           />
         </div>
+        <AppVersionRow />
         <div className="pt-3.5 text-xs text-muted">
           {t('dataUpdated')}: {catalog?.generatedAt ? new Date(catalog.generatedAt).toLocaleString(settings.language === 'vi' ? 'vi-VN' : 'en-GB') : '—'} ·{' '}
           {catalogSource}
         </div>
       </div>
     </Modal>
+  );
+}
+
+function AppVersionRow() {
+  const { current, phase, available, checkNow, install } = useAppUpdate();
+  const vi = useStore((s) => s.settings.language) !== 'en';
+  return (
+    <div className="flex items-center justify-between gap-4 py-3.5">
+      <div>
+        <div className="text-sm font-semibold">{vi ? 'Phiên bản app' : 'App version'}</div>
+        <div className="text-xs text-muted">
+          v{current || '—'}
+          {phase === 'uptodate' && (vi ? ' · đã là bản mới nhất' : ' · up to date')}
+          {phase === 'error' && (vi ? ' · không kiểm tra được' : " · couldn't check")}
+          {available && ` → v${available.version}`}
+        </div>
+      </div>
+      {available ? (
+        <button className="btn-primary shrink-0 !py-1.5" onClick={() => void install()}>
+          {vi ? 'Cập nhật' : 'Update'}
+        </button>
+      ) : (
+        <button className="btn-outline shrink-0 !py-1.5" disabled={phase === 'checking'} onClick={() => void checkNow(true)}>
+          {phase === 'checking' ? (vi ? 'Đang kiểm tra…' : 'Checking…') : vi ? 'Kiểm tra bản mới' : 'Check for updates'}
+        </button>
+      )}
+    </div>
   );
 }

@@ -2,7 +2,9 @@ import { getCurrentWindow } from '@tauri-apps/api/window';
 import { Minus, X } from 'lucide-react';
 import { useEffect } from 'react';
 import mascotDownload from './assets/img/mascot-download.webp';
+import { AppUpdateBanner } from './components/AppUpdateBanner';
 import { CatalogView } from './components/CatalogView';
+import { useAppUpdate } from './lib/appUpdate';
 import { LibraryView } from './components/LibraryView';
 import { Onboarding } from './components/Onboarding';
 import { ActivityPanel, SelectionBar, SettingsDialog, Toasts, UpdateDialogView } from './components/Overlays';
@@ -16,6 +18,11 @@ export default function App() {
   useEffect(() => {
     void init();
   }, [init]);
+
+  // Kiểm tra bản app mới sau khi đã vào giao diện chính
+  useEffect(() => {
+    if (ready) void useAppUpdate.getState().init();
+  }, [ready]);
 
   useEffect(() => {
     document.documentElement.lang = settings.language;
@@ -60,6 +67,7 @@ export default function App() {
       <Sidebar />
       <main className="flex min-w-0 flex-1 flex-col">
         <TopBar />
+        <AppUpdateBanner />
         <div className="flex-1 overflow-y-auto" key={view}>
           {view === 'library' ? <LibraryView /> : <CatalogView tab={view} />}
         </div>

@@ -1,12 +1,28 @@
-name: Build bộ cài Windows
+name: Phát hành bản app mới
 
+# Mỗi khi code của app thay đổi trên nhánh main: tự build, ký số bản cập nhật
+# và phát hành lên GitHub Releases. App trên máy người dùng sẽ tự thấy bản mới.
+# (Thay đổi danh mục phần mềm không cần phát hành lại app.)
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'src-tauri/**'
+      - 'public/**'
+      - 'index.html'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vite.config.ts'
+      - 'tailwind.config.js'
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -25,12 +41,24 @@ jobs:
       - uses: swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2
         with:
           workspaces: src-tauri
+      - name: Đặt số phiên bản tự tăng (0.2.<lần chạy>)
+        shell: bash
+        run: |
+          VERSION="0.2.${{ github.run_number }}"
+          node -e "const f='src-tauri/tauri.conf.json';const c=require('./'+f);c.version='$VERSION';require('fs').writeFileSync(f,JSON.stringify(c,null,2))"
+          echo "Phiên bản: $VERSION"
       - run: npm ci
       - uses: tauri-apps/tauri-action@84b9d35b5fc46c1e45415bdb6144030364f7ebc5 # v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
         with:
-          tagName: ${{ github.ref_name }}
-          releaseName: 'SOGE Multi App ${{ github.ref_name }}'
-          releaseBody: 'Tải file *_x64-setup.exe bên dưới để cài đặt.'
-          releaseDraft: true
+          tagName: v__VERSION__
+          releaseName: 'SOGE Multi App v__VERSION__'
+          releaseBody: |
+            Tải file **SOGE.Multi.App_..._x64-setup.exe** bên dưới để cài đặt.
+            Máy đã cài SOGE Multi App sẽ tự hiện thông báo cập nhật khi mở app.
+          releaseDraft: false
+          prerelease: false
+          includeUpdaterJson: true

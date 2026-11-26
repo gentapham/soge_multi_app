@@ -62,6 +62,18 @@
         "displayLanguageSelector": false,
         "installMode": "perMachine"
       }
+    },
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IERFQzQyQkIwRDdDNzgyQzQKUldURWdzZlhzQ3ZFM25jMUtzczJFWUxOZGdGT1o5SlJDdVJhOG9ycHkyTHpuaFQ4ay9lVWpBTDcK",
+      "endpoints": [
+        "https://github.com/gentapham/soge_multi_app/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
     }
   }
 }

@@ -1,4 +1,5 @@
 import { BadgeCheck, FolderDown, FolderOpen, Gamepad2, Gift, Monitor, Settings as Cog, type LucideIcon } from 'lucide-react';
+import { useAppUpdate } from '../lib/appUpdate';
 import { inTab } from '../lib/format';
 import logoText from '../assets/img/logo-text.webp';
 import { api } from '../lib/api';
@@ -17,6 +18,7 @@ export function Sidebar() {
   const lang = settings.language;
   const count = (tab: View) => (catalog && tab !== 'library' ? catalog.apps.filter((a) => inTab(a, tab, catalog)).length : 0);
   const libCount = Object.keys(library).length;
+  const appVersion = useAppUpdate((u) => u.current);
 
   return (
     <aside className="flex w-[276px] shrink-0 flex-col border-r border-line bg-surface/70">
@@ -86,7 +88,7 @@ export function Sidebar() {
             </button>
           </div>
         </div>
-        <div className="text-center text-[11px] text-muted/80">SOGE Multi App v0.1.0</div>
+        <div className="text-center text-[11px] text-muted/80">SOGE Multi App {appVersion ? `v${appVersion}` : ''}</div>
       </div>
     </aside>
   );
