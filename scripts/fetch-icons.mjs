@@ -95,6 +95,8 @@ export async function fetchIcon(app, { refresh = false } = {}) {
   const domain = new URL(app.iconDomain ? `https://${app.iconDomain}` : app.homepage).hostname;
   const list = [
     ...(app.icon ? [{ url: app.icon, score: 999 }] : []),
+    // Kho icon mở dashboard-icons (thử theo id phần mềm)
+    { url: `https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/${app.iconSlug ?? app.id}.png`, score: 998 },
     ...(await candidatesFromPage(app.homepage)),
     { url: `https://www.google.com/s2/favicons?domain=${domain}&sz=128`, score: 0 },
   ];
@@ -105,7 +107,7 @@ export async function fetchIcon(app, { refresh = false } = {}) {
     const res = await toPng(Buffer.from(await r.arrayBuffer()));
     if (!res) continue;
     if (!best || res.width > best.width) best = res;
-    if (best.width >= 128 || c.score === 999) break;
+    if (best.width >= 128 || c.score >= 998) break;
   }
   if (best) {
     await fs.mkdir(ICON_DIR, { recursive: true });

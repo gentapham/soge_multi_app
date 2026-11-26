@@ -166,8 +166,27 @@ function pickInstaller(doc, src) {
 }
 
 // ---------- github releases ----------
+// Dự phòng khi GitHub API bị giới hạn: đọc trang releases/latest trên github.com
+async function githubLatestFromHtml(repo) {
+  const r = await fetch(`https://github.com/${repo}/releases/latest`, { headers: { 'User-Agent': UA }, redirect: 'follow' });
+  const tag = decodeURIComponent(/\/releases\/tag\/([^/?#]+)/.exec(r.url)?.[1] ?? '');
+  if (!tag) throw new Error('không tìm thấy release mới nhất');
+  const html = await (await fetch(`https://github.com/${repo}/releases/expanded_assets/${encodeURIComponent(tag)}`, { headers: { 'User-Agent': UA } })).text();
+  const assets = [...html.matchAll(/href="(\/[^"]+\/releases\/download\/[^"]+)"/g)].map((m) => {
+    const url = `https://github.com${m[1]}`;
+    return { name: decodeURIComponent(url.split('/').pop()), browser_download_url: url, updated_at: new Date().toISOString(), size: null };
+  });
+  return { tag_name: tag, name: tag, assets };
+}
+
 async function resolveGithub(src) {
-  const rel = await ghJson(`https://api.github.com/repos/${src.repo}/releases/latest`);
+  let rel;
+  try {
+    rel = await ghJson(`https://api.github.com/repos/${src.repo}/releases/latest`);
+  } catch (e) {
+    if (!/GitHub (403|429)/.test(e.message)) throw e;
+    rel = await githubLatestFromHtml(src.repo);
+  }
   const re = new RegExp(src.asset, 'i');
   const asset = rel.assets.find((a) => re.test(a.name));
   if (!asset) throw new Error(`không thấy asset khớp ${src.asset}`);
@@ -211,7 +230,7 @@ async function resolveDirect(src) {
   const h = await headInfo(src.url);
   const fileName = src.fileName ?? h.fileName ?? fileNameFromUrl(h.finalUrl, extFor(src.installerType));
   // Phiên bản: ưu tiên khai báo tay > số trong tên file > ngày cập nhật trên server
-  const fromName = /(\d+(?:\.\d+){1,3})/.exec(fileNameFromUrl(h.finalUrl, ''))?.[1];
+  const fromName = /(\d+(?:\.\d+){1,3})/.exec(h.fileName ?? fileNameFromUrl(h.finalUrl, ''))?.[1];
   let version = src.version ?? fromName;
   let fingerprint = null;
   if (h.lastModified) fingerprint = new Date(h.lastModified).toISOString().slice(0, 10);

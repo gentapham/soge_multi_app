@@ -7,6 +7,8 @@ import {
   Flag,
   Gamepad2,
   Globe,
+  Joystick,
+  Smartphone,
   Keyboard,
   LayoutGrid,
   MessageCircle,
@@ -35,6 +37,8 @@ const CATEGORY_ICONS: Record<string, LucideIcon> = {
   gamepad: Gamepad2,
   flag: Flag,
   trophy: Trophy,
+  smartphone: Smartphone,
+  joystick: Joystick,
 };
 
 export function CategoryIcon({ name, className }: { name: string; className?: string }) {

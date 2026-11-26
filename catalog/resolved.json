@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-26T06:18:21.172Z",
+  "generatedAt": "2026-11-26T06:35:47.275Z",
   "tabs": [
     {
       "id": "free",
@@ -99,6 +99,26 @@
       }
     },
     {
+      "id": "design",
+      "tab": "free",
+      "icon": "palette",
+      "folder": "Do Hoa",
+      "name": {
+        "vi": "Đồ hoạ & 3D",
+        "en": "Graphics & 3D"
+      }
+    },
+    {
+      "id": "security-free",
+      "tab": "free",
+      "icon": "shield",
+      "folder": "Bao Mat Mang",
+      "name": {
+        "vi": "Bảo mật & mạng",
+        "en": "Security & network"
+      }
+    },
+    {
       "id": "driver",
       "tab": "free",
       "icon": "cpu",
@@ -106,6 +126,16 @@
       "name": {
         "vi": "Driver & hiệu năng",
         "en": "Drivers & performance"
+      }
+    },
+    {
+      "id": "runtime",
+      "tab": "free",
+      "icon": "cpu",
+      "folder": "Runtime",
+      "name": {
+        "vi": "Runtime & thư viện",
+        "en": "Runtimes"
       }
     },
     {
@@ -196,6 +226,26 @@
       "name": {
         "vi": "Thi đấu",
         "en": "Competitive"
+      }
+    },
+    {
+      "id": "emu-android",
+      "tab": "games",
+      "icon": "smartphone",
+      "folder": "Gia Lap Android",
+      "name": {
+        "vi": "Giả lập Android",
+        "en": "Android emulators"
+      }
+    },
+    {
+      "id": "emu-console",
+      "tab": "games",
+      "icon": "joystick",
+      "folder": "Gia Lap May Choi Game",
+      "name": {
+        "vi": "Giả lập máy chơi game",
+        "en": "Console emulators"
       }
     }
   ],
@@ -301,6 +351,226 @@
           "/PreventRebootRequired=true"
         ],
         "sha256": "768e29619f3463c157f20c5ab1e4d480acfb0d84f1a39ee60ef3151fed91ceb2"
+      }
+    },
+    {
+      "id": "firefox-dev",
+      "name": "Firefox Developer Edition",
+      "category": "browser",
+      "homepage": "https://www.mozilla.org/firefox/developer/",
+      "detect": [
+        "Firefox Developer Edition"
+      ],
+      "desc": {
+        "vi": "Firefox dành cho lập trình viên, có sẵn công cụ debug.",
+        "en": "Firefox for web developers."
+      },
+      "tab": "free",
+      "release": {
+        "version": "162.0",
+        "url": "https://download-installer.cdn.mozilla.net/pub/devedition/releases/162.0b1/win64/en-US/Firefox%20Setup%20162.0b1.exe",
+        "fileName": "Firefox Setup 162.0b1.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S",
+          "/PreventRebootRequired=true"
+        ],
+        "sha256": "21ef04409dd1982dd718ff29913fec3e408059b430be4d38a584b289699eca90"
+      }
+    },
+    {
+      "id": "librewolf",
+      "name": "LibreWolf",
+      "category": "browser",
+      "homepage": "https://librewolf.net/",
+      "detect": [
+        "LibreWolf"
+      ],
+      "desc": {
+        "vi": "Firefox tối ưu quyền riêng tư, chặn theo dõi sẵn. Mã nguồn mở.",
+        "en": "Privacy-hardened Firefox fork. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "161.0-1",
+        "url": "https://dl.librewolf.net/librewolf/161.0-1/librewolf-161.0-1-windows-x86_64-setup.exe",
+        "fileName": "librewolf-161.0-1-windows-x86_64-setup.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "7507bffc68cbcc05fb66f46c8d6f9913193ee6bc7b871333cce6432742400df1"
+      }
+    },
+    {
+      "id": "zen",
+      "name": "Zen Browser",
+      "category": "browser",
+      "homepage": "https://zen-browser.app/",
+      "detect": [
+        "Zen Browser"
+      ],
+      "desc": {
+        "vi": "Trình duyệt hiện đại, giao diện đẹp, dựa trên Firefox. Mã nguồn mở.",
+        "en": "Beautiful Firefox-based browser. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.24.3b",
+        "url": "https://github.com/zen-browser/desktop/releases/download/1.24.3b/zen.installer.exe",
+        "fileName": "zen.installer.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S",
+          "/PreventRebootRequired=true",
+          "/DesktopShortcut=false"
+        ],
+        "sha256": "2717edcfcd1a923639ecbcceb9c517f331e8bbe4c80a1cc80620a8c4e3d52f2b"
+      }
+    },
+    {
+      "id": "floorp",
+      "name": "Floorp",
+      "category": "browser",
+      "homepage": "https://floorp.app/",
+      "detect": [
+        "Floorp"
+      ],
+      "desc": {
+        "vi": "Trình duyệt dựa trên Firefox, tuỳ biến mạnh. Mã nguồn mở.",
+        "en": "Highly customizable Firefox fork. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "12.21.0@159.0",
+        "url": "https://github.com/Floorp-Projects/Floorp/releases/download/v12.21.0/floorp-windows-x86_64.installer.exe",
+        "fileName": "floorp-windows-x86_64.installer.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S",
+          "/PreventRebootRequired=true"
+        ],
+        "sha256": "e5591a25e104189fe882814f2b4c0c8f745c5b38af5c4e206deca563e950148d"
+      }
+    },
+    {
+      "id": "ungoogled",
+      "name": "Ungoogled Chromium",
+      "category": "browser",
+      "homepage": "https://github.com/ungoogled-software/ungoogled-chromium",
+      "detect": [
+        "Chromium"
+      ],
+      "desc": {
+        "vi": "Chromium đã loại bỏ dịch vụ Google. Mã nguồn mở.",
+        "en": "Chromium without Google services. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "157.0.8103.78",
+        "url": "https://github.com/ungoogled-software/ungoogled-chromium-windows/releases/download/157.0.8103.78-1.1/ungoogled-chromium_157.0.8103.78-1.1_installer_x64.exe",
+        "fileName": "ungoogled-chromium_157.0.8103.78-1.1_installer_x64.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/silent",
+          "/install",
+          "--system-level"
+        ],
+        "sha256": "835a6f337dc8ef199d2297110a2d7568df77b7bf1bc1282083770c1ea5ccb610"
+      }
+    },
+    {
+      "id": "tor",
+      "name": "Tor Browser",
+      "category": "browser",
+      "homepage": "https://www.torproject.org/",
+      "desc": {
+        "vi": "Duyệt web ẩn danh qua mạng Tor. Mã nguồn mở.",
+        "en": "Browse anonymously via Tor. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "16.0.3",
+        "url": "https://archive.torproject.org/tor-package-archive/torbrowser/16.0.3/tor-browser-windows-x86_64-portable-16.0.3.exe",
+        "fileName": "tor-browser-windows-x86_64-portable-16.0.3.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "824eecb64bea43d9f312f375d8601563958493909ffd6c3f2372bcc13da5284a"
+      }
+    },
+    {
+      "id": "edge",
+      "name": "Microsoft Edge",
+      "category": "browser",
+      "homepage": "https://www.microsoft.com/edge",
+      "detect": [
+        "Microsoft Edge"
+      ],
+      "desc": {
+        "vi": "Trình duyệt của Microsoft, có sẵn trên Windows.",
+        "en": "Microsoft's browser."
+      },
+      "tab": "free",
+      "release": {
+        "version": "156.0.4314.58",
+        "url": "https://download.microsoft.com/download/6a05dff7-d4e0-4e1f-a773-efe3f9c17341/MicrosoftEdgeEnterpriseX64.msi",
+        "fileName": "MicrosoftEdgeEnterpriseX64.msi",
+        "installerType": "msi",
+        "silentArgs": null,
+        "sha256": "784051ebfcc8b28569127f381d515766866c4925312d35c52293382b97eef2fb"
+      }
+    },
+    {
+      "id": "vivaldi",
+      "name": "Vivaldi",
+      "category": "browser",
+      "homepage": "https://vivaldi.com/",
+      "detect": [
+        "Vivaldi"
+      ],
+      "desc": {
+        "vi": "Trình duyệt nhiều tính năng: chia tab, ghi chú, mail.",
+        "en": "Feature-packed browser."
+      },
+      "tab": "free",
+      "release": {
+        "version": "8.3.4191.47",
+        "url": "https://downloads.vivaldi.com/stable/Vivaldi.8.3.4191.47.x64.exe",
+        "fileName": "Vivaldi.8.3.4191.47.x64.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--vivaldi-silent",
+          "--do-not-launch-chrome",
+          "--system-level"
+        ],
+        "sha256": "be76967567c83ee3c1bbc54b93369fb4a3f9f1c50f4d647fc690cba88f59c6d2"
+      }
+    },
+    {
+      "id": "operagx",
+      "name": "Opera GX",
+      "category": "browser",
+      "homepage": "https://www.opera.com/gx",
+      "detect": [
+        "Opera GX"
+      ],
+      "desc": {
+        "vi": "Trình duyệt cho game thủ, giới hạn RAM/CPU.",
+        "en": "The browser for gamers."
+      },
+      "tab": "free",
+      "release": {
+        "version": "140.0.6074.48",
+        "url": "https://get.geo.opera.com/pub/opera_gx/140.0.6074.48/win/Opera_GX_140.0.6074.48_Setup_x64.exe",
+        "fileName": "Opera_GX_140.0.6074.48_Setup_x64.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/silent",
+          "/allusers=1"
+        ],
+        "sha256": "7b854acb0226992ad53a5f9c3787f330aa96b410624429a16b001524d892661b"
       }
     },
     {
@@ -506,6 +776,145 @@
       }
     },
     {
+      "id": "signal",
+      "name": "Signal",
+      "category": "chat",
+      "homepage": "https://signal.org/",
+      "detect": [
+        "Signal"
+      ],
+      "desc": {
+        "vi": "Nhắn tin mã hoá đầu cuối, bảo mật cao. Mã nguồn mở.",
+        "en": "End-to-end encrypted messaging. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "8.36.0",
+        "url": "https://updates.signal.org/desktop/signal-desktop-win-8.36.0.exe",
+        "fileName": "signal-desktop-win-8.36.0.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "4ba887638e25bf0d8c178b62274fd6d011c10c104f8db76b8855d1ca1af6483f"
+      }
+    },
+    {
+      "id": "element",
+      "name": "Element",
+      "category": "chat",
+      "homepage": "https://element.io/",
+      "detect": [
+        "Element"
+      ],
+      "desc": {
+        "vi": "Chat nhóm bảo mật trên mạng Matrix. Mã nguồn mở.",
+        "en": "Secure chat on Matrix. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.12.36",
+        "url": "https://packages.element.io/desktop/install/win32/x64/Element%20Setup%201.12.36.exe",
+        "fileName": "Element Setup 1.12.36.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--silent"
+        ],
+        "sha256": "1ec8cfa2c027b1ab64f0d8408fae995e9028bd123d0cc8806c9817dbc0084918"
+      }
+    },
+    {
+      "id": "rustdesk",
+      "name": "RustDesk",
+      "category": "chat",
+      "homepage": "https://rustdesk.com/",
+      "detect": [
+        "RustDesk"
+      ],
+      "desc": {
+        "vi": "Điều khiển máy tính từ xa miễn phí, thay TeamViewer. Mã nguồn mở.",
+        "en": "Free remote desktop. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.5.3",
+        "url": "https://github.com/rustdesk/rustdesk/releases/download/1.5.3/rustdesk-1.5.3-x86_64.msi",
+        "fileName": "rustdesk-1.5.3-x86_64.msi",
+        "installerType": "msi",
+        "silentArgs": null,
+        "sha256": "27f6bfb48a93d524860dd7f4a79e349be14b6dc71295746cf132a060ba4869c8",
+        "size": 26734592
+      }
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom",
+      "category": "chat",
+      "homepage": "https://zoom.us/",
+      "detect": [
+        "Zoom"
+      ],
+      "desc": {
+        "vi": "Họp trực tuyến, học online.",
+        "en": "Video meetings."
+      },
+      "tab": "free",
+      "release": {
+        "version": "7.2.51704",
+        "url": "https://zoom.us/client/7.2.5.51704/ZoomInstallerFull.msi?archType=x64",
+        "fileName": "ZoomInstallerFull.msi",
+        "installerType": "msi",
+        "silentArgs": null,
+        "sha256": "8e81e0d7dc401880c4cdfd14db8bed51308608b7aa67fa1e2ca31ccaa71cad93"
+      }
+    },
+    {
+      "id": "teams",
+      "name": "Microsoft Teams",
+      "category": "chat",
+      "homepage": "https://www.microsoft.com/microsoft-teams",
+      "detect": [
+        "Microsoft Teams"
+      ],
+      "desc": {
+        "vi": "Họp & làm việc nhóm của Microsoft.",
+        "en": "Microsoft meetings & chat."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26304.1207.5384.858",
+        "url": "https://teamsinstaller.public.onecdn.static.microsoft/production-windows-x64/26304.1207.5384.858/MSTeams-x64.msix",
+        "fileName": "MSTeams-x64.msix",
+        "installerType": "msix",
+        "silentArgs": null,
+        "sha256": "25118cfe0a79554cc4b0e22c9c4e4e599c9dc0623a41f4202fab191c3ad7d978"
+      }
+    },
+    {
+      "id": "teamviewer",
+      "name": "TeamViewer",
+      "category": "chat",
+      "homepage": "https://www.teamviewer.com/",
+      "detect": [
+        "TeamViewer"
+      ],
+      "desc": {
+        "vi": "Điều khiển từ xa phổ biến (miễn phí cho cá nhân).",
+        "en": "Popular remote desktop (free for personal use)."
+      },
+      "tab": "free",
+      "release": {
+        "version": "15.83.7",
+        "url": "https://download.teamviewer.com/download/version_15x/TeamViewer_Setup_x64_15.83.7.exe",
+        "fileName": "TeamViewer_Setup_x64_15.83.7.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "d18de864f9c5dc9bf469f7352a0ec0b0ba8a47b4e0da147f69389b321bbf20dd"
+      }
+    },
+    {
       "id": "libreoffice",
       "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/libreoffice.png",
       "name": "LibreOffice",
@@ -551,6 +960,270 @@
           "/quiet"
         ],
         "sha256": "71f1a0cb46c0854e7b45d675f2ebbd5052261a0d95f6513dc6aa087c6350ee27"
+      }
+    },
+    {
+      "id": "onlyoffice",
+      "name": "ONLYOFFICE",
+      "category": "office",
+      "homepage": "https://www.onlyoffice.com/",
+      "detect": [
+        "ONLYOFFICE"
+      ],
+      "desc": {
+        "vi": "Bộ văn phòng tương thích tốt file Word/Excel/PowerPoint. Mã nguồn mở.",
+        "en": "Office suite with great MS Office compatibility. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "10.0.0",
+        "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/DesktopEditors_x64.exe",
+        "fileName": "DesktopEditors_x64.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "e9f6df29bb09770cfc14c9ebb9bce881ff7ad9705d76b3faf038831fe248e46b"
+      }
+    },
+    {
+      "id": "wps",
+      "name": "WPS Office",
+      "category": "office",
+      "homepage": "https://www.wps.com/",
+      "detect": [
+        "WPS Office"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Bộ văn phòng nhẹ, giao diện giống Microsoft Office.",
+        "en": "Lightweight office suite."
+      },
+      "tab": "free",
+      "release": {
+        "version": "12.2.0.23196",
+        "url": "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/12.2.0.23196/500.1001/WPSOffice_23196.exe",
+        "fileName": "WPSOffice_23196.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "-S"
+        ],
+        "sha256": "12417429e8a02e43cb089ab4a2cb449a9f15ad428af69f1f2f5277571046ddbd"
+      }
+    },
+    {
+      "id": "notepadpp",
+      "name": "Notepad++",
+      "category": "office",
+      "homepage": "https://notepad-plus-plus.org/",
+      "detect": [
+        "Notepad++"
+      ],
+      "desc": {
+        "vi": "Soạn thảo văn bản & code nhẹ, nhanh. Mã nguồn mở.",
+        "en": "Fast text & code editor. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "8.9.9.1",
+        "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.9.1/npp.8.9.9.1.Installer.x64.msi",
+        "fileName": "npp.8.9.9.1.Installer.x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "e3b0607a092ce2604fbdac027db2c94915995e8e568ebd226f8c5493c2f61a80"
+      }
+    },
+    {
+      "id": "sumatra",
+      "name": "Sumatra PDF",
+      "category": "office",
+      "homepage": "https://www.sumatrapdfreader.org/",
+      "detect": [
+        "SumatraPDF"
+      ],
+      "desc": {
+        "vi": "Đọc PDF, EPUB siêu nhẹ. Mã nguồn mở.",
+        "en": "Tiny PDF/EPUB reader. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.6.1",
+        "url": "https://www.sumatrapdfreader.org/dl/rel/3.6.1/SumatraPDF-3.6.1-64-install.exe",
+        "fileName": "SumatraPDF-3.6.1-64-install.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "-s",
+          "-allusers",
+          "-install",
+          "-with-preview"
+        ],
+        "sha256": "1eee71cccd2ea6e94d5bcea54ee2f759844da3e1a0ee2f6045035b1d17b94381"
+      }
+    },
+    {
+      "id": "pdf24",
+      "name": "PDF24 Creator",
+      "category": "office",
+      "homepage": "https://tools.pdf24.org/",
+      "detect": [
+        "PDF24"
+      ],
+      "desc": {
+        "vi": "Gộp, tách, nén, chuyển đổi PDF miễn phí.",
+        "en": "Free all-in-one PDF toolbox."
+      },
+      "tab": "free",
+      "release": {
+        "version": "11.35.0",
+        "url": "https://download.pdf24.org/pdf24-creator-11.35.0-x64.msi",
+        "fileName": "pdf24-creator-11.35.0-x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "d4cf3207764e275766bbdf9ab0599330e3dc25297be6bdf662f8381942bc14b2"
+      }
+    },
+    {
+      "id": "thunderbird",
+      "name": "Thunderbird",
+      "category": "office",
+      "homepage": "https://www.thunderbird.net/",
+      "detect": [
+        "Mozilla Thunderbird"
+      ],
+      "desc": {
+        "vi": "Ứng dụng email đa tài khoản. Mã nguồn mở.",
+        "en": "Email client. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "161.0",
+        "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/161.0/win64/en-US/Thunderbird%20Setup%20161.0.exe",
+        "fileName": "Thunderbird Setup 161.0.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S",
+          "/PreventRebootRequired=true"
+        ],
+        "sha256": "8575ec2d844f68065ce2b0e7f86d0f8c4027610ddd5193b6a7af796d4bb40306"
+      }
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "category": "office",
+      "homepage": "https://obsidian.md/",
+      "detect": [
+        "Obsidian"
+      ],
+      "desc": {
+        "vi": "Ghi chú Markdown, liên kết ý tưởng.",
+        "en": "Markdown knowledge base."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.15.1",
+        "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.15.1/Obsidian-1.15.1.exe",
+        "fileName": "Obsidian-1.15.1.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "218c7d30acc065355ce94719dd996d5e2a2347cde3811ea5dc29380583f02b58"
+      }
+    },
+    {
+      "id": "joplin",
+      "name": "Joplin",
+      "category": "office",
+      "homepage": "https://joplinapp.org/",
+      "detect": [
+        "Joplin"
+      ],
+      "desc": {
+        "vi": "Ghi chú & to-do đồng bộ đa thiết bị. Mã nguồn mở.",
+        "en": "Notes & to-dos with sync. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.7.24",
+        "url": "https://github.com/laurent22/joplin/releases/download/v3.7.24/Joplin-Setup-3.7.24.exe",
+        "fileName": "Joplin-Setup-3.7.24.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "9b528527bf24c4657c35052309437d2798c2ab38f80e32b66f0dedb8daeb3ec9"
+      }
+    },
+    {
+      "id": "calibre",
+      "name": "Calibre",
+      "category": "office",
+      "homepage": "https://calibre-ebook.com/",
+      "detect": [
+        "calibre"
+      ],
+      "desc": {
+        "vi": "Quản lý & chuyển đổi sách điện tử. Mã nguồn mở.",
+        "en": "E-book manager. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "9.19.0",
+        "url": "https://download.calibre-ebook.com/9.19.0/calibre-64bit-9.19.0.msi",
+        "fileName": "calibre-64bit-9.19.0.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "241193d5045bdcbc3e7ec000c22ede0b5da1fd2e91e83fa0b17f0e1f67174480"
+      }
+    },
+    {
+      "id": "zotero",
+      "name": "Zotero",
+      "category": "office",
+      "homepage": "https://www.zotero.org/",
+      "detect": [
+        "Zotero"
+      ],
+      "desc": {
+        "vi": "Quản lý tài liệu tham khảo cho sinh viên. Mã nguồn mở.",
+        "en": "Reference manager. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "10.0.8",
+        "url": "https://download.zotero.org/client/release/10.0.8/Zotero-10.0.8_x64_setup.exe",
+        "fileName": "Zotero-10.0.8_x64_setup.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "1ba5d091fd24b50db1159c71650f55303d99c82e66494dc09eddab76a4179d73"
+      }
+    },
+    {
+      "id": "naps2",
+      "name": "NAPS2",
+      "category": "office",
+      "homepage": "https://www.naps2.com/",
+      "detect": [
+        "NAPS2"
+      ],
+      "desc": {
+        "vi": "Scan tài liệu ra PDF dễ dàng. Mã nguồn mở.",
+        "en": "Easy document scanning. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "8.6.1",
+        "url": "https://github.com/cyanfish/naps2/releases/download/v8.6.1/naps2-8.6.1-win-x64.msi",
+        "fileName": "naps2-8.6.1-win-x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "db9768a748cc3de5b21a4fbab468deca900eec9acf7b2b52a8d257da996e9aa2"
       }
     },
     {
@@ -737,6 +1410,338 @@
           "/SP-"
         ],
         "sha256": "0f63d94c0be212e25157125eb3757272b5aa95ea06538298631c14a3d7709197"
+      }
+    },
+    {
+      "id": "vscodium",
+      "name": "VSCodium",
+      "category": "dev",
+      "homepage": "https://vscodium.com/",
+      "detect": [
+        "VSCodium"
+      ],
+      "desc": {
+        "vi": "VS Code bản hoàn toàn mã nguồn mở, không telemetry.",
+        "en": "Telemetry-free VS Code. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.143.17232",
+        "url": "https://github.com/VSCodium/vscodium/releases/download/1.143.17232/VSCodiumSetup-x64-1.143.17232.exe",
+        "fileName": "VSCodiumSetup-x64-1.143.17232.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "012125ae30f70d1c2f6366ec8c47aa0e293f0e799b704c0eb3721089f69bbdca"
+      }
+    },
+    {
+      "id": "github-desktop",
+      "name": "GitHub Desktop",
+      "category": "dev",
+      "homepage": "https://desktop.github.com/",
+      "detect": [
+        "GitHub Desktop"
+      ],
+      "desc": {
+        "vi": "Dùng Git & GitHub bằng giao diện. Mã nguồn mở.",
+        "en": "Git & GitHub GUI. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.7.0",
+        "url": "https://desktop.githubusercontent.com/releases/3.7.0-f13859b6/GitHubDesktopSetup-x64.msi",
+        "fileName": "GitHubDesktopSetup-x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "a8fa288473c618fba1049e89d220a6a12b444b4bd388d86b35a6da261ef4577c"
+      }
+    },
+    {
+      "id": "terminal",
+      "name": "Windows Terminal",
+      "category": "dev",
+      "homepage": "https://github.com/microsoft/terminal",
+      "desc": {
+        "vi": "Terminal hiện đại nhiều tab của Microsoft. Mã nguồn mở.",
+        "en": "Modern tabbed terminal. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.25.3131.0",
+        "url": "https://github.com/microsoft/terminal/releases/download/v1.25.3131.0/Microsoft.WindowsTerminal_1.25.3131.0_8wekyb3d8bbwe.msixbundle",
+        "fileName": "Microsoft.WindowsTerminal_1.25.3131.0_8wekyb3d8bbwe.msixbundle",
+        "installerType": "msix",
+        "silentArgs": null,
+        "sha256": "86da5797d0cd1c5fb6f93391517ee13b4fad546c8aa31c7cd46d26684dd6d72f"
+      }
+    },
+    {
+      "id": "pwsh",
+      "name": "PowerShell 7",
+      "category": "dev",
+      "homepage": "https://github.com/PowerShell/PowerShell",
+      "detect": [
+        "PowerShell 7"
+      ],
+      "desc": {
+        "vi": "PowerShell bản mới nhất, đa nền tảng. Mã nguồn mở.",
+        "en": "Latest cross-platform PowerShell. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "7.7.0.0",
+        "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.7.0/PowerShell-7.7.0.msixbundle",
+        "fileName": "PowerShell-7.7.0.msixbundle",
+        "installerType": "msix",
+        "silentArgs": null,
+        "sha256": "e00c349858c2d273f29485541ece91617b435accdd5e3f156d68d5cb97740022"
+      }
+    },
+    {
+      "id": "docker",
+      "name": "Docker Desktop",
+      "category": "dev",
+      "homepage": "https://www.docker.com/products/docker-desktop/",
+      "detect": [
+        "Docker Desktop"
+      ],
+      "desc": {
+        "vi": "Chạy container cho lập trình viên.",
+        "en": "Containers for developers."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.100.1",
+        "url": "https://desktop.docker.com/win/main/amd64/247138/Docker%20Desktop%20Installer.exe",
+        "fileName": "Docker Desktop Installer.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "install",
+          "--quiet",
+          "--accept-license",
+          "--backend=wsl-2",
+          "--no-windows-containers"
+        ],
+        "sha256": "98b24fd6f56313899953ca4d2ed05645d69963b598143b75c6585fa4f7f639b2"
+      }
+    },
+    {
+      "id": "bruno",
+      "name": "Bruno",
+      "category": "dev",
+      "homepage": "https://www.usebruno.com/",
+      "detect": [
+        "Bruno"
+      ],
+      "desc": {
+        "vi": "Test API nhẹ, lưu bằng file, thay Postman. Mã nguồn mở.",
+        "en": "Git-friendly API client. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.4.0",
+        "url": "https://github.com/usebruno/bruno/releases/download/v4.4.0/bruno_4.4.0_x64_win.msi",
+        "fileName": "bruno_4.4.0_x64_win.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "c3c8e78d42913d811dbcba3c697d1b0d7df112157c1bd7be257819906fb70848"
+      }
+    },
+    {
+      "id": "postman",
+      "name": "Postman",
+      "category": "dev",
+      "homepage": "https://www.postman.com/",
+      "detect": [
+        "Postman"
+      ],
+      "desc": {
+        "vi": "Kiểm thử API phổ biến nhất.",
+        "en": "The popular API platform."
+      },
+      "tab": "free",
+      "release": {
+        "version": "12.38.5",
+        "url": "https://dl.pstmn.io/download/version/12.38.5/windows_64",
+        "fileName": "windows_64.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--silent"
+        ],
+        "sha256": "70a305b3005f93351e84b4720197fe307cf594f85a9f8f4b57d8b67189e16f52"
+      }
+    },
+    {
+      "id": "dbeaver",
+      "name": "DBeaver",
+      "category": "dev",
+      "homepage": "https://dbeaver.io/",
+      "detect": [
+        "DBeaver"
+      ],
+      "desc": {
+        "vi": "Quản lý mọi loại database. Mã nguồn mở.",
+        "en": "Universal database tool. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.2.5",
+        "url": "https://github.com/dbeaver/dbeaver/releases/download/26.2.5/dbeaver-ce-26.2.5-windows-x86_64.exe",
+        "fileName": "dbeaver-ce-26.2.5-windows-x86_64.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "8cce0a921ef3e0f43dd13357304bd0c18eff1cfcbf52f848db8f854af469cce3"
+      }
+    },
+    {
+      "id": "heidisql",
+      "name": "HeidiSQL",
+      "category": "dev",
+      "homepage": "https://www.heidisql.com/",
+      "detect": [
+        "HeidiSQL"
+      ],
+      "desc": {
+        "vi": "Quản lý MySQL/MariaDB/SQL Server nhẹ. Mã nguồn mở.",
+        "en": "Lightweight SQL client. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "12.22.0.7382",
+        "url": "https://github.com/HeidiSQL/HeidiSQL/releases/download/v12.22/HeidiSQL_12.22.0.7382_Setup.exe",
+        "fileName": "HeidiSQL_12.22.0.7382_Setup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "468055814dcedc057821f2692d28cfdde181332265240538b9acb320cae49904"
+      }
+    },
+    {
+      "id": "winscp",
+      "name": "WinSCP",
+      "category": "dev",
+      "homepage": "https://winscp.net/",
+      "detect": [
+        "WinSCP"
+      ],
+      "desc": {
+        "vi": "Truyền file SFTP/FTP lên server. Mã nguồn mở.",
+        "en": "SFTP/FTP client. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "6.7.1",
+        "url": "https://sourceforge.net/projects/winscp/files/WinSCP/6.7.1/WinSCP-6.7.1.msi/download",
+        "fileName": "winscp-6.7.1.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "6f13955925447f0714bc8e6de9e9be7e59e5352422284c27f4ff0ad9c68cda6c"
+      }
+    },
+    {
+      "id": "putty",
+      "name": "PuTTY",
+      "category": "dev",
+      "homepage": "https://www.putty.org/",
+      "detect": [
+        "PuTTY"
+      ],
+      "desc": {
+        "vi": "Kết nối SSH tới server. Mã nguồn mở.",
+        "en": "SSH client. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "0.85.0.0",
+        "url": "https://the.earth.li/~sgtatham/putty/0.85/w64/putty-64bit-0.85-installer.msi",
+        "fileName": "putty-64bit-0.85-installer.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "2213ebacf962b709411d654a40087508a694756bc4e41c5a1c24ad86596b2511"
+      }
+    },
+    {
+      "id": "temurin",
+      "name": "Java JDK (Temurin 21)",
+      "category": "dev",
+      "homepage": "https://adoptium.net/",
+      "detect": [
+        "Eclipse Temurin JDK"
+      ],
+      "desc": {
+        "vi": "Bộ phát triển Java miễn phí bản LTS. Mã nguồn mở.",
+        "en": "Free Java LTS JDK. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "21.0.13.102",
+        "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1+2/OpenJDK21U-jdk_x64_windows_hotspot_21.0.13.1_2.msi",
+        "fileName": "OpenJDK21U-jdk_x64_windows_hotspot_21.0.13.1_2.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "24742e4539f122f0427e33b195c96c93a5369da1f5da95f642825ce3813ff815"
+      }
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "dev",
+      "homepage": "https://cursor.com/",
+      "detect": [
+        "Cursor"
+      ],
+      "desc": {
+        "vi": "Trình soạn code tích hợp AI.",
+        "en": "AI-first code editor."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.31.15",
+        "url": "https://downloads.cursor.com/production/3eb8c13390837371c7c2f2013dc57fdbc802c753/win32/x64/system-setup/CursorSetup-x64-3.31.15.exe",
+        "fileName": "CursorSetup-x64-3.31.15.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "952010917a01ede47d57eb39d91a0bac2dbadbdebbc7540a3fbf7d3e6e5a29da"
+      }
+    },
+    {
+      "id": "jetbrains-toolbox",
+      "name": "JetBrains Toolbox",
+      "category": "dev",
+      "homepage": "https://www.jetbrains.com/toolbox-app/",
+      "detect": [
+        "JetBrains Toolbox"
+      ],
+      "desc": {
+        "vi": "Cài & cập nhật các IDE JetBrains.",
+        "en": "Manage JetBrains IDEs."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.9.2.0",
+        "url": "https://download.jetbrains.com/toolbox/jetbrains-toolbox-3.9.2.89815.exe",
+        "fileName": "jetbrains-toolbox-3.9.2.89815.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/headless"
+        ],
+        "sha256": "3ee271bcf520aa4f1d19f548ff0be5fcc5013ecdf6ffdebf7118533c0bd5db5f"
       }
     },
     {
@@ -942,6 +1947,414 @@
       }
     },
     {
+      "id": "everything",
+      "name": "Everything",
+      "category": "system",
+      "homepage": "https://www.voidtools.com/",
+      "detect": [
+        "Everything"
+      ],
+      "desc": {
+        "vi": "Tìm file trên máy trong tích tắc.",
+        "en": "Instant file search."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.4.1.1032",
+        "url": "https://www.voidtools.com/Everything-1.4.1.1032.x64.msi",
+        "fileName": "Everything-1.4.1.1032.x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "4e7a80885aab8566b750c56a2a2b3e7c3c1f4920bcc53777e07f5eeb9e1f7485"
+      }
+    },
+    {
+      "id": "powertoys",
+      "name": "PowerToys",
+      "category": "system",
+      "homepage": "https://github.com/microsoft/PowerToys",
+      "detect": [
+        "PowerToys"
+      ],
+      "desc": {
+        "vi": "Bộ tiện ích Windows của Microsoft. Mã nguồn mở.",
+        "en": "Windows power-user utilities. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "0.102.3101",
+        "url": "https://github.com/microsoft/PowerToys/releases/download/v0.102.3101/PowerToysSetup-0.102.3101.0-x64.exe",
+        "fileName": "PowerToysSetup-0.102.3101.0-x64.exe",
+        "installerType": "burn",
+        "silentArgs": [
+          "/quiet",
+          "/norestart"
+        ],
+        "sha256": "f1d24a49346167322eb64a2458bd82810519920d1da4c0aeb1788e54c345d142"
+      }
+    },
+    {
+      "id": "bcu",
+      "name": "Bulk Crap Uninstaller",
+      "category": "system",
+      "homepage": "https://www.bcuninstaller.com/",
+      "detect": [
+        "BCUninstaller",
+        "Bulk Crap Uninstaller"
+      ],
+      "desc": {
+        "vi": "Gỡ nhiều phần mềm cùng lúc, dọn sạch. Mã nguồn mở.",
+        "en": "Bulk uninstaller. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "6.3.0.0",
+        "url": "https://github.com/BCUninstaller/Bulk-Crap-Uninstaller/releases/download/v6.3/BCUninstaller_6.3.0_setup.exe",
+        "fileName": "BCUninstaller_6.3.0_setup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "d89c81f4dd029b4862fc6261262a4a9851a6948827af3e55d54e9a8c53b13d88"
+      }
+    },
+    {
+      "id": "bleachbit",
+      "name": "BleachBit",
+      "category": "system",
+      "homepage": "https://www.bleachbit.org/",
+      "detect": [
+        "BleachBit"
+      ],
+      "desc": {
+        "vi": "Dọn rác, giải phóng dung lượng. Mã nguồn mở.",
+        "en": "Disk cleaner. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "6.0.6.633",
+        "url": "https://download.bleachbit.org/BleachBit-6.0.6-setup.exe",
+        "fileName": "BleachBit-6.0.6-setup.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "a8d27535cdc53e89c21090eabca6026d32c4d385863f8dfc6fc8814bda7881c4"
+      }
+    },
+    {
+      "id": "windirstat",
+      "name": "WinDirStat",
+      "category": "system",
+      "homepage": "https://windirstat.net/",
+      "detect": [
+        "WinDirStat"
+      ],
+      "desc": {
+        "vi": "Xem thư mục nào chiếm nhiều dung lượng. Mã nguồn mở.",
+        "en": "Disk usage visualizer. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.9.3",
+        "url": "https://github.com/windirstat/windirstat/releases/download/release/v2.9.3/WinDirStat-x64.msi",
+        "fileName": "WinDirStat-x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "96c4c4beb63c7c5ad6b1a206f96560d7a9a2b6063f3cd175a82f392977a9af5d"
+      }
+    },
+    {
+      "id": "wiztree",
+      "name": "WizTree",
+      "category": "system",
+      "homepage": "https://diskanalyzer.com/",
+      "detect": [
+        "WizTree"
+      ],
+      "desc": {
+        "vi": "Phân tích dung lượng ổ đĩa cực nhanh.",
+        "en": "Super-fast disk analyzer."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.34",
+        "url": "https://diskanalyzer.com/files/wiztree_4_34_setup.exe",
+        "fileName": "wiztree_4_34_setup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "77e75b83b59673a49dc88ba60471776df3646baee30a82453db01ff6ad83ef2c"
+      }
+    },
+    {
+      "id": "ventoy",
+      "name": "Ventoy",
+      "category": "system",
+      "homepage": "https://www.ventoy.net/",
+      "installMode": "portable",
+      "launch": "Ventoy2Disk.exe",
+      "desc": {
+        "vi": "Tạo USB boot chứa nhiều file ISO cùng lúc. Mã nguồn mở.",
+        "en": "Multi-ISO bootable USB. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.1.18",
+        "url": "https://github.com/ventoy/Ventoy/releases/download/v1.1.18/ventoy-1.1.18-windows.zip",
+        "fileName": "ventoy-1.1.18-windows.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "082c478e8c432e1ac653899fcf50e3a4077a2851bc6112b5ddd30545962164a9"
+      }
+    },
+    {
+      "id": "peazip",
+      "name": "PeaZip",
+      "category": "system",
+      "homepage": "https://peazip.github.io/",
+      "detect": [
+        "PeaZip"
+      ],
+      "desc": {
+        "vi": "Nén & giải nén hơn 200 định dạng. Mã nguồn mở.",
+        "en": "Archiver for 200+ formats. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "11.4.0",
+        "url": "https://github.com/peazip/PeaZip/releases/download/11.4.0/peazip-11.4.0.WIN64.exe",
+        "fileName": "peazip-11.4.0.WIN64.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "7c7e70f4bb64b0f8e6f088c33bb14d7791d9a7c1a762d062f3bfec1bbb8ac9d3"
+      }
+    },
+    {
+      "id": "sdio",
+      "name": "Snappy Driver Installer Origin",
+      "category": "system",
+      "homepage": "https://www.glenn.delahoy.com/snappy-driver-installer-origin/",
+      "installMode": "portable",
+      "desc": {
+        "vi": "Tự tìm & cài driver còn thiếu cho máy. Mã nguồn mở.",
+        "en": "Find & install missing drivers. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.0.8.891",
+        "url": "https://www.glenn.delahoy.com/downloads/sdio/SDIO_2.0.8.891.zip",
+        "fileName": "SDIO_2.0.8.891.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "96f48d84d97ebda6e60fd67c45eaf388ae7d3b3db8e171d3c5d7e5381065ba89"
+      }
+    },
+    {
+      "id": "librehwmon",
+      "name": "LibreHardwareMonitor",
+      "category": "system",
+      "homepage": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor",
+      "installMode": "portable",
+      "launch": "LibreHardwareMonitor.exe",
+      "desc": {
+        "vi": "Theo dõi nhiệt độ, quạt, điện áp. Mã nguồn mở.",
+        "en": "Temperature & sensor monitor. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "0.9.6",
+        "url": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases/download/v0.9.6/LibreHardwareMonitor.zip",
+        "fileName": "LibreHardwareMonitor.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "086d9f1b5a99e643edc2cfaaac16051685b551e4c5ac0b32a57c58c0e529c001"
+      }
+    },
+    {
+      "id": "gpuz",
+      "name": "GPU-Z",
+      "category": "system",
+      "homepage": "https://www.techpowerup.com/gpuz/",
+      "detect": [
+        "GPU-Z",
+        "TechPowerUp GPU-Z"
+      ],
+      "desc": {
+        "vi": "Xem thông tin chi tiết card màn hình.",
+        "en": "Graphics card information."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.72.0",
+        "url": "https://us1-dl.techpowerup.com/files/GPU-Z.2.72.0.exe",
+        "fileName": "GPU-Z.2.72.0.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "-installSilent"
+        ],
+        "sha256": "3b15545f3edf7f2c714a32c7ee2bedd9823fee7d23a20e15f2e29cd2fee25323"
+      }
+    },
+    {
+      "id": "ditto",
+      "name": "Ditto",
+      "category": "system",
+      "homepage": "https://ditto-cp.sourceforge.io/",
+      "detect": [
+        "Ditto"
+      ],
+      "desc": {
+        "vi": "Lưu lịch sử copy/paste. Mã nguồn mở.",
+        "en": "Clipboard manager. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.25.113.0",
+        "url": "https://github.com/sabrogden/Ditto/releases/download/3.25.113.0/DittoSetup_3_25_113_0.exe",
+        "fileName": "DittoSetup_3_25_113_0.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "fc354f1e9b9d2984099d4da93b4c569866dfe9bf1f590c1313e85e07f41224d3"
+      }
+    },
+    {
+      "id": "flowlauncher",
+      "name": "Flow Launcher",
+      "category": "system",
+      "homepage": "https://www.flowlauncher.com/",
+      "detect": [
+        "Flow Launcher"
+      ],
+      "desc": {
+        "vi": "Mở app, tìm file bằng bàn phím siêu nhanh. Mã nguồn mở.",
+        "en": "Keyboard launcher. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.1.4",
+        "url": "https://github.com/Flow-Launcher/Flow.Launcher/releases/download/v2.1.4/Flow-Launcher-Setup.exe",
+        "fileName": "Flow-Launcher-Setup.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--silent"
+        ],
+        "sha256": "0e7b4ea82192702a98a10f8ec257c3830f6591b80517d291a83854c0df54fc20"
+      }
+    },
+    {
+      "id": "localsend",
+      "name": "LocalSend",
+      "category": "system",
+      "homepage": "https://localsend.org/",
+      "detect": [
+        "LocalSend"
+      ],
+      "desc": {
+        "vi": "Gửi file giữa máy tính & điện thoại qua Wi-Fi. Mã nguồn mở.",
+        "en": "Share files over local Wi-Fi. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.19.0",
+        "url": "https://github.com/localsend/localsend/releases/download/v1.19.0/LocalSend-1.19.0-windows-x86-64.exe",
+        "fileName": "LocalSend-1.19.0-windows-x86-64.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "0df76352124634c8d998867b813cb5ae96613f4a3b6e52d8d3e497dba63c01e0"
+      }
+    },
+    {
+      "id": "rainmeter",
+      "name": "Rainmeter",
+      "category": "system",
+      "homepage": "https://www.rainmeter.net/",
+      "detect": [
+        "Rainmeter"
+      ],
+      "desc": {
+        "vi": "Trang trí desktop với widget. Mã nguồn mở.",
+        "en": "Desktop widgets. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.5.28.3936",
+        "url": "https://github.com/rainmeter/rainmeter/releases/download/v4.5.28.3936/Rainmeter-4.5.28.exe",
+        "fileName": "Rainmeter-4.5.28.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "de6e010f8c28882bc28dcd8f319c899f34dfddec51e1e4dd4e7a23f68ebfe14d"
+      }
+    },
+    {
+      "id": "translucenttb",
+      "name": "TranslucentTB",
+      "category": "system",
+      "homepage": "https://github.com/TranslucentTB/TranslucentTB",
+      "desc": {
+        "vi": "Làm trong suốt thanh Taskbar. Mã nguồn mở.",
+        "en": "Transparent taskbar. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2026.2.0.0",
+        "url": "https://github.com/TranslucentTB/TranslucentTB/releases/download/2026.2/bundle.msixbundle",
+        "fileName": "bundle.msixbundle",
+        "installerType": "msix",
+        "silentArgs": null,
+        "sha256": "3f740e7019e11ff455af374945edb25413e0567c1eb6a16afefb23a496545649"
+      }
+    },
+    {
+      "id": "openshell",
+      "name": "Open-Shell",
+      "category": "system",
+      "homepage": "https://open-shell.github.io/Open-Shell-Menu/",
+      "detect": [
+        "Open-Shell"
+      ],
+      "desc": {
+        "vi": "Đưa Start Menu kiểu Windows 7 trở lại. Mã nguồn mở.",
+        "en": "Classic Start Menu. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.4.198",
+        "url": "https://github.com/Open-Shell/Open-Shell-Menu/releases/download/v4.4.198/OpenShellSetup_4_4_198.exe",
+        "fileName": "OpenShellSetup_4_4_198.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/quiet",
+          "/norestart"
+        ],
+        "sha256": "a4d2d4459de55b5e962ba2a14f7bb794170511649138173dfa72949837b48c3f"
+      }
+    },
+    {
       "id": "vlc",
       "name": "VLC Media Player",
       "category": "media",
@@ -1012,6 +2425,283 @@
           "/SP-"
         ],
         "sha256": "3caf9d253f788937d1a1b665cf67ffc3b75dfb48a998ac09f3ac3f47f3252941"
+      }
+    },
+    {
+      "id": "potplayer",
+      "name": "PotPlayer",
+      "category": "media",
+      "homepage": "https://potplayer.daum.net/",
+      "detect": [
+        "PotPlayer"
+      ],
+      "desc": {
+        "vi": "Trình xem phim mượt, hỗ trợ phụ đề tốt.",
+        "en": "Smooth video player with great subtitles."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.10.21.0",
+        "url": "https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe",
+        "fileName": "PotPlayerSetup64.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "71374ce7f60136b8e8dd1618f736d37ccbefcc5875feb33650f9f8de0bba87e8"
+      }
+    },
+    {
+      "id": "mpchc",
+      "name": "MPC-HC",
+      "category": "media",
+      "homepage": "https://github.com/clsid2/mpc-hc",
+      "detect": [
+        "MPC-HC"
+      ],
+      "desc": {
+        "vi": "Trình xem phim cổ điển, nhẹ. Mã nguồn mở.",
+        "en": "Classic lightweight player. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.8.5",
+        "url": "https://github.com/clsid2/mpc-hc/releases/download/2.8.5/MPC-HC.2.8.5.x64.exe",
+        "fileName": "MPC-HC.2.8.5.x64.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "ef3b3273130f5e4312e608de0253bdc3b96187ef73655603719812973649437e"
+      }
+    },
+    {
+      "id": "audacity",
+      "name": "Audacity",
+      "category": "media",
+      "homepage": "https://www.audacityteam.org/",
+      "detect": [
+        "Audacity"
+      ],
+      "desc": {
+        "vi": "Thu âm & chỉnh sửa âm thanh. Mã nguồn mở.",
+        "en": "Audio recording & editing. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "4.0.2.263060742",
+        "url": "https://github.com/audacity/audacity/releases/download/Audacity-4.0.2/audacity-win-4.0.2-x86_64.msi",
+        "fileName": "audacity-win-4.0.2-x86_64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "ff6cad670befee96fee563056965fa5e17bfa8c7ea3aba10c461c18799409e22"
+      }
+    },
+    {
+      "id": "handbrake",
+      "name": "HandBrake",
+      "category": "media",
+      "homepage": "https://handbrake.fr/",
+      "detect": [
+        "HandBrake"
+      ],
+      "desc": {
+        "vi": "Nén & chuyển đổi video. Mã nguồn mở.",
+        "en": "Video transcoder. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.11.2",
+        "url": "https://github.com/HandBrake/HandBrake/releases/download/1.11.2/HandBrake-1.11.2-x86_64-Win_GUI.exe",
+        "fileName": "HandBrake-1.11.2-x86_64-Win_GUI.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "6becb8e5a041941d5f2fd6fe83c66fc15b2b16190e2e79f5ad47eb4cd18df8cd"
+      }
+    },
+    {
+      "id": "sharex",
+      "name": "ShareX",
+      "category": "media",
+      "homepage": "https://getsharex.com/",
+      "detect": [
+        "ShareX"
+      ],
+      "desc": {
+        "vi": "Chụp & quay màn hình, nhiều tính năng. Mã nguồn mở.",
+        "en": "Screenshots & screen recording. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "22.4.0",
+        "url": "https://github.com/ShareX/ShareX/releases/download/v22.4.0/ShareX-22.4.0-setup-x64.exe",
+        "fileName": "ShareX-22.4.0-setup-x64.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "5fac6ee58600976586d706f164b0f8a992fff7679bf2724a1f678c4a63894a8e"
+      }
+    },
+    {
+      "id": "greenshot",
+      "name": "Greenshot",
+      "category": "media",
+      "homepage": "https://getgreenshot.org/",
+      "detect": [
+        "Greenshot"
+      ],
+      "desc": {
+        "vi": "Chụp màn hình & ghi chú nhanh. Mã nguồn mở.",
+        "en": "Quick screenshots. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.3.328",
+        "url": "https://github.com/greenshot/greenshot/releases/download/v1.3.328/Greenshot-INSTALLER-1.3.328-RELEASE.exe",
+        "fileName": "Greenshot-INSTALLER-1.3.328-RELEASE.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "5d6ec298fb30c010351c100d85dec0fa6f2188833f2bc8edf594d785d9aa478a"
+      }
+    },
+    {
+      "id": "shotcut",
+      "name": "Shotcut",
+      "category": "media",
+      "homepage": "https://shotcut.org/",
+      "detect": [
+        "Shotcut"
+      ],
+      "desc": {
+        "vi": "Dựng video miễn phí, dễ dùng. Mã nguồn mở.",
+        "en": "Free video editor. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.11.15",
+        "url": "https://github.com/mltframework/shotcut/releases/download/v26.11.15/shotcut-win64-26.11.15.exe",
+        "fileName": "shotcut-win64-26.11.15.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "f440b9b9aa9e92040683d43094502f6dcfa8ff4800fb80299f9402d1ac0df624"
+      }
+    },
+    {
+      "id": "kdenlive",
+      "name": "Kdenlive",
+      "category": "media",
+      "homepage": "https://kdenlive.org/",
+      "detect": [
+        "Kdenlive"
+      ],
+      "desc": {
+        "vi": "Dựng video chuyên nghiệp. Mã nguồn mở.",
+        "en": "Professional video editor. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.08.3",
+        "url": "https://download.kde.org/stable/kdenlive/26.08/windows/kdenlive-26.08.3.exe",
+        "fileName": "kdenlive-26.08.3.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "1f4027f287c3066887b1c112664b10c4e71a6772914fd5ea41074df429652186"
+      }
+    },
+    {
+      "id": "capcut",
+      "name": "CapCut",
+      "category": "media",
+      "homepage": "https://www.capcut.com/",
+      "detect": [
+        "CapCut"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Dựng video TikTok/Reels nhanh, nhiều hiệu ứng.",
+        "en": "Quick social video editing."
+      },
+      "tab": "free",
+      "release": {
+        "version": "9.9.0.4252",
+        "url": "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/packages/CapCut_9_9_0_4252_capcutpc_0_creatortool.exe",
+        "fileName": "CapCut_9_9_0_4252_capcutpc_0_creatortool.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/silent_install=1"
+        ],
+        "sha256": "e16ecf188403577d9dad57f2ba13bd58652f9647435f5576f0a45d6b7dadbb46"
+      }
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "media",
+      "homepage": "https://www.spotify.com/",
+      "detect": [
+        "Spotify"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Nghe nhạc trực tuyến.",
+        "en": "Music streaming."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.3.10.2586.g81a118a22460",
+        "url": "https://download.scdn.co/SpotifyFullSetupX64.exe",
+        "fileName": "SpotifyFullSetupX64.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/silent",
+          "/skip-app-launch"
+        ],
+        "sha256": "27e57a2a60fc3795d739ffe754b2a2701d9cc2f9a58e896182bcfb68ffb7fd11"
+      }
+    },
+    {
+      "id": "foobar",
+      "name": "foobar2000",
+      "category": "media",
+      "homepage": "https://www.foobar2000.org/",
+      "detect": [
+        "foobar2000"
+      ],
+      "desc": {
+        "vi": "Nghe nhạc chất lượng cao, siêu nhẹ.",
+        "en": "Advanced audio player."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.26.3",
+        "url": "https://www.foobar2000.org/files/foobar2000-x64_v2.26.3.exe",
+        "fileName": "foobar2000-x64_v2.26.3.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "b8a92891013d3af81ee7b51393e85e963dc099e7e4958f8cf392bfa252425183"
       }
     },
     {
@@ -1112,6 +2802,81 @@
         ],
         "sha256": null,
         "size": 917340
+      }
+    },
+    {
+      "id": "qbittorrent",
+      "name": "qBittorrent",
+      "category": "download",
+      "homepage": "https://www.qbittorrent.org/",
+      "detect": [
+        "qBittorrent"
+      ],
+      "desc": {
+        "vi": "Tải torrent không quảng cáo. Mã nguồn mở.",
+        "en": "Ad-free torrent client. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "5.3.1",
+        "url": "https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.1/qbittorrent_5.3.1_x64_setup.exe/download",
+        "fileName": "qbittorrent-5.3.1.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "836d0f415fdf195cb861a3bc88ac603d2bf4480f78a334d512ad0e458e7c8db5"
+      }
+    },
+    {
+      "id": "motrix",
+      "name": "Motrix",
+      "category": "download",
+      "homepage": "https://motrix.app/",
+      "detect": [
+        "Motrix"
+      ],
+      "desc": {
+        "vi": "Trình tải đa năng: HTTP, torrent, magnet. Mã nguồn mở.",
+        "en": "Full-featured download manager. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.8.19",
+        "url": "https://github.com/agalwood/Motrix/releases/download/v1.8.19/Motrix-Setup-1.8.19.exe",
+        "fileName": "Motrix-Setup-1.8.19.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "eb8afbda006962da47bf99f5ecc2d73ae2d51f293965ae4ad637acbf55108645"
+      }
+    },
+    {
+      "id": "fdm",
+      "name": "Free Download Manager",
+      "category": "download",
+      "homepage": "https://www.freedownloadmanager.org/",
+      "detect": [
+        "Free Download Manager"
+      ],
+      "desc": {
+        "vi": "Tăng tốc tải file miễn phí.",
+        "en": "Free download accelerator."
+      },
+      "tab": "free",
+      "release": {
+        "version": "6.36.0.7128",
+        "url": "https://dn3.freedownloadmanager.org/6/latest/fdm_x64_setup.exe",
+        "fileName": "fdm_x64_setup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "c94bcf11560c6ef709854408b8a3732023dd94494b74c39beb1ec26992349a02"
       }
     },
     {
@@ -1546,6 +3311,999 @@
           "--silent"
         ],
         "sha256": "cf436f1dd756cb1b4fc5553b194661e4c1bdcd21f95c142eed66a7f618b04895"
+      }
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "category": "design",
+      "homepage": "https://www.gimp.org/",
+      "detect": [
+        "GIMP"
+      ],
+      "desc": {
+        "vi": "Chỉnh sửa ảnh thay Photoshop. Mã nguồn mở.",
+        "en": "Photo editor. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "3.2.8.0",
+        "url": "https://download.gimp.org/gimp/v3.2/windows/gimp-3.2.8-setup.exe",
+        "fileName": "gimp-3.2.8-setup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "1d78874295661d791eaf149982e9b3564888631ea29186da5ff99e8114020a5b"
+      }
+    },
+    {
+      "id": "krita",
+      "name": "Krita",
+      "category": "design",
+      "homepage": "https://krita.org/",
+      "detect": [
+        "Krita"
+      ],
+      "desc": {
+        "vi": "Vẽ tranh kỹ thuật số. Mã nguồn mở.",
+        "en": "Digital painting. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "5.3.5.0",
+        "url": "https://download.kde.org/stable/krita/5.3.5/krita-x64-5.3.5-setup.exe",
+        "fileName": "krita-x64-5.3.5-setup.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "c21930c3d409519a873d3de9793068df954c21a4209c3ac42ef7732f82beaf27"
+      }
+    },
+    {
+      "id": "inkscape",
+      "name": "Inkscape",
+      "category": "design",
+      "homepage": "https://inkscape.org/",
+      "detect": [
+        "Inkscape"
+      ],
+      "desc": {
+        "vi": "Thiết kế vector thay Illustrator. Mã nguồn mở.",
+        "en": "Vector graphics. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.4.4",
+        "url": "https://media.inkscape.org/dl/resources/file/inkscape-1.4.4_2026-05-05_dcaf3e7-x64.signed_xMx7DJV.msi",
+        "fileName": "inkscape-1.4.4_2026-05-05_dcaf3e7-x64.signed_xMx7DJV.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "2fa033e95113ae83d6430b2479e7e63e4266d0632a5b03f99ee3db9360e3b8b8"
+      }
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "category": "design",
+      "homepage": "https://www.blender.org/",
+      "detect": [
+        "Blender"
+      ],
+      "desc": {
+        "vi": "Dựng hình 3D, hoạt hình, VFX. Mã nguồn mở.",
+        "en": "3D creation suite. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "5.3.0",
+        "url": "https://download.blender.org/release/Blender5.3/blender-5.3.0-windows-x64.msi",
+        "fileName": "blender-5.3.0-windows-x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "3ff4ec8a488be1148aa2bdb2cb229be21b8050e75931da617934cac254dd726c"
+      }
+    },
+    {
+      "id": "paintnet",
+      "name": "Paint.NET",
+      "category": "design",
+      "homepage": "https://www.getpaint.net/",
+      "detect": [
+        "paint.net"
+      ],
+      "desc": {
+        "vi": "Chỉnh ảnh đơn giản, dễ dùng.",
+        "en": "Simple photo editing."
+      },
+      "tab": "free",
+      "release": {
+        "version": "5.2",
+        "url": "https://github.com/paintdotnet/release/releases/download/v5.2/paint.net.5.2.install.x64.zip",
+        "fileName": "paint.net.5.2.install.x64.zip",
+        "installerType": "exe",
+        "archiveEntry": "paint.net.5.2.install.x64.exe",
+        "silentArgs": [
+          "/auto"
+        ],
+        "sha256": "fe79df875fab758f06dbe2b0cf1947cc135251f4d8549401bd5b8411ef5773b4"
+      }
+    },
+    {
+      "id": "darktable",
+      "name": "darktable",
+      "category": "design",
+      "homepage": "https://www.darktable.org/",
+      "detect": [
+        "darktable"
+      ],
+      "desc": {
+        "vi": "Xử lý ảnh RAW thay Lightroom. Mã nguồn mở.",
+        "en": "RAW photo workflow. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "5.6.2",
+        "url": "https://github.com/darktable-org/darktable/releases/download/release-5.6.2/darktable-5.6.2-win64.exe",
+        "fileName": "darktable-5.6.2-win64.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "7f7a1eabcd0a1b548dcfacac842c8203fc85a4175697fb09f90bb891c8931edd"
+      }
+    },
+    {
+      "id": "imageglass",
+      "name": "ImageGlass",
+      "category": "design",
+      "homepage": "https://imageglass.org/",
+      "detect": [
+        "ImageGlass"
+      ],
+      "desc": {
+        "vi": "Xem ảnh nhanh, đẹp — do người Việt phát triển. Mã nguồn mở.",
+        "en": "Fast image viewer by a Vietnamese dev. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "10.0.906.0",
+        "url": "https://github.com/d2phap/ImageGlass/releases/download/10.0.6.906/ImageGlass_10.0.6.906_win-x64.msix",
+        "fileName": "ImageGlass_10.0.6.906_win-x64.msix",
+        "installerType": "msix",
+        "silentArgs": null,
+        "sha256": "c83592c7c79dbfa492aed7e1385051eb14a29eb69bba05ddeb15ac051f48ebc5"
+      }
+    },
+    {
+      "id": "upscayl",
+      "name": "Upscayl",
+      "category": "design",
+      "homepage": "https://upscayl.org/",
+      "detect": [
+        "Upscayl"
+      ],
+      "desc": {
+        "vi": "Phóng to ảnh bằng AI, không vỡ nét. Mã nguồn mở.",
+        "en": "AI image upscaler. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.15.0",
+        "url": "https://github.com/upscayl/upscayl/releases/download/v2.15.0/upscayl-2.15.0-win.exe",
+        "fileName": "upscayl-2.15.0-win.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "5dd7f58abafae2907fede489324a074cb6959a93c5714f3d0609650ab942ff3c"
+      }
+    },
+    {
+      "id": "freecad",
+      "name": "FreeCAD",
+      "category": "design",
+      "homepage": "https://www.freecad.org/",
+      "detect": [
+        "FreeCAD"
+      ],
+      "desc": {
+        "vi": "Thiết kế 3D kỹ thuật (CAD). Mã nguồn mở.",
+        "en": "Parametric 3D CAD. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.1.4",
+        "url": "https://github.com/FreeCAD/FreeCAD/releases/download/1.1.4/FreeCAD_1.1.4-Windows-x86_64-py311-installer.exe",
+        "fileName": "FreeCAD_1.1.4-Windows-x86_64-py311-installer.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "845f7101d33faf257a82a0cadc5f4f3804441f46ee493eb32b92fcf9c7147a24"
+      }
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "category": "design",
+      "homepage": "https://www.figma.com/",
+      "detect": [
+        "Figma"
+      ],
+      "desc": {
+        "vi": "Thiết kế giao diện UI/UX.",
+        "en": "UI/UX design tool."
+      },
+      "tab": "free",
+      "release": {
+        "version": "126.12.8",
+        "url": "https://desktop.figma.com/win/build/Figma-126.12.8.msi",
+        "fileName": "Figma-126.12.8.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "149c19fefed13d94b3f478c8c6b852c0a6fc1043d7fd8cdd2bbf55fc8b8038bf"
+      }
+    },
+    {
+      "id": "bitwarden",
+      "name": "Bitwarden",
+      "category": "security-free",
+      "homepage": "https://bitwarden.com/",
+      "detect": [
+        "Bitwarden"
+      ],
+      "desc": {
+        "vi": "Quản lý mật khẩu miễn phí, đồng bộ mọi nơi. Mã nguồn mở.",
+        "en": "Password manager. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2026.11.0",
+        "url": "https://github.com/bitwarden/clients/releases/download/desktop-v2026.11.0/bit-Bitwarden-Installer-2026.11.0.exe",
+        "fileName": "bit-Bitwarden-Installer-2026.11.0.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "c8e7ee33b43b9fd6baada11b4355a684bb8944ea58173423fa108d244bcbdf0a"
+      }
+    },
+    {
+      "id": "keepassxc",
+      "name": "KeePassXC",
+      "category": "security-free",
+      "homepage": "https://keepassxc.org/",
+      "detect": [
+        "KeePassXC"
+      ],
+      "desc": {
+        "vi": "Quản lý mật khẩu offline. Mã nguồn mở.",
+        "en": "Offline password manager. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "2.8.0",
+        "url": "https://github.com/keepassxreboot/keepassxc/releases/download/2.8.0/KeePassXC-2.8.0-x64.msi",
+        "fileName": "KeePassXC-2.8.0-x64.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "4f105af5ba780428718c8be5614cf95deceed5cb3b474a9bd624c5df81cec6e5"
+      }
+    },
+    {
+      "id": "warp",
+      "name": "Cloudflare WARP",
+      "category": "security-free",
+      "homepage": "https://one.one.one.one/",
+      "detect": [
+        "Cloudflare WARP"
+      ],
+      "desc": {
+        "vi": "DNS 1.1.1.1 & mạng nhanh, an toàn hơn.",
+        "en": "Faster, safer internet (1.1.1.1)."
+      },
+      "tab": "free",
+      "release": {
+        "version": "26.8.2115.0",
+        "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/2026.8.2115.0",
+        "fileName": "2026.8.2115.0.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "ab3138dbebdf132af076b5ebcb25b42345d29258acb76267c3bd1f8cfea57a53"
+      }
+    },
+    {
+      "id": "protonvpn",
+      "name": "Proton VPN",
+      "category": "security-free",
+      "homepage": "https://protonvpn.com/",
+      "detect": [
+        "Proton VPN"
+      ],
+      "desc": {
+        "vi": "VPN miễn phí không giới hạn dung lượng. Mã nguồn mở.",
+        "en": "Free unlimited VPN. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "5.1.10",
+        "url": "https://vpn.protondownload.com/download/ProtonVPN_v5.1.10_x64.exe",
+        "fileName": "ProtonVPN_v5.1.10_x64.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "67ee2e03322abc313430c0aeb2702db5ab09b070cd7e97c4636b44523589cf56"
+      }
+    },
+    {
+      "id": "wireguard",
+      "name": "WireGuard",
+      "category": "security-free",
+      "homepage": "https://www.wireguard.com/",
+      "detect": [
+        "WireGuard"
+      ],
+      "desc": {
+        "vi": "VPN hiện đại, tốc độ cao. Mã nguồn mở.",
+        "en": "Fast modern VPN. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.1.1",
+        "url": "https://download.wireguard.com/windows-client/wireguard-amd64-1.1.1.msi",
+        "fileName": "wireguard-amd64-1.1.1.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "7bfed60ad61b785c914b38b61555a975488e1d3ec472dbfb2fcdf498fca75242"
+      }
+    },
+    {
+      "id": "veracrypt",
+      "name": "VeraCrypt",
+      "category": "security-free",
+      "homepage": "https://www.veracrypt.fr/",
+      "detect": [
+        "VeraCrypt"
+      ],
+      "desc": {
+        "vi": "Mã hoá ổ đĩa & dữ liệu. Mã nguồn mở.",
+        "en": "Disk encryption. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "1.26.31",
+        "url": "https://github.com/veracrypt/VeraCrypt/releases/download/VeraCrypt_1.26.31/VeraCrypt_Setup_x64_1.26.31.msi",
+        "fileName": "VeraCrypt_Setup_x64_1.26.31.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "6b0dbcc1d6910ec9f045689dd29172b4ae825b5fdcdae1a2d5f1e5b692782265"
+      }
+    },
+    {
+      "id": "vcredist-x64",
+      "name": "Visual C++ Redistributable (x64)",
+      "category": "runtime",
+      "homepage": "https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist",
+      "detect": [
+        "Microsoft Visual C++ 2015-2022 Redistributable (x64)",
+        "Microsoft Visual C++ v14 Redistributable (x64)"
+      ],
+      "desc": {
+        "vi": "Thư viện bắt buộc cho nhiều game & phần mềm (sửa lỗi thiếu .dll).",
+        "en": "Required by many games & apps (fixes missing DLLs)."
+      },
+      "tab": "free",
+      "release": {
+        "version": "14.52.37029.0",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/78d061c5-9ef3-42ab-98ed-3309d1095dc4/9C02C9ED120F671B900E6B9471D890E3B2414117A7E53F4AE2E855466FA2B7C9/VC_redist.x64.exe",
+        "fileName": "VC_redist.x64.exe",
+        "installerType": "burn",
+        "silentArgs": [
+          "/quiet",
+          "/norestart"
+        ],
+        "sha256": "9c02c9ed120f671b900e6b9471d890e3b2414117a7e53f4ae2e855466fa2b7c9"
+      }
+    },
+    {
+      "id": "vcredist-x86",
+      "name": "Visual C++ Redistributable (x86)",
+      "category": "runtime",
+      "homepage": "https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist",
+      "detect": [
+        "Microsoft Visual C++ 2015-2022 Redistributable (x86)",
+        "Microsoft Visual C++ v14 Redistributable (x86)"
+      ],
+      "desc": {
+        "vi": "Bản 32-bit, cần cho game & phần mềm cũ.",
+        "en": "32-bit runtime for older apps."
+      },
+      "tab": "free",
+      "release": {
+        "version": "14.52.37029.0",
+        "url": "https://download.visualstudio.microsoft.com/download/pr/78d061c5-9ef3-42ab-98ed-3309d1095dc4/7B0117E6E20E9E349029C000A8A2715A52CF37C15B6BB697B2908E8BC7066CDF/VC_redist.x86.exe",
+        "fileName": "VC_redist.x86.exe",
+        "installerType": "burn",
+        "silentArgs": [
+          "/quiet",
+          "/norestart"
+        ],
+        "sha256": "7b0117e6e20e9e349029c000a8a2715a52cf37c15b6bb697b2908e8bc7066cdf"
+      }
+    },
+    {
+      "id": "directx",
+      "name": "DirectX End-User Runtime",
+      "category": "runtime",
+      "homepage": "https://www.microsoft.com/download/details.aspx?id=35",
+      "desc": {
+        "vi": "Sửa lỗi thiếu d3dx9/xinput khi chơi game cũ.",
+        "en": "Fixes missing d3dx9/xinput for older games."
+      },
+      "tab": "free",
+      "release": {
+        "version": "9.29.1974.0",
+        "url": "https://download.microsoft.com/download/1/7/1/1718ccc4-6315-4d8e-9543-8e28a4e18c4c/dxwebsetup.exe",
+        "fileName": "dxwebsetup.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "/Q"
+        ],
+        "sha256": "2cf71d098c608c56e07f4655855a886c3102553f648df88458df616b26fd612f"
+      }
+    },
+    {
+      "id": "dotnet-desktop",
+      "name": ".NET Desktop Runtime 8",
+      "category": "runtime",
+      "homepage": "https://dotnet.microsoft.com/",
+      "detect": [
+        "Microsoft Windows Desktop Runtime - 8"
+      ],
+      "desc": {
+        "vi": "Cần cho nhiều phần mềm viết bằng .NET.",
+        "en": "Required by many .NET apps."
+      },
+      "tab": "free",
+      "release": {
+        "version": "8.0.34",
+        "url": "https://download.microsoft.com/download/f5126c7f-c450-4883-a6ac-db5a8625bd16/3a6bc153-80ae-4859-80d1-3f251d2485e0/windowsdesktop-runtime-8.0.34-win-x64.exe",
+        "fileName": "windowsdesktop-runtime-8.0.34-win-x64.exe",
+        "installerType": "burn",
+        "silentArgs": [
+          "/quiet",
+          "/norestart"
+        ],
+        "sha256": "37aa8a02acc1973ddd7e3de993a02007ccef26b48fa35b09d087fa8ab4602795"
+      }
+    },
+    {
+      "id": "java-runtime",
+      "name": "Java Runtime (Temurin 21)",
+      "category": "runtime",
+      "homepage": "https://adoptium.net/",
+      "detect": [
+        "Eclipse Temurin JRE"
+      ],
+      "desc": {
+        "vi": "Chạy phần mềm & game Java (Minecraft mod, tool…). Mã nguồn mở.",
+        "en": "Run Java apps. Open source."
+      },
+      "tab": "free",
+      "release": {
+        "version": "21.0.13.102",
+        "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1+2/OpenJDK21U-jre_x64_windows_hotspot_21.0.13.1_2.msi",
+        "fileName": "OpenJDK21U-jre_x64_windows_hotspot_21.0.13.1_2.msi",
+        "installerType": "wix",
+        "silentArgs": null,
+        "sha256": "edd761b200d7896fc40382bc14c3e077c3d4d3011682157d4db6f487e2bce081"
+      }
+    },
+    {
+      "id": "bluestacks",
+      "name": "BlueStacks",
+      "category": "emu-android",
+      "homepage": "https://www.bluestacks.com/",
+      "detect": [
+        "BlueStacks"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Giả lập Android phổ biến nhất thế giới.",
+        "en": "The most popular Android emulator."
+      },
+      "tab": "games",
+      "release": {
+        "version": "5.22.166.1003",
+        "url": "https://ak-build.bluestacks.com/public/app-player/windows/nxt/5.22.166.1003/e0cbf0a49445273dc3c94ced970fd7d4/FullInstaller/x64/BlueStacksFullInstaller_5.22.166.1003_amd64_native.exe",
+        "fileName": "BlueStacksFullInstaller_5.22.166.1003_amd64_native.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "-s"
+        ],
+        "sha256": "dbe8b99d3d06f520865d7add1c8651b4841d55bef07fb04c9f2d025263adcab7"
+      }
+    },
+    {
+      "id": "ldplayer",
+      "name": "LDPlayer",
+      "category": "emu-android",
+      "homepage": "https://www.ldplayer.net/",
+      "detect": [
+        "LDPlayer"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Giả lập Android nhẹ, tối ưu chơi game.",
+        "en": "Lightweight gaming Android emulator."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2026-11-18",
+        "build": "2026-11-18|1539048|\"BFF20A401E4D7FCFCE2A250AAF6B46BB\"",
+        "url": "https://res.ldrescdn.com/download/LDPlayer9.exe",
+        "fileName": "LDPlayer9.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 1539048
+      }
+    },
+    {
+      "id": "mumu",
+      "name": "MuMu Player",
+      "category": "emu-android",
+      "homepage": "https://www.mumuplayer.com/",
+      "detect": [
+        "MuMu"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Giả lập Android của NetEase, mượt & ổn định.",
+        "en": "NetEase's Android emulator."
+      },
+      "tab": "games",
+      "release": {
+        "version": "6.0.2",
+        "build": "2026-08-12|6102432|\"5cebb5b671a423443563bbd50f9b151f\"",
+        "url": "https://api.mumuplayer.com/api/dl/win?channel=gw-overseas12",
+        "fileName": "MuMu_6.0.2_13vv6QvC.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 6102432
+      }
+    },
+    {
+      "id": "nox",
+      "name": "NoxPlayer",
+      "category": "emu-android",
+      "homepage": "https://www.bignox.com/",
+      "detect": [
+        "NoxPlayer",
+        "Nox"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Giả lập Android, hỗ trợ đa cửa sổ.",
+        "en": "Android emulator with multi-instance."
+      },
+      "tab": "games",
+      "release": {
+        "version": "7.0.6.2",
+        "build": "2025-03-17|598932728|\"98D02E404B5A591472D3D4AA718825E5\"",
+        "url": "https://www.bignox.com/en/download/fullPackage",
+        "fileName": "nox_setup_v7.0.6.2_full_intl.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 598932728
+      }
+    },
+    {
+      "id": "memu",
+      "name": "MEmu Play",
+      "category": "emu-android",
+      "homepage": "https://www.memuplay.com/",
+      "detect": [
+        "MEmu"
+      ],
+      "installMode": "interactive",
+      "desc": {
+        "vi": "Giả lập Android nhẹ cho máy cấu hình thấp.",
+        "en": "Android emulator for low-end PCs."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2026-11-10",
+        "build": "2026-11-10|138403072|\"6af2b5d8-83fdd00\"",
+        "url": "https://www.memuplay.com/download-en.php?file_name=Download-MEmu-Setup&from=official_release",
+        "fileName": "MEmu-Setup.exe",
+        "installerType": "exe",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 138403072
+      }
+    },
+    {
+      "id": "gpg",
+      "name": "Google Play Games",
+      "category": "emu-android",
+      "homepage": "https://play.google.com/googleplaygames",
+      "detect": [
+        "Google Play Games"
+      ],
+      "desc": {
+        "vi": "Chơi game Android chính thức của Google trên PC.",
+        "en": "Google's official Android games on PC."
+      },
+      "tab": "games",
+      "release": {
+        "version": "159.0.8140.0",
+        "url": "https://dl.google.com/tag/s/appguid={47B07D71-505D-4665-AFD4-4972A30C6530}&appname=GPG&needsadmin=true&ap=beta/play/games/Install-GooglePlayGames.exe",
+        "fileName": "Install-GooglePlayGames.exe",
+        "installerType": "exe",
+        "silentArgs": [
+          "--silent"
+        ],
+        "sha256": "a483167fecbc569fcff25a92c8a633be90b6000fe53eca094426351d5e91f05a"
+      }
+    },
+    {
+      "id": "retroarch",
+      "name": "RetroArch",
+      "category": "emu-console",
+      "homepage": "https://www.retroarch.com/",
+      "detect": [
+        "RetroArch"
+      ],
+      "desc": {
+        "vi": "Giả lập tất-cả-trong-một: NES, SNES, GBA, PS1… Mã nguồn mở.",
+        "en": "All-in-one emulator frontend. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "1.22.2",
+        "url": "https://buildbot.libretro.com/stable/1.22.2/windows/x86_64/RetroArch-Win64-setup.exe",
+        "fileName": "RetroArch-Win64-setup.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "bb2b95329542d98d951bb381c0dd57e803d846242878895f12d374b87201c1c9"
+      }
+    },
+    {
+      "id": "dolphin",
+      "name": "Dolphin",
+      "category": "emu-console",
+      "homepage": "https://dolphin-emu.org/",
+      "detect": [
+        "Dolphin"
+      ],
+      "desc": {
+        "vi": "Giả lập GameCube & Wii. Mã nguồn mở.",
+        "en": "GameCube & Wii emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "5.0",
+        "url": "https://dl-mirror.dolphin-emu.org/5.0/dolphin-x64-5.0.exe",
+        "fileName": "dolphin-x64-5.0.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "e1b3ae8fc890c6588e5656f77ef2747ae7ddfc90b6530b240c0c5b9d0ab3ce8c"
+      }
+    },
+    {
+      "id": "pcsx2",
+      "name": "PCSX2",
+      "category": "emu-console",
+      "homepage": "https://pcsx2.net/",
+      "detect": [
+        "PCSX2"
+      ],
+      "desc": {
+        "vi": "Giả lập PlayStation 2. Mã nguồn mở.",
+        "en": "PlayStation 2 emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2.8.2",
+        "url": "https://github.com/PCSX2/pcsx2/releases/download/v2.8.2/pcsx2-v2.8.2-windows-x64-installer.exe",
+        "fileName": "pcsx2-v2.8.2-windows-x64-installer.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "3422f3705ccc641b7e4fdf3f280d635d05c3c8b53a56c3af55d9df115bdcf768"
+      }
+    },
+    {
+      "id": "duckstation",
+      "name": "DuckStation",
+      "category": "emu-console",
+      "homepage": "https://www.duckstation.org/",
+      "installMode": "portable",
+      "launch": "duckstation-qt-x64-ReleaseLTCG.exe",
+      "desc": {
+        "vi": "Giả lập PlayStation 1 chất lượng cao. Mã nguồn mở.",
+        "en": "PlayStation 1 emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "0.1.11894",
+        "url": "https://github.com/stenzek/duckstation/releases/download/v0.1-11894/duckstation-windows-x64-release.zip",
+        "fileName": "duckstation-windows-x64-release.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "5ba3b9624b3073d3398c2cb8185ba3a014ff9e84f9c486627e0e8aa56371d352"
+      }
+    },
+    {
+      "id": "ppsspp",
+      "name": "PPSSPP",
+      "category": "emu-console",
+      "homepage": "https://www.ppsspp.org/",
+      "detect": [
+        "PPSSPP"
+      ],
+      "desc": {
+        "vi": "Giả lập PSP. Mã nguồn mở.",
+        "en": "PSP emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "1.20.4",
+        "url": "https://www.ppsspp.org/files/1_20_4/PPSSPPSetup.exe",
+        "fileName": "PPSSPPSetup.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "1635152e05ae756f1e068a1495c50d6cbf648f2d1fe6edc93e764b3014ea01f3"
+      }
+    },
+    {
+      "id": "shadps4",
+      "name": "shadPS4",
+      "category": "emu-console",
+      "homepage": "https://shadps4.net/",
+      "installMode": "portable",
+      "desc": {
+        "vi": "Giả lập PlayStation 4 (đang phát triển). Mã nguồn mở.",
+        "en": "PlayStation 4 emulator (WIP). Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "0.21.0",
+        "url": "https://github.com/shadps4-emu/shadPS4/releases/download/v.0.21.0/shadps4-win64-sdl-0.21.0.zip",
+        "fileName": "shadps4-win64-sdl-0.21.0.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "95295b8f109663f70c2dac685e6232aa97be1353f6ed0a5d5e0c5dd24a797d88",
+        "size": 31725856
+      }
+    },
+    {
+      "id": "vita3k",
+      "name": "Vita3K",
+      "category": "emu-console",
+      "homepage": "https://vita3k.org/",
+      "installMode": "portable",
+      "launch": "Vita3K.exe",
+      "desc": {
+        "vi": "Giả lập PlayStation Vita. Mã nguồn mở.",
+        "en": "PS Vita emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2026-11-25",
+        "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip",
+        "fileName": "windows-latest.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "26c5ded576834d1e4108c361119e2436671f709ac13866a8be51c1fc44e16829",
+        "size": 38251888
+      }
+    },
+    {
+      "id": "cemu",
+      "name": "Cemu",
+      "category": "emu-console",
+      "homepage": "https://cemu.info/",
+      "installMode": "portable",
+      "launch": "Cemu.exe",
+      "desc": {
+        "vi": "Giả lập Wii U. Mã nguồn mở.",
+        "en": "Wii U emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2.6",
+        "url": "https://github.com/cemu-project/Cemu/releases/download/v2.6/cemu-2.6-windows-x64.zip",
+        "fileName": "cemu-2.6-windows-x64.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "a6bcc2bc42a362d10213819948f3152fae7d47f70067f25939b51d3ddcfb0896"
+      }
+    },
+    {
+      "id": "azahar",
+      "name": "Azahar",
+      "category": "emu-console",
+      "homepage": "https://azahar-emu.org/",
+      "detect": [
+        "Azahar"
+      ],
+      "desc": {
+        "vi": "Giả lập Nintendo 3DS (kế thừa Citra). Mã nguồn mở.",
+        "en": "Nintendo 3DS emulator (Citra successor). Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2127.0.1",
+        "url": "https://github.com/azahar-emu/azahar/releases/download/2127.0.1/azahar-windows-msvc-2127.0.1-installer.exe",
+        "fileName": "azahar-windows-msvc-2127.0.1-installer.exe",
+        "installerType": "nullsoft",
+        "silentArgs": [
+          "/S"
+        ],
+        "sha256": "eaa508706cc46abad502069231aa9a7d79d5fe6fddd892afc9d5d5b4169ec815"
+      }
+    },
+    {
+      "id": "melonds",
+      "name": "melonDS",
+      "category": "emu-console",
+      "homepage": "https://melonds.kuribo64.net/",
+      "installMode": "portable",
+      "launch": "melonDS.exe",
+      "desc": {
+        "vi": "Giả lập Nintendo DS. Mã nguồn mở.",
+        "en": "Nintendo DS emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "1.1",
+        "url": "https://melonds.kuribo64.net/downloads/melonDS-1.1-windows-x86_64.zip",
+        "fileName": "melonDS-1.1-windows-x86_64.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "9f3f8a244103be20b5b657af5b0ed1b2a66bb20a7181476a6d294c9a53d4f8c8"
+      }
+    },
+    {
+      "id": "mgba",
+      "name": "mGBA",
+      "category": "emu-console",
+      "homepage": "https://mgba.io/",
+      "detect": [
+        "mGBA"
+      ],
+      "desc": {
+        "vi": "Giả lập Game Boy Advance. Mã nguồn mở.",
+        "en": "Game Boy Advance emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "0.10.5",
+        "url": "https://github.com/mgba-emu/mgba/releases/download/0.10.5/mGBA-0.10.5-win64-installer.exe",
+        "fileName": "mGBA-0.10.5-win64-installer.exe",
+        "installerType": "inno",
+        "silentArgs": [
+          "/VERYSILENT",
+          "/SUPPRESSMSGBOXES",
+          "/NORESTART",
+          "/SP-"
+        ],
+        "sha256": "edd0454b8fe69f20dc2f0b47f2cfc32a14e3848550762ffbb3d782e649669c6b"
+      }
+    },
+    {
+      "id": "xemu",
+      "name": "xemu",
+      "category": "emu-console",
+      "homepage": "https://xemu.app/",
+      "installMode": "portable",
+      "launch": "xemu.exe",
+      "desc": {
+        "vi": "Giả lập Xbox đời đầu. Mã nguồn mở.",
+        "en": "Original Xbox emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "0.8.139",
+        "url": "https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-win-x86_64-release.zip",
+        "fileName": "xemu-win-x86_64-release.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "fbb14dd7ea08120ca9ec99c955758786645af16a5058250553b3b7d7592e8701"
+      }
+    },
+    {
+      "id": "snes9x",
+      "name": "Snes9x",
+      "category": "emu-console",
+      "homepage": "https://www.snes9x.com/",
+      "installMode": "portable",
+      "launch": "snes9x-x64.exe",
+      "desc": {
+        "vi": "Giả lập Super Nintendo. Mã nguồn mở.",
+        "en": "Super Nintendo emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "1.63",
+        "url": "https://github.com/snes9xgit/snes9x/releases/download/1.63/snes9x-1.63-win32-x64.zip",
+        "fileName": "snes9x-1.63-win32-x64.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": null,
+        "size": 5328695
+      }
+    },
+    {
+      "id": "mesen",
+      "name": "Mesen",
+      "category": "emu-console",
+      "homepage": "https://www.mesen.ca/",
+      "installMode": "portable",
+      "launch": "Mesen.exe",
+      "desc": {
+        "vi": "Giả lập NES/SNES/Game Boy chính xác cao. Mã nguồn mở.",
+        "en": "Accurate NES/SNES/GB emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2.1.1",
+        "url": "https://github.com/SourMesen/Mesen2/releases/download/2.1.1/Mesen_2.1.1_Windows.zip",
+        "fileName": "Mesen_2.1.1_Windows.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "23ccc2bc060b663c68dad3a8c5d6da7d23a50f872d04f135bafa2b04ff7d5cbe"
+      }
+    },
+    {
+      "id": "flycast",
+      "name": "Flycast",
+      "category": "emu-console",
+      "homepage": "https://github.com/flyinghead/flycast",
+      "installMode": "portable",
+      "launch": "flycast.exe",
+      "desc": {
+        "vi": "Giả lập Sega Dreamcast & Naomi. Mã nguồn mở.",
+        "en": "Dreamcast emulator. Open source."
+      },
+      "tab": "games",
+      "release": {
+        "version": "2.7",
+        "url": "https://github.com/flyinghead/flycast/releases/download/v2.7/flycast-win64-2.7.zip",
+        "fileName": "flycast-win64-2.7.zip",
+        "installerType": "zip",
+        "silentArgs": null,
+        "sha256": "7edf489ba6b3053703a18ce8233767eb71a2d89e4bda0421b312c2167a739161",
+        "size": 9885102
       }
     }
   ]

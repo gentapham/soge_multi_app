@@ -46,7 +46,7 @@ export function CatalogView({ tab }: { tab: TabId }) {
         </div>
       </section>
 
-      <div className="no-scrollbar sticky top-0 z-20 -mx-8 mb-5 flex gap-2 overflow-x-auto bg-bg/85 px-8 py-2 backdrop-blur-md">
+      <div className="sticky top-0 z-20 -mx-8 mb-5 flex flex-wrap gap-2 bg-bg/85 px-8 py-2 backdrop-blur-md">
         <button className={`chip ${activeCat === 'all' ? 'chip-active' : ''}`} onClick={() => setCategory('all')}>
           <CategoryIcon name="all" className="h-3.5 w-3.5" />
           {t('all')}
