@@ -14,8 +14,12 @@ use std::time::{Duration, Instant, SystemTime, UNIX_EPOCH};
 use tauri::{AppHandle, Emitter};
 use tokio::io::AsyncWriteExt;
 
-pub const USER_AGENT: &str =
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36 SOGE-Multi-App/0.1";
+/// User-Agent mặc định (dạng thường). Một số máy chủ như SourceForge trả về trang web
+/// thay vì file khi thấy User-Agent giống trình duyệt.
+pub const USER_AGENT: &str = "SOGE-Multi-App/0.2 (Windows; +https://sogestore.vn)";
+/// User-Agent dự phòng giống trình duyệt, dùng khi máy chủ chặn User-Agent thường.
+pub const BROWSER_USER_AGENT: &str =
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36";
 
 #[derive(Default)]
 pub struct DownloadState {
@@ -160,14 +164,33 @@ async fn stream_to_file(
     cancel: &AtomicBool,
 ) -> Result<(u64, String)> {
     let client = http_client()?;
-    let resp = client
-        .get(&release.url)
-        .send()
-        .await
-        .context("Không kết nối được tới máy chủ tải")?;
-    if !resp.status().is_success() {
-        bail!("Máy chủ trả về lỗi HTTP {}", resp.status());
+    // Thử User-Agent thường trước; bị chặn (403/429) hoặc nhận về trang web thì thử lại kiểu trình duyệt.
+    let mut resp = None;
+    let mut last_err = String::new();
+    for ua in [USER_AGENT, BROWSER_USER_AGENT] {
+        let r = client
+            .get(&release.url)
+            .header(reqwest::header::USER_AGENT, ua)
+            .send()
+            .await
+            .context("Không kết nối được tới máy chủ tải")?;
+        let is_html = r
+            .headers()
+            .get(reqwest::header::CONTENT_TYPE)
+            .and_then(|v| v.to_str().ok())
+            .map(|v| v.to_ascii_lowercase().starts_with("text/html"))
+            .unwrap_or(false);
+        if r.status().is_success() && !is_html {
+            resp = Some(r);
+            break;
+        }
+        last_err = if is_html && r.status().is_success() {
+            "Máy chủ trả về trang web thay vì file cài đặt (link có thể đã thay đổi). Hãy thử lại sau.".into()
+        } else {
+            format!("Máy chủ trả về lỗi HTTP {}", r.status())
+        };
     }
+    let Some(resp) = resp else { bail!("{last_err}") };
     let total = resp.content_length().or(release.size);
     // Luôn xoá .part cũ: nếu nó là symlink/hardlink do kẻ xấu tạo sẵn thì chỉ gỡ cái tên,
     // không ghi xuyên vào file thật ở nơi khác.
