@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-27T09:26:13.663Z",
+  "generatedAt": "2026-11-28T08:40:15.788Z",
   "tabs": [
     {
       "id": "free",
@@ -720,9 +720,9 @@
       },
       "tab": "free",
       "release": {
-        "version": "7.4.6",
-        "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.6/td-setup-win-x64-7.4.6.exe",
-        "fileName": "td-setup-win-x64-7.4.6.exe",
+        "version": "7.4.7",
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v7.4.7/td-setup-win-x64-7.4.7.exe",
+        "fileName": "td-setup-win-x64-7.4.7.exe",
         "installerType": "inno",
         "silentArgs": [
           "/VERYSILENT",
@@ -730,7 +730,7 @@
           "/NORESTART",
           "/SP-"
         ],
-        "sha256": "c4323c79b76b86e3b160953ec7ebeadce502d7e042ae7d7a407f423d21ad3d3f"
+        "sha256": "8a58bbbfc1eb6497e5c1fd62d1b7c9e6856de1533aba6f72790a5b057612a378"
       }
     },
     {
@@ -1116,12 +1116,12 @@
       },
       "tab": "free",
       "release": {
-        "version": "11.35.0",
-        "url": "https://download.pdf24.org/pdf24-creator-11.35.0-x64.msi",
-        "fileName": "pdf24-creator-11.35.0-x64.msi",
+        "version": "11.36.0",
+        "url": "https://download.pdf24.org/pdf24-creator-11.36.0-x64.msi",
+        "fileName": "pdf24-creator-11.36.0-x64.msi",
         "installerType": "wix",
         "silentArgs": null,
-        "sha256": "d4cf3207764e275766bbdf9ab0599330e3dc25297be6bdf662f8381942bc14b2"
+        "sha256": "dda88091641ffad60048caeb1f7582bbd63b6233064b95d390de1e99d9f56056"
       }
     },
     {
@@ -1921,9 +1921,9 @@
       },
       "tab": "free",
       "release": {
-        "version": "286",
-        "url": "https://github.com/Rem0o/FanControl.Releases/releases/download/V286/FanControl_286_net_10_0_Installer.exe",
-        "fileName": "FanControl_286_net_10_0_Installer.exe",
+        "version": "287",
+        "url": "https://github.com/Rem0o/FanControl.Releases/releases/download/V287/FanControl_287_net_10_0_Installer.exe",
+        "fileName": "FanControl_287_net_10_0_Installer.exe",
         "installerType": "inno",
         "silentArgs": [
           "/VERYSILENT",
@@ -1931,7 +1931,7 @@
           "/NORESTART",
           "/SP-"
         ],
-        "sha256": "162121ae8c176e90f3447c6ae3f60df7af7c51d3ae5be0cd6fa36e01de0fe88c"
+        "sha256": "f3abf93aa81d70db7b843daee339747f89c20b4c154bcd3cabbd815b70179469"
       }
     },
     {
@@ -2576,9 +2576,9 @@
       },
       "tab": "free",
       "release": {
-        "version": "22.4.0",
-        "url": "https://github.com/ShareX/ShareX/releases/download/v22.4.0/ShareX-22.4.0-setup-x64.exe",
-        "fileName": "ShareX-22.4.0-setup-x64.exe",
+        "version": "22.5.0",
+        "url": "https://github.com/ShareX/ShareX/releases/download/v22.5.0/ShareX-22.5.0-setup-x64.exe",
+        "fileName": "ShareX-22.5.0-setup-x64.exe",
         "installerType": "inno",
         "silentArgs": [
           "/VERYSILENT",
@@ -2586,7 +2586,7 @@
           "/NORESTART",
           "/SP-"
         ],
-        "sha256": "5fac6ee58600976586d706f164b0f8a992fff7679bf2724a1f678c4a63894a8e"
+        "sha256": "0ac699fde6d29c53ec135864509a7b802fa2e9004484f34165095e5a744d4c0f"
       }
     },
     {
@@ -2707,7 +2707,7 @@
       },
       "tab": "free",
       "release": {
-        "version": "1.3.10.2586.g81a118a22460",
+        "version": "1.3.11.2657.gab535a3f4acc",
         "url": "https://download.scdn.co/SpotifyFullSetupX64.exe",
         "fileName": "SpotifyFullSetupX64.exe",
         "installerType": "exe",
@@ -3340,7 +3340,7 @@
       },
       "tab": "games",
       "release": {
-        "version": "2.11.2",
+        "version": "2.11.3",
         "url": "https://faceit-client.faceit-cdn.net/release/FACEIT-setup-latest.exe",
         "fileName": "FACEIT-setup-latest.exe",
         "installerType": "exe",
@@ -3916,7 +3916,7 @@
         "version": "6.0.2",
         "build": "2026-08-12|6102432|\"5cebb5b671a423443563bbd50f9b151f\"",
         "url": "https://api.mumuplayer.com/api/dl/win?channel=gw-overseas12",
-        "fileName": "MuMu_6.0.2_13C2FrHC.exe",
+        "fileName": "MuMu_6.0.2_13HHCIaC.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
@@ -3964,14 +3964,14 @@
       },
       "tab": "games",
       "release": {
-        "version": "2026-11-11",
-        "build": "2026-11-11|139060480|\"6af4252c-849e500\"",
+        "version": "2026-11-10",
+        "build": "2026-11-10|138403072|\"6af2b5d8-83fdd00\"",
         "url": "https://www.memuplay.com/download-en.php?file_name=Download-MEmu-Setup&from=official_release",
         "fileName": "MEmu-Setup.exe",
         "installerType": "exe",
         "silentArgs": null,
         "sha256": null,
-        "size": 139060480
+        "size": 138403072
       }
     },
     {
@@ -4153,7 +4153,7 @@
         "installerType": "zip",
         "silentArgs": null,
         "sha256": null,
-        "size": 38265508
+        "size": 38265350
       }
     },
     {
